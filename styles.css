@@ -1,0 +1,36 @@
+		.content {
+			max-width: 60%;
+			margin: auto;
+			font-size: 140%
+		}
+
+		img.clickThrough {
+			border: 1px solid #ddd;
+			border-radius: 10px;
+			padding: 1px;
+			width: 100%;
+		}
+
+		img.clickThrough:hover {
+			box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+		}
+
+		img.profilePicture {
+			border-radius: 50%;
+			width: 10vh;
+			margin-top: 3vh;
+		}
+
+		a:hover {
+			color: rgb(18, 37, 0);
+			font-weight: bold;
+		}
+
+		h1 {
+			margin-top: 1vh;
+			margin-bottom: 1vh;
+		}
+
+		body {
+			font-family: 'Open Sans', 'Arial';
+		}
