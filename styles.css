@@ -68,7 +68,7 @@
 	}
 	
 	img.clickThrough {
-		max-width: 100%;
+		width: 100%;
 	}
 
 
@@ -155,7 +155,7 @@ img.clickThrough {
 	border: 1px solid #ddd;
 	border-radius: 7px;
 	padding: 1px;
-	max-width: 50%;
+	width: 50%;
 }
 
 img.clickThrough:hover {
