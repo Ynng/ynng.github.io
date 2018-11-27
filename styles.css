@@ -65,7 +65,13 @@
     /* For mobile phones: */
     [class*="col-"] {
         width: 100%;
-    }
+	}
+	
+	img.clickThrough {
+		max-width: 100%;
+	}
+
+
 }
 
 .row::after {
@@ -149,7 +155,7 @@ img.clickThrough {
 	border: 1px solid #ddd;
 	border-radius: 7px;
 	padding: 1px;
-	width: 100%;
+	max-width: 50%;
 }
 
 img.clickThrough:hover {
