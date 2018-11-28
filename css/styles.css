@@ -2,148 +2,109 @@
 	box-sizing: border-box;
 }
 
-
-[class*="col-"] {
-	float: left;
-	padding: 15px;
-	border: 1px solid red;
-}
-
-.row{
-	border: 1px solid blue;
-}
-
-.col-1 {
-	width: 8.33%;
-}
-
-.col-2 {
-	width: 16.66%;
-}
-
-.col-3 {
-	width: 25%;
-}
-
-.col-4 {
-	width: 33.33%;
-}
-
-.col-5 {
-	width: 41.66%;
-}
-
-.col-6 {
-	width: 50%;
-}
-
-.col-7 {
-	width: 58.33%;
-}
-
-.col-8 {
-	width: 66.66%;
-}
-
-.col-9 {
-	width: 75%;
-}
-
-.col-10 {
-	width: 83.33%;
-}
-
-.col-11 {
-	width: 91.66%;
-}
-
-.col-12 {
-	width: 100%;
-}
-
-@media only screen and (max-width: 768px) {
-    /* For mobile phones: */
-    [class*="col-"] {
-        width: 100%;
-	}
-	
-}
-
-.row::after {
-	content: "";
-	clear: both;
-	display: table;
-}
-
-/*a:hover {
-	color: rgb(18, 37, 0);
-	font-weight: bold;
-}*/
-
 body {
-	/*max-width: 1000px;
-	/*margin-left: 5vh;
-	margin-right: 5vh;
-	margin-top: 3vh;*/
-	margin:0px;
-	font-size: 135%;
-	
+	color: #3c313a;
+	background: #fff4ee;
+	padding: 0;
+	margin: 0;
 	font-family: 'Open Sans', 'Arial', 'Roboto';
 }
 
+a {
+	text-decoration: none;
+	color: #6bab90;
+	transition: color .3s
+}
 
-img.profilePicture {
+a:hover {
+	color: #55917f
+}
+
+#site{
+	min-height:100vh;
+}
+
+#site-head, #site-nav {
+	background: #3c313a;
+	padding: 1rem;
+	color: #fff
+}
+
+#site-foot {
+	color: #fff;
+	background: #2b2329;
+	padding-left: 2rem;
+}
+
+#site-foot a, #site-nav>a {
+	color: #f79f79
+}
+
+#me>h2, #me>p{
+	margin:0px;
+	text-align: center;
+}
+
+#site-foot a:hover, #site-nav>a:hover {
+	color: #f8b091
+}
+
+#me-avatar {
 	border-radius: 50%;
-	height: 12vh;
-	margin: 1vw;
-	/*margin: 2vh;*/
-	float: left;
+	margin:1rem auto;
+}
+
+img{
+	max-width:100%;
+}
+
+.wrapper{
+	padding:0 1rem;
+	margin-top: 1rem;
 }
 
 /*.overflow {
 	overflow: auto;
 }*/
 
-.menu ul{
+.menu ul {
 	list-style-type: none;
-	margin:0px;
-	padding:0px;
+	margin: 0px;
+	padding: 0px;
 }
 
-.menu li{
+.menu li {
 	padding: 8px;
-    margin-bottom: 7px;
-    background-color: #ffc1e3;
-    color: #000000;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	margin-bottom: 7px;
+	background-color: #ffc1e3;
+	color: #000000;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-.menu li:hover{
-    background-color: #f48fb1;
+.menu li:hover {
+	background-color: #f48fb1;
 }
 
-
-.menu a{
-	color:#000000;
-	font-style: normal;	
+.menu a {
+	color: #000000;
+	font-style: normal;
 }
 
-
-.title{
-	margin:0px;
-	padding:7vh;
-	background-color:#f48fb1;
-	color:#000000;
+.title {
+	margin: 0px;
+	padding: 7vh;
+	background-color: #f48fb1;
+	color: #000000;
 	display: block;
 }
 
 .aside {
-    background-color: #ffc1e3;
+	background-color: #ffc1e3;
 	padding: 3vw;
-    color: #000000;
-    text-align: center;
-    font-size: 14px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	color: #000000;
+	text-align: center;
+	font-size: 14px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 img.clickThrough {
@@ -155,4 +116,86 @@ img.clickThrough {
 
 img.clickThrough:hover {
 	box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+#author{
+    text-align:center;
+    margin-top:5rem;
+    margin-bottom:5rem
+}
+
+@supports(display:grid) {
+	#site {
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: max-content max-content auto max-content;
+		grid-template-areas: "header" "nav " "main " "footer"
+	}
+	#site-head {
+		grid-area: header;
+	}
+	#site-nav {
+		grid-area: nav;
+	}
+	#site-content {
+		grid-area: main
+	}
+	#site-foot {
+		grid-area: footer
+	}
+	#me{
+		display:grid;
+        grid-gap:0;
+        grid-template-areas:"header" "avatar" "desc "
+	}
+	#me-avatar{
+		grid-area:avatar;
+	}
+	#me-head{
+		grid-area:header;
+	}
+	#me-desc{
+		grid-area:desc;
+	}
+}
+
+@media only screen and (max-width: 76.999rem) {
+	#site-nav a+a {
+		margin-left: 1rem;
+	}
+}
+
+@media only screen and (min-width: 77rem) {
+	/* For PC: */
+	#site {
+		grid-template-columns: 20rem auto;
+		grid-template-rows: max-content auto max-content;
+		grid-template-areas: "header main " "nav main " "nav footer"
+	}
+	#site-nav>a {
+		display: block;
+		padding-bottom: .5rem;
+		text-align: center
+	}
+	#site-nav>a+a {
+		border-top: 1px solid #4a4549;
+		padding-top: .5rem;
+		margin-left: 0
+	}
+	img.clickThrough {
+		width:50rem;
+	}
+	.wrapper{
+		max-width:50rem;
+		padding-left:2rem;
+		padding-right:2rem
+	}
+	#me{
+		text-align:left;
+		grid-template-columns:max-content auto;
+		grid-template-areas:"avatar header" "avatar desc "
+	}
+	#me-avatar{
+		margin:auto 2rem
+	}
 }
