@@ -8,6 +8,10 @@ body {
     margin:0;
 }
 
+h1{
+    font-size: 1.5em;
+}
+
 .japanese {
     font-family: 'Open Sans', 'Arial', 'ＭＳ Ｐゴシック', 'MS PGothic', 'メイリオ', Meiryo, "Hiragino Sans GB", sans-serif;
 }
@@ -258,6 +262,10 @@ body {
 
 @media only screen and (min-width: 50rem) {
     /* For PC: */
+
+    h1{
+        font-size: 2em;
+    }
     #header {
         display: grid;
         grid-template-columns: 30% 70%;
@@ -300,5 +308,9 @@ body {
         width: 99%;
         padding: 2%;
         /* border-radius: 1%; */
+    }
+
+    .labelFolder{
+        text-align: left;
     }
 }
