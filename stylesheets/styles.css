@@ -62,11 +62,14 @@ body {
     padding: 3%;
     width: 94%;
     transform: rotateZ(0deg);
-    transition: 1s ease-in-out;
+    transition: .5s ease-in-out;
 }
 
 #profilePicture:hover {
-    transform: rotateZ(-360deg);
+    /* transform: rotateZ(-360deg); */
+    width: 100%;
+    padding: 0%;
+    border-radius: 0%;
 }
 
 #profilePicture-container {
