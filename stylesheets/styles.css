@@ -5,6 +5,7 @@
 
 body {
     font-size: 1em;
+    margin:0;
 }
 
 .japanese {
@@ -44,7 +45,7 @@ body {
 }
 
 #about {
-    background: rgba(255, 255, 255, .95);
+    background: rgba(255, 255, 255, .97);
     padding-bottom: 1.6em;
     padding-top: 1em;
 }
@@ -86,6 +87,7 @@ body {
 
 .labelFolder {
     margin: .8em 0;
+    text-align: center;
 }
 
 #hello, .labelFolder {
@@ -295,8 +297,8 @@ body {
     }
     
     #profilePicture:hover {
-        /* width: 101%;
-        padding: 1%; */
-        border-radius: 3%;
+        width: 99%;
+        padding: 2%;
+        /* border-radius: 1%; */
     }
 }
