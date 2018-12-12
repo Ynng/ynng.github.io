@@ -72,7 +72,7 @@ body {
 
 #profilePicture:hover {
     /* transform: rotateZ(-360deg); */
-    width: 100%;
+    width: 94%;
     padding: 1%;
     border-radius: 2.5%;
 }
@@ -99,7 +99,7 @@ body {
     position: relative;
     padding: .5em .75em;
     box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, .15);
-    transition: .2s ease-out;
+    transition: .3s ease-out;
 }
 
 .label>* {
