@@ -7,10 +7,28 @@
     font-family: 'Open Sans', 'Arial', 'ＭＳ Ｐゴシック', 'MS PGothic', 'メイリオ', Meiryo, "Hiragino Sans GB", sans-serif;
 }
 
-.smallText{
-    font-size: .675em;
-    color: rgba(204,204,204,.75);
+.section {
+    box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, .125);
+    margin: 1em 0;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
 }
+
+.label>.fas {
+    color: white;
+    font-size: 150%;
+    vertical-align: middle;
+}
+
+body {
+    background-image: url("../img/stripe\ background.png");
+}
+
+.smallText {
+    font-size: .675em;
+    color: rgba(204, 204, 204, .75);
+}
+
 #main-container {
     margin: 0 auto;
     max-width: 64em;
@@ -19,6 +37,12 @@
 #header {
     background: #3e2723;
     padding-top: 1.6em;
+}
+
+#about {
+    background: rgba(255, 255, 255, .95);
+    padding-bottom: 1.6em;
+    padding-top: 1em;
 }
 
 #hello>h1 {
@@ -43,10 +67,11 @@
     padding: 1.25em;
 }
 
-#labels{
-    margin:.8em 0;
+#labels {
+    margin: .8em 0;
 }
-#hello, #labels{
+
+#hello, #labels {
     padding-left: 0.75em;
     padding-right: 0.75em;
 }
@@ -89,22 +114,23 @@
     color: #ccc;
 }
 
-
-.section {
-    box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, .125);
-    margin: 1em 0;
-    padding-left: 0.75em;
-    padding-right: 0.75em;
-}
-
-.fas {
-    color: white;
+#aboutTitle>.fas {
+    color: #6a4f4b;
     font-size: 150%;
     vertical-align: middle;
+    margin:0.2em;
+    transform: rotateZ(-385deg);
+    transition-duration: .7s;
 }
 
-body {
-    background-image: url("../img/stripe\ background.png");
+#aboutTitle>.fas:hover{
+    transform: rotateZ(0deg);
+}
+
+#aboutTitle{
+    font-weight: 300;
+    line-height: 2em;
+    margin: 0;
 }
 
 @supports(display:grid) {
@@ -121,5 +147,19 @@ body {
     }
     #labels {
         grid-area: labels;
+    }
+    #about {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "title title" "desc links"
+    }
+    #aboutTitle-container {
+        grid-area: title;
+    }
+    #description {
+        grid-area: desc;
+    }
+    #link {
+        grid-area: links;
     }
 }
