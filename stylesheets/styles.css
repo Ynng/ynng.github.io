@@ -35,7 +35,7 @@ body {
 
 .smallText {
     font-size: .675em;
-    color: rgba(204, 204, 204, .75);
+    color: rgba(204, 204, 204, .5);
 }
 
 #main-container {
@@ -44,7 +44,7 @@ body {
 }
 
 #header {
-    background: #3e2723;
+    background: rgba(62, 39, 35, .975);
     padding-top: 1.6em;
 }
 
@@ -120,6 +120,10 @@ body {
     background: #6a4f4b;
 }
 
+.label:active {
+    background: #55403c;
+}
+
 .label::before {
     color: #fff;
     content: attr(alt);
@@ -188,6 +192,10 @@ body {
 
 .link:hover {
     background: rgba(0, 0, 0, .1);
+}
+
+.link:active {
+    background: rgba(0, 0, 0, .35);
 }
 
 .link>* {
@@ -309,8 +317,38 @@ body {
         padding: 2%;
         /* border-radius: 1%; */
     }
+    #profilePicture:active {
+        max-width: 110%;
+        width: 110%;
+        padding: 0%;
+        border-radius: 0%;
+    }
 
     .labelFolder{
         text-align: left;
+    }
+
+    #header {
+        background: rgba(62, 39, 35, .95);
+        transition: .3s ease-out;
+    }
+
+
+    #header:hover {
+        background: rgba(62, 39, 35, .98);
+    }
+    #header:active {
+        background: rgba(62, 39, 35, 1);
+    }
+
+    #about {
+        background: rgba(255, 255, 255, .9);
+        transition: .3s ease-out;
+    }
+    #about:hover {
+        background: rgba(255, 255, 255, .97);
+    }
+    #about:active {
+        background: rgba(255, 255, 255, 1);
     }
 }
