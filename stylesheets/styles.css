@@ -1,0 +1,237 @@
+* {
+    font-family: 'Open Sans', 'Arial', "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    text-decoration: none;
+}
+
+.japanese {
+    font-family: 'Open Sans', 'Arial', 'ＭＳ Ｐゴシック', 'MS PGothic', 'メイリオ', Meiryo, "Hiragino Sans GB", sans-serif;
+}
+
+.section {
+    box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, .125);
+    margin: 1em 0;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+}
+
+.label>.fas {
+    color: white;
+    font-size: 150%;
+    vertical-align: middle;
+}
+
+body {
+    background-image: url("../img/stripe\ background.png");
+}
+
+.smallText {
+    font-size: .675em;
+    color: rgba(204, 204, 204, .75);
+}
+
+#main-container {
+    margin: 0 auto;
+    max-width: 64em;
+}
+
+#header {
+    background: #3e2723;
+    padding-top: 1.6em;
+}
+
+#about {
+    background: rgba(255, 255, 255, .95);
+    padding-bottom: 1.6em;
+    padding-top: 1em;
+}
+
+#hello>h1 {
+    margin: 0;
+    font-weight: 300;
+    line-height: 1.6em;
+    color: #f5f5f5;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .25);
+}
+
+#profilePicture {
+    background: #f5f5f5;
+    border-radius: 50%;
+    box-sizing: content-box;
+    box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, .125);
+    display: block;
+    padding: 3%;
+    width: 94%;
+    transform: rotateZ(0deg);
+    transition: 1s ease-in-out;
+}
+
+#profilePicture:hover {
+    transform: rotateZ(-360deg);
+}
+
+#profilePicture-container {
+    padding: 1.25em;
+}
+
+#labels {
+    margin: .8em 0;
+}
+
+#hello, #labels {
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+}
+
+.label {
+    display: inline-block;
+    vertical-align: bottom;
+    font-weight: 300;
+    background: #22110b;
+    margin: 1.2em 0;
+    position: relative;
+    padding: .5em .75em;
+    box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, .15);
+    transition: .2s ease-out;
+}
+
+.label>* {
+    margin-right: .25em;
+}
+
+.label:hover {
+    background: #6a4f4b;
+}
+
+.label::before {
+    color: #fff;
+    content: attr(alt);
+    font-size: .6em;
+    left: 0;
+    top: -1.75em;
+    position: absolute;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .25);
+}
+
+.labelTitle {
+    color: #fff;
+}
+
+.labelContent {
+    color: #ccc;
+}
+
+#aboutTitle>.fas, .tag>.fas {
+    color: #6a4f4b;
+    vertical-align: middle;
+    transform: rotateZ(-23deg);
+    transition: .3s;
+}
+
+#aboutTitle>.fas {
+    margin: 0.2em;
+    font-size: 150%;
+}
+
+#aboutTitle>.fas:hover, .tag>.fas:hover {
+    transform: rotateZ(0deg);
+}
+
+#aboutTitle {
+    font-weight: 300;
+    line-height: 2em;
+    margin: 0;
+}
+
+.tag {
+    font-size: 0.75em;
+    margin-left:.5em;
+}
+
+#description>p{
+    border-left: 3px solid #6a4f4b;
+    line-height: 1.8em;
+    padding-left: 1em;
+}
+
+#links{
+    padding: 0;
+    margin: 0;
+}
+
+.link{
+    border-bottom: .15em solid rgba(0, 0, 0, .125);
+    display: block;
+    line-height: 1.2em;
+    margin:.4em auto;
+    padding: .4em;
+    position: relative;
+    width: 90%;
+    transition: .3s ease-out;
+}
+
+.link:hover{
+    background:rgba(0, 0, 0, .125);
+}
+
+.link>a{
+    display: block;
+}
+
+.link>a>*{
+    vertical-align: middle;
+}
+
+.link>a>.fas{
+    color: #6a4f4b;
+    font-size: 1.5em;
+    text-align: center;
+    width: 1.5em;
+}
+
+.linkName{
+    color: #222;
+}
+
+
+.linkLink{
+    color:#6a4f4b;
+    text-align: right;
+    right:.5em;
+    position: absolute;
+    bottom: .5em;
+    display: inline-block;
+}
+
+
+
+
+@supports(display:grid) {
+    #header {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-template-areas: "profilePic hello" "profilePic labels"
+    }
+    #profilePicture-container {
+        grid-area: profilePic;
+    }
+    #hello {
+        grid-area: hello;
+    }
+    #labels {
+        grid-area: labels;
+    }
+    #about {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "title title" "desc links"
+    }
+    #aboutTitle-container {
+        grid-area: title;
+    }
+    #description {
+        grid-area: desc;
+    }
+    #links {
+        grid-area: links;
+    }
+}
