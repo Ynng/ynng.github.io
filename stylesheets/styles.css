@@ -1,10 +1,9 @@
 * {
     font-family: 'Open Sans', 'Arial', "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
     text-decoration: none;
-    
 }
 
-body{
+body {
     font-size: 1em;
 }
 
@@ -50,6 +49,10 @@ body {
     padding-top: 1em;
 }
 
+ #hello {
+    text-align: center;
+} 
+
 #hello>h1 {
     margin: 0;
     font-weight: 300;
@@ -64,16 +67,16 @@ body {
     box-sizing: content-box;
     box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, .125);
     display: block;
-    padding: 3%;
-    width: 94%;
+    padding: 1.5%;
+    min-width: 48%;
+    max-width: 75%;
     transform: rotateZ(0deg);
     transition: .5s ease-in-out;
+    margin:auto;
 }
 
 #profilePicture:hover {
     /* transform: rotateZ(-360deg); */
-    width: 94%;
-    padding: 1%;
     border-radius: 2.5%;
 }
 
@@ -104,7 +107,7 @@ body {
 
 .label>* {
     margin-right: .25em;
-    vertical-align:middle;
+    vertical-align: middle;
 }
 
 .label:hover {
@@ -172,7 +175,6 @@ body {
     display: block;
     line-height: 1.2em;
     margin: 0 auto;
-    
     position: relative;
     width: 90%;
     transition: .3s ease-out;
@@ -226,7 +228,7 @@ body {
 @supports(display:grid) {
     #header {
         display: grid;
-        grid-template-areas: "hello" "profilePic" "labels"
+        grid-template-areas: "hello" "profilePic" "labels";
     }
     #profilePicture-container {
         grid-area: profilePic;
@@ -239,7 +241,7 @@ body {
     }
     #about {
         display: grid;
-        grid-template-areas: "title" "desc" "links"
+        grid-template-areas: "title" "desc" "links";
     }
     #aboutTitle-container {
         grid-area: title;
@@ -252,9 +254,9 @@ body {
     }
 }
 
-@media only screen and (min-width: 77rem) {
-	/* For PC: */
-	#header {
+@media only screen and (min-width: 50rem) {
+    /* For PC: */
+    #header {
         display: grid;
         grid-template-columns: 30% 70%;
         grid-template-areas: "profilePic hello" "profilePic labels"
@@ -281,5 +283,20 @@ body {
     }
     #links {
         grid-area: links;
+    }
+    #hello{
+        text-align: left;
+    }
+    #profilePicture {
+        padding: 3%;
+        width: 97%;
+        margin:0 auto;
+        max-width: 100%;
+    }
+    
+    #profilePicture:hover {
+        /* width: 101%;
+        padding: 1%; */
+        border-radius: 3%;
     }
 }
