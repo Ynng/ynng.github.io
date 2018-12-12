@@ -1,6 +1,11 @@
 * {
     font-family: 'Open Sans', 'Arial', "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
     text-decoration: none;
+    
+}
+
+body{
+    font-size: 1em;
 }
 
 .japanese {
@@ -14,7 +19,7 @@
     padding-right: 0.75em;
 }
 
-.label>.fas {
+.label>i {
     color: white;
     font-size: 150%;
     vertical-align: middle;
@@ -68,19 +73,19 @@ body {
 #profilePicture:hover {
     /* transform: rotateZ(-360deg); */
     width: 100%;
-    padding: 0%;
-    border-radius: 0%;
+    padding: 1%;
+    border-radius: 2.5%;
 }
 
 #profilePicture-container {
     padding: 1.25em;
 }
 
-#labels {
+.labelFolder {
     margin: .8em 0;
 }
 
-#hello, #labels {
+#hello, .labelFolder {
     padding-left: 0.75em;
     padding-right: 0.75em;
 }
@@ -99,6 +104,7 @@ body {
 
 .label>* {
     margin-right: .25em;
+    vertical-align:middle;
 }
 
 .label:hover {
@@ -108,7 +114,7 @@ body {
 .label::before {
     color: #fff;
     content: attr(alt);
-    font-size: .6em;
+    font-size: .5em;
     left: 0;
     top: -1.75em;
     position: absolute;
@@ -123,19 +129,19 @@ body {
     color: #ccc;
 }
 
-#aboutTitle>.fas, .tag>.fas {
+#aboutTitle>i, .tag>i {
     color: #6a4f4b;
     vertical-align: middle;
     transform: rotateZ(-23deg);
     transition: .3s;
 }
 
-#aboutTitle>.fas {
+#aboutTitle>i {
     margin: 0.2em;
     font-size: 150%;
 }
 
-#aboutTitle>.fas:hover, .tag>.fas:hover {
+#aboutTitle>i:hover, .tag>i:hover {
     transform: rotateZ(0deg);
 }
 
@@ -147,66 +153,75 @@ body {
 
 .tag {
     font-size: 0.75em;
-    margin-left:.5em;
+    margin-left: .5em;
 }
 
-#description>p{
+#description>p {
     border-left: 3px solid #6a4f4b;
     line-height: 1.8em;
     padding-left: 1em;
 }
 
-#links{
+#links {
     padding: 0;
     margin: 0;
 }
 
-.link{
+.link {
     border-bottom: .15em solid rgba(0, 0, 0, .125);
     display: block;
     line-height: 1.2em;
-    margin:.4em auto;
-    padding: .4em;
+    margin: 0 auto;
+    
     position: relative;
     width: 90%;
     transition: .3s ease-out;
 }
 
-.link:hover{
-    background:rgba(0, 0, 0, .125);
+.link:hover {
+    background: rgba(0, 0, 0, .1);
 }
 
-.link>a{
+.link>* {
     display: block;
+    padding: .8em;
 }
 
-.link>a>*{
+.link>*>* {
     vertical-align: middle;
 }
 
-.link>a>.fas{
+.link>*>i {
     color: #6a4f4b;
     font-size: 1.5em;
     text-align: center;
     width: 1.5em;
 }
 
-.linkName{
+.linkName {
     color: #222;
 }
 
-
-.linkLink{
-    color:#6a4f4b;
+.linkLink {
+    color: #6a4f4b;
     text-align: right;
-    right:.5em;
+    right: .5em;
     position: absolute;
-    bottom: .5em;
+    bottom: 1em;
     display: inline-block;
 }
 
+#footer {
+    background: #301810;
+    font-size: .9em;
+    line-height: 2em;
+    padding: .5em 1em;
+}
 
-
+#copyright {
+    color: #eee;
+    text-align: center;
+}
 
 @supports(display:grid) {
     #header {
