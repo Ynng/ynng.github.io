@@ -145,17 +145,11 @@ body {
 #aboutTitle>i, .tag>i {
     color: #6a4f4b;
     vertical-align: middle;
-    transform: rotateZ(-23deg);
-    transition: .3s;
 }
 
 #aboutTitle>i {
     margin: 0.2em;
     font-size: 150%;
-}
-
-#aboutTitle>i:hover, .tag>i:hover {
-    transform: rotateZ(0deg);
 }
 
 #aboutTitle {
@@ -350,5 +344,12 @@ body {
     }
     #about:active {
         background: rgba(255, 255, 255, 1);
+    }
+    #aboutTitle>i, .tag>i {
+        transform: rotateZ(-23deg);
+        transition: .3s;
+    }
+    #aboutTitle>i:hover, .tag>i:hover {
+        transform: rotateZ(0deg);
     }
 }
