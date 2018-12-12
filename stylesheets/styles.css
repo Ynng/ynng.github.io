@@ -60,7 +60,13 @@ body {
     box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, .125);
     display: block;
     padding: 3%;
-    width: 94%
+    width: 94%;
+    transform: rotateZ(0deg);
+    transition: 1s ease-in-out;
+}
+
+#profilePicture:hover {
+    transform: rotateZ(-360deg);
 }
 
 #profilePicture-container {
@@ -85,7 +91,7 @@ body {
     position: relative;
     padding: .5em .75em;
     box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, .15);
-    transition-duration: .6s;
+    transition: .2s ease-out;
 }
 
 .label>* {
@@ -114,24 +120,90 @@ body {
     color: #ccc;
 }
 
-#aboutTitle>.fas {
+#aboutTitle>.fas, .tag>.fas {
     color: #6a4f4b;
-    font-size: 150%;
     vertical-align: middle;
-    margin:0.2em;
-    transform: rotateZ(-385deg);
-    transition-duration: .7s;
+    transform: rotateZ(-23deg);
+    transition: .3s;
 }
 
-#aboutTitle>.fas:hover{
+#aboutTitle>.fas {
+    margin: 0.2em;
+    font-size: 150%;
+}
+
+#aboutTitle>.fas:hover, .tag>.fas:hover {
     transform: rotateZ(0deg);
 }
 
-#aboutTitle{
+#aboutTitle {
     font-weight: 300;
     line-height: 2em;
     margin: 0;
 }
+
+.tag {
+    font-size: 0.75em;
+    margin-left:.5em;
+}
+
+#description>p{
+    border-left: 3px solid #6a4f4b;
+    line-height: 1.8em;
+    padding-left: 1em;
+}
+
+#links{
+    padding: 0;
+    margin: 0;
+}
+
+.link{
+    border-bottom: .15em solid rgba(0, 0, 0, .125);
+    display: block;
+    line-height: 1.2em;
+    margin:.4em auto;
+    padding: .4em;
+    position: relative;
+    width: 90%;
+    transition: .3s ease-out;
+}
+
+.link:hover{
+    background:rgba(0, 0, 0, .125);
+}
+
+.link>a{
+    display: block;
+}
+
+.link>a>*{
+    vertical-align: middle;
+}
+
+.link>a>.fas{
+    color: #6a4f4b;
+    font-size: 1.5em;
+    text-align: center;
+    width: 1.5em;
+}
+
+.linkName{
+    color: #222;
+}
+
+
+.linkLink{
+    color:#6a4f4b;
+    text-align: right;
+    right:.5em;
+    position: absolute;
+    bottom: .5em;
+    display: inline-block;
+}
+
+
+
 
 @supports(display:grid) {
     #header {
@@ -159,7 +231,7 @@ body {
     #description {
         grid-area: desc;
     }
-    #link {
+    #links {
         grid-area: links;
     }
 }
