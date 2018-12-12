@@ -226,6 +226,36 @@ body {
 @supports(display:grid) {
     #header {
         display: grid;
+        grid-template-areas: "hello" "profilePic" "labels"
+    }
+    #profilePicture-container {
+        grid-area: profilePic;
+    }
+    #hello {
+        grid-area: hello;
+    }
+    #labels {
+        grid-area: labels;
+    }
+    #about {
+        display: grid;
+        grid-template-areas: "title" "desc" "links"
+    }
+    #aboutTitle-container {
+        grid-area: title;
+    }
+    #description {
+        grid-area: desc;
+    }
+    #links {
+        grid-area: links;
+    }
+}
+
+@media only screen and (min-width: 77rem) {
+	/* For PC: */
+	#header {
+        display: grid;
         grid-template-columns: 30% 70%;
         grid-template-areas: "profilePic hello" "profilePic labels"
     }
@@ -241,7 +271,7 @@ body {
     #about {
         display: grid;
         grid-template-columns: 50% 50%;
-        grid-template-areas: "title title" "desc links"
+        grid-template-areas: "title title" "desc links";
     }
     #aboutTitle-container {
         grid-area: title;
