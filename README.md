@@ -1,6 +1,6 @@
-ynng.github.io
+Ynng's Website
 ======
 
-Where I experiments with html, css, js, git bash and whatever I'm curious about
+Where I experiments with html, css, js and whatever I used in this repo
 
-Also serves as my personal website
+And my personal website

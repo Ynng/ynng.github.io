@@ -12,6 +12,10 @@ h1{
     font-size: 1.5em;
 }
 
+.alignRight {
+    text-align: right;
+} 
+
 .japanese {
     font-family: 'Open Sans', 'Arial', 'ＭＳ Ｐゴシック', 'MS PGothic', 'メイリオ', Meiryo, "Hiragino Sans GB", sans-serif;
 }
@@ -81,8 +85,7 @@ body {
 }
 
 #profilePicture:hover {
-    /* transform: rotateZ(-360deg); */
-    border-radius: 2.5%;
+    background: #313131;
 }
 
 #profilePicture-container {
@@ -163,7 +166,8 @@ body {
     margin-left: .5em;
 }
 
-#description>p {
+
+#description>* {
     border-left: 3px solid #6a4f4b;
     line-height: 1.8em;
     padding-left: 1em;
@@ -307,15 +311,9 @@ body {
     }
     
     #profilePicture:hover {
-        width: 99%;
-        padding: 2%;
+        /* width: 99%;
+        padding: 2%; */
         /* border-radius: 1%; */
-    }
-    #profilePicture:active {
-        max-width: 110%;
-        width: 110%;
-        padding: 0%;
-        border-radius: 0%;
     }
 
     .labelFolder{
