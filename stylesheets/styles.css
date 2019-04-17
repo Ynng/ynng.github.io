@@ -5,16 +5,16 @@
 
 body {
     font-size: 1em;
-    margin:0;
+    margin: 0;
 }
 
-h1{
+h1 {
     font-size: 1.5em;
 }
 
 .alignRight {
     text-align: right;
-} 
+}
 
 .japanese {
     font-family: 'Open Sans', 'Arial', 'ＭＳ Ｐゴシック', 'MS PGothic', 'メイリオ', Meiryo, "Hiragino Sans GB", sans-serif;
@@ -48,19 +48,19 @@ body {
 }
 
 #header {
-    background: rgba(62, 39, 35, .975);
+    background: rgba(62, 39, 35, 1);
     padding-top: 1.6em;
 }
 
 #about {
-    background: rgba(255, 255, 255, .97);
+    background: rgb(255, 250, 250,1);
     padding-bottom: 1.6em;
     padding-top: 1em;
 }
 
- #hello {
+#hello {
     text-align: center;
-} 
+}
 
 #hello>h1 {
     margin: 0;
@@ -81,11 +81,7 @@ body {
     max-width: 75%;
     transform: rotateZ(0deg);
     transition: .5s ease-in-out;
-    margin:auto;
-}
-
-#profilePicture:hover {
-    background: #313131;
+    margin: auto;
 }
 
 #profilePicture-container {
@@ -165,7 +161,6 @@ body {
     font-size: 0.75em;
     margin-left: .5em;
 }
-
 
 #description>* {
     border-left: 3px solid #6a4f4b;
@@ -268,8 +263,7 @@ body {
 
 @media only screen and (min-width: 50rem) {
     /* For PC: */
-
-    h1{
+    h1 {
         font-size: 2em;
     }
     #header {
@@ -300,48 +294,20 @@ body {
     #links {
         grid-area: links;
     }
-    #hello{
+    #hello {
         text-align: left;
     }
     #profilePicture {
         padding: 3%;
         width: 97%;
-        margin:0 auto;
+        margin: 0 auto;
         max-width: 100%;
     }
-    
     #profilePicture:hover {
-        /* width: 99%;
-        padding: 2%; */
-        /* border-radius: 1%; */
-    }
-
-    .labelFolder{
+        background: #acacac;
+    }    
+    .labelFolder {
         text-align: left;
-    }
-
-    #header {
-        background: rgba(62, 39, 35, .95);
-        transition: .3s ease-out;
-    }
-
-
-    #header:hover {
-        background: rgba(62, 39, 35, .98);
-    }
-    #header:active {
-        background: rgba(62, 39, 35, 1);
-    }
-
-    #about {
-        background: rgba(255, 255, 255, .9);
-        transition: .3s ease-out;
-    }
-    #about:hover {
-        background: rgba(255, 255, 255, .97);
-    }
-    #about:active {
-        background: rgba(255, 255, 255, 1);
     }
     #aboutTitle>i, .tag>i {
         transform: rotateZ(-23deg);
