@@ -6,7 +6,7 @@
 }
 
 body {
-    background: #251B17;
+    background: rgb(45, 43, 51);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -25,7 +25,7 @@ a {
 
 .card {
     width: 80vw;
-    background: rgb(73, 58, 61);
+    background: rgb(63, 67, 87);
     display: block;
     border-radius: 1em;
     margin: 1em auto;
@@ -85,7 +85,7 @@ a {
     display: inline-block;
     vertical-align: bottom;
     font-weight: 300;
-    background: #ABB3C3;
+    background: rgb(103, 105, 116);
     margin: 1.2em 0;
     position: relative;
     padding: .5em .75em;
@@ -99,7 +99,7 @@ a {
 }
 
 .label:hover {
-    background: #1A1C1E;
+    background: rgb(195, 214, 233);
 }
 
 .label:active {
@@ -112,19 +112,19 @@ a {
 }
 
 .label>i, .labelTitle {
-    color: #292119;
+    color: #ffffff;
 }
 
 .label:hover>.labelTitle, .label:hover>i {
-    color: #DFD0BC;
+    color: rgb(36, 36, 46);
 }
 
 .labelContent {
-    color: #3C2C1F;
+    color: rgb(214, 214, 214);
 }
 
 .label:hover>.labelContent {
-    color: #A79B8C;
+    color: rgb(39, 39, 39);
 }
 
 #footer {
