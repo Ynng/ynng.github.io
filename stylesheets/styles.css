@@ -148,9 +148,9 @@ a {
     text-align: center;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 75rem) {
     /* For PC: */
-    card {
+    .card {
         width: auto;
     }
     .card.right {
