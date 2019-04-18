@@ -24,12 +24,13 @@ a {
 }
 
 .card {
+    width: 80vw;
     background: rgb(73, 58, 61);
     display: block;
     border-radius: 1em;
     margin: 1em auto;
     max-width: 64em;
-    min-width: 25em;
+    min-width: 20em;
     box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, .125);
     padding-top: 1.6em;
     padding-left: 0.75em;
@@ -149,6 +150,9 @@ a {
 
 @media only screen and (min-width: 50rem) {
     /* For PC: */
+    card {
+        width: auto;
+    }
     .card.right {
         text-align: right;
     }
