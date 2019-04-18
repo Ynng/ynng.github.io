@@ -1,113 +1,95 @@
+/* Imports */
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
 * {
-    font-family: 'Open Sans', 'Arial', "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-    text-decoration: none;
+    font-family: 'Quicksand', 'Arial', "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
 
 body {
-    font-size: 1em;
-    margin: 0;
+    background: #251B17;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    margin: 7.5em 0;
 }
 
-h1 {
-    font-size: 1.5em;
-}
-
-.alignRight {
-    text-align: right;
+a {
+    text-decoration: none;
 }
 
 .japanese {
-    font-family: 'Open Sans', 'Arial', 'ＭＳ Ｐゴシック', 'MS PGothic', 'メイリオ', Meiryo, "Hiragino Sans GB", sans-serif;
+    font-family: 'Quicksand', 'Arial', 'ＭＳ Ｐゴシック', 'MS PGothic', 'メイリオ', Meiryo, "Hiragino Sans GB", sans-serif;
 }
 
-.section {
+.card {
+    background: rgb(73, 58, 61);
+    display: block;
+    border-radius: 1em;
+    margin: 1em auto;
+    max-width: 64em;
+    min-width: 25em;
     box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, .125);
-    margin: 1em 0;
+    padding-top: 1.6em;
     padding-left: 0.75em;
     padding-right: 0.75em;
 }
 
-.label>i {
-    color: white;
-    font-size: 150%;
-    vertical-align: middle;
-}
-
-body {
-    background-image: url("../img/stripe\ background.png");
-}
-
 .smallText {
     font-size: .675em;
-    color: rgba(204, 204, 204, .5);
-}
-
-#main-container {
-    margin: 0 auto;
-    max-width: 64em;
-}
-
-#header {
-    background: rgba(62, 39, 35, 1);
-    padding-top: 1.6em;
 }
 
 #about {
-    background: rgb(255, 250, 250,1);
+    background: rgb(255, 255, 255);
     padding-bottom: 1.6em;
     padding-top: 1em;
 }
 
-#hello {
-    text-align: center;
-}
-
-#hello>h1 {
+.title {
     margin: 0;
     font-weight: 300;
+    font-size: 3em;
     line-height: 1.6em;
+    text-align: center;
     color: #f5f5f5;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, .25);
 }
 
-#profilePicture {
-    background: #f5f5f5;
-    border-radius: 50%;
-    box-sizing: content-box;
-    box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, .125);
-    display: block;
-    padding: 1.5%;
-    min-width: 48%;
-    max-width: 75%;
-    transform: rotateZ(0deg);
-    transition: .5s ease-in-out;
-    margin: auto;
+.image, .content {
+    display: inline-block;
+    vertical-align: top;
 }
 
-#profilePicture-container {
-    padding: 1.25em;
+.image {
+    box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, .125);
+    margin: 1em auto;
+    border-radius: 0.75em;
+    width: 100%;
+}
+
+.content {
+    width: 100%;
 }
 
 .labelFolder {
     margin: .8em 0;
     text-align: center;
-}
-
-#hello, .labelFolder {
     padding-left: 0.75em;
     padding-right: 0.75em;
 }
 
 .label {
+    border-radius: .5em;
     display: inline-block;
     vertical-align: bottom;
     font-weight: 300;
-    background: #22110b;
+    background: #ABB3C3;
     margin: 1.2em 0;
     position: relative;
     padding: .5em .75em;
     box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, .15);
-    transition: .3s ease-out;
+    transition: .2s ease-out;
 }
 
 .label>* {
@@ -116,11 +98,38 @@ body {
 }
 
 .label:hover {
-    background: #6a4f4b;
+    background: #1A1C1E;
 }
 
 .label:active {
-    background: #55403c;
+    background: #28292D;
+}
+
+.label>i {
+    font-size: 150%;
+    vertical-align: middle;
+}
+
+.label>i, .labelTitle {
+    color: #292119;
+}
+
+.label:hover>.labelTitle, .label:hover>i {
+    color: #DFD0BC;
+}
+
+.labelContent {
+    color: #3C2C1F;
+}
+
+.label:hover>.labelContent {
+    color: #A79B8C;
+}
+
+#footer {
+    font-size: .9em;
+    line-height: 2em;
+    padding: .5em 1em;
 }
 
 .label::before {
@@ -133,187 +142,29 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, .25);
 }
 
-.labelTitle {
-    color: #fff;
-}
-
-.labelContent {
-    color: #ccc;
-}
-
-#aboutTitle>i, .tag>i {
-    color: #6a4f4b;
-    vertical-align: middle;
-}
-
-#aboutTitle>i {
-    margin: 0.2em;
-    font-size: 150%;
-}
-
-#aboutTitle {
-    font-weight: 300;
-    line-height: 2em;
-    margin: 0;
-}
-
-.tag {
-    font-size: 0.75em;
-    margin-left: .5em;
-}
-
-#description>* {
-    border-left: 3px solid #6a4f4b;
-    line-height: 1.8em;
-    padding-left: 1em;
-}
-
-#links {
-    padding: 0;
-    margin: 0;
-}
-
-.link {
-    border-bottom: .15em solid rgba(0, 0, 0, .125);
-    display: block;
-    line-height: 1.2em;
-    margin: 0 auto;
-    position: relative;
-    width: 90%;
-    transition: .3s ease-out;
-}
-
-.link:hover {
-    background: rgba(0, 0, 0, .1);
-}
-
-.link:active {
-    background: rgba(0, 0, 0, .35);
-}
-
-.link>* {
-    display: block;
-    padding: .8em;
-}
-
-.link>*>* {
-    vertical-align: middle;
-}
-
-.link>*>i {
-    color: #6a4f4b;
-    font-size: 1.5em;
-    text-align: center;
-    width: 1.5em;
-}
-
-.linkName {
-    color: #222;
-}
-
-.linkLink {
-    color: #6a4f4b;
-    text-align: right;
-    right: .5em;
-    position: absolute;
-    bottom: 1em;
-    display: inline-block;
-}
-
-#footer {
-    background: #301810;
-    font-size: .9em;
-    line-height: 2em;
-    padding: .5em 1em;
-}
-
 #copyright {
     color: #eee;
     text-align: center;
 }
 
-@supports(display:grid) {
-    #header {
-        display: grid;
-        grid-template-areas: "hello" "profilePic" "labels";
-    }
-    #profilePicture-container {
-        grid-area: profilePic;
-    }
-    #hello {
-        grid-area: hello;
-    }
-    #labels {
-        grid-area: labels;
-    }
-    #about {
-        display: grid;
-        grid-template-areas: "title" "desc" "links";
-    }
-    #aboutTitle-container {
-        grid-area: title;
-    }
-    #description {
-        grid-area: desc;
-    }
-    #links {
-        grid-area: links;
-    }
-}
-
 @media only screen and (min-width: 50rem) {
     /* For PC: */
-    h1 {
-        font-size: 2em;
+    .card.right {
+        text-align: right;
     }
-    #header {
-        display: grid;
-        grid-template-columns: 30% 70%;
-        grid-template-areas: "profilePic hello" "profilePic labels"
-    }
-    #profilePicture-container {
-        grid-area: profilePic;
-    }
-    #hello {
-        grid-area: hello;
-    }
-    #labels {
-        grid-area: labels;
-    }
-    #about {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-areas: "title title" "desc links";
-    }
-    #aboutTitle-container {
-        grid-area: title;
-    }
-    #description {
-        grid-area: desc;
-    }
-    #links {
-        grid-area: links;
-    }
-    #hello {
+    .card.left {
         text-align: left;
     }
-    #profilePicture {
-        padding: 3%;
-        width: 97%;
-        margin: 0 auto;
-        max-width: 100%;
-    }
-    #profilePicture:hover {
-        background: #acacac;
-    }    
     .labelFolder {
-        text-align: left;
+        text-align: right;
     }
-    #aboutTitle>i, .tag>i {
-        transform: rotateZ(-23deg);
-        transition: .3s;
+    .image {
+        box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, .125);
+        margin: 1em auto;
+        border-radius: 0.75em;
+        width: 33%;
     }
-    #aboutTitle>i:hover, .tag>i:hover {
-        transform: rotateZ(0deg);
+    .content {
+        width: 66%;
     }
 }
