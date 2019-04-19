@@ -24,13 +24,13 @@ a {
 }
 
 .card {
-    width: 80vw;
     background: rgb(63, 67, 87);
+    text-align: center;
     display: block;
     border-radius: 1em;
     margin: 1em auto;
-    max-width: 64em;
     min-width: 20em;
+    max-width: 85vw;
     box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, .125);
     padding-top: 1.6em;
     padding-left: 0.75em;
@@ -65,8 +65,9 @@ a {
 .image {
     box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, .125);
     margin: 1em auto;
-    border-radius: 0.75em;
-    width: 100%;
+    border-radius: 1em;
+    width:100%;
+    max-width: 30em;
 }
 
 .content {
@@ -81,7 +82,7 @@ a {
 }
 
 .label {
-    border-radius: .5em;
+    border-radius: 0.25em;
     display: inline-block;
     vertical-align: bottom;
     font-weight: 300;
@@ -149,10 +150,10 @@ a {
     text-align: center;
 }
 
-@media only screen and (min-width: 75rem) {
+@media only screen and (min-width: 50rem) {
     /* For PC: */
     .card {
-        width: auto;
+        max-width: 75em;
     }
     .card.right {
         text-align: right;
@@ -160,13 +161,8 @@ a {
     .card.left {
         text-align: left;
     }
-    .labelFolder {
-        text-align: right;
-    }
     .image {
-        box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, .125);
-        margin: 1em auto;
-        border-radius: 0.75em;
+        border-radius: 0.5em;
         width: 33%;
     }
     .content {
