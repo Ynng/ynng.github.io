@@ -74,6 +74,18 @@ a {
     width: 100%;
 }
 
+.content>p {
+    color:rgb(208, 218, 235);
+    text-align: left;
+}
+
+.content>h3 {
+    width: 100%;
+    font-size:1.5em;
+    color:rgb(242, 246, 255);
+    text-align: left;
+}
+
 .labelFolder {
     margin: .8em 0;
     text-align: center;
@@ -153,13 +165,13 @@ a {
 @media only screen and (min-width: 50rem) {
     /* For PC: */
     .card {
-        max-width: 75em;
+        width: 75em;
     }
-    .card.right {
-        text-align: right;
+    .card.right>.content {
+        float: right;
     }
-    .card.left {
-        text-align: left;
+    .card.left>.content {
+        float: left;
     }
     .image {
         border-radius: 0.5em;
