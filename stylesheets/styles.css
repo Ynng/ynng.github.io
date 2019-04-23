@@ -18,32 +18,17 @@ a {
     text-decoration: none;
 }
 
-.japanese {
-    font-family: 'Quicksand', 'Arial', 'ＭＳ Ｐゴシック', 'MS PGothic', 'メイリオ', Meiryo, "Hiragino Sans GB", sans-serif;
-}
-
-.card {
-    background: rgb(63, 67, 87);
-    text-align: center;
-    display: block;
-    border-radius: 1em;
-    margin: 1em auto;
-    min-width: 20em;
-    max-width: 85vw;
-    box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, .125);
-    padding-top: 1.6em;
-    padding-left: 0.75em;
-    padding-right: 0.75em;
+.alignRight{
+    margin:0;
+    text-align: right !important; 
 }
 
 .smallText {
     font-size: .675em;
 }
 
-#about {
-    background: rgb(255, 255, 255);
-    padding-bottom: 1.6em;
-    padding-top: 1em;
+.japanese {
+    font-family: 'Quicksand', 'Arial', 'ＭＳ Ｐゴシック', 'MS PGothic', 'メイリオ', Meiryo, "Hiragino Sans GB", sans-serif;
 }
 
 .title {
@@ -64,9 +49,26 @@ h2.title {
     font-weight: bold;
 }
 
-.image, .content {
-    display: inline-block;
-    vertical-align: top;
+.card {
+    background: rgb(63, 67, 87);
+    text-align: center;
+    display: block;
+    border-radius: 1em;
+    margin: 1em auto;
+    min-width: 20em;
+    max-width: 85vw;
+    box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, .125);
+    padding: 1.6em 0.75em;
+}
+
+.card.content-only {
+    padding: 1em 0.75em;
+}
+
+#about {
+    background: rgb(255, 255, 255);
+    padding-bottom: 1.6em;
+    padding-top: 1em;
 }
 
 .image {
@@ -85,6 +87,11 @@ h2.title {
     font-size: 1.075em;
     color:rgb(208, 218, 235);
     text-align: left;
+}
+
+.image, .content {
+    display: inline-block;
+    vertical-align: top;
 }
 
 .heading>* {
@@ -180,10 +187,6 @@ h2.title {
     text-align: center;
 }
 
-.alignRight{
-    text-align: right !important; 
-}
-
 @media only screen and (min-width: 50rem) {
     /* For PC: */
     .card {
@@ -212,9 +215,9 @@ h2.title {
     }
     .image {
         border-radius: 0.5em;
-        width: 49%;
+        width: 45%;
     }
     .content {
-        width: 50%;
+        width: 54%;
     }
 }
