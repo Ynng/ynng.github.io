@@ -12,7 +12,6 @@ body {
     flex-direction: column;
     justify-content: center;
     height: 100%;
-    margin: 7.5em 0;
 }
 
 a {
@@ -50,11 +49,19 @@ a {
 .title {
     margin: 0;
     font-weight: 300;
-    font-size: 3em;
     line-height: 1.6em;
     text-align: center;
-    color: #f5f5f5;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, .25);
+}
+
+h1.title {
+    font-size: 3em;
+    color: #e7e7e7;
+}
+h2.title {
+    font-size: 1.5em;
+    color: #a2a2a2;
+    font-weight: bold;
 }
 
 .image, .content {
@@ -75,15 +82,26 @@ a {
 }
 
 .content>p {
+    font-size: 1.075em;
     color:rgb(208, 218, 235);
     text-align: left;
 }
 
-.content>h3 {
+.heading>* {
+    display: inline-block;
     width: 100%;
-    font-size:1.5em;
+    margin: auto 0;
+    font-size:2em;
     color:rgb(242, 246, 255);
     text-align: left;
+}
+
+.heading>*>i {
+    transform: rotateZ(-23deg);
+    transition: .3s;
+}
+.card:hover>.heading>*>i {
+    transform: rotateZ(0deg);
 }
 
 .labelFolder {
@@ -162,10 +180,20 @@ a {
     text-align: center;
 }
 
+.alignRight{
+    text-align: right !important; 
+}
+
 @media only screen and (min-width: 50rem) {
     /* For PC: */
     .card {
         width: 75em;
+    }
+    .card.content-only {
+        width: 50em;
+    }
+    .card.content-only>.content {
+        width: 100%;
     }
     .card.right>.content {
         float: right;
@@ -173,11 +201,20 @@ a {
     .card.left>.content {
         float: left;
     }
+    .card.right>.heading>* {
+        text-align: right;
+    }
+    .card.left>.heading>* {
+        text-align: left;
+    }
+    body{
+        margin: 7.5em 0;
+    }
     .image {
         border-radius: 0.5em;
-        width: 33%;
+        width: 49%;
     }
     .content {
-        width: 66%;
+        width: 50%;
     }
 }
