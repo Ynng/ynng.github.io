@@ -1,24 +1,4 @@
-/* Imports */
-
-@import url('https://fonts.googleapis.com/css?family=Quicksand');
-* {
-    font-family: 'Quicksand', 'Arial', "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-}
-
-body {
-    background: rgb(45, 43, 51);
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 90vh;
-    margin:5vh 0;
-    transition: 0.2s cubic-bezier(0.06, 0.35, 0.43, 0.84);
-}
-
-a {
-    text-decoration: none;
-}
+/* General styling/Mobile styling */
 
 .alignRight{
     margin:0;
@@ -31,6 +11,22 @@ a {
 
 .japanese {
     font-family: 'Quicksand', 'Arial', 'ＭＳ Ｐゴシック', 'MS PGothic', 'メイリオ', Meiryo, "Hiragino Sans GB", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background: rgb(45, 43, 51);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 90vh;
+    margin:5vh 0;
+    font-family: 'Quicksand', 'Arial', "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    transition: 0.2s cubic-bezier(0.06, 0.35, 0.43, 0.84);
 }
 
 .title {
@@ -96,7 +92,7 @@ h2.title {
     vertical-align: top;
 }
 
-.heading>* {
+.heading {
     display: inline-block;
     width: 100%;
     margin: auto 0;
@@ -105,12 +101,12 @@ h2.title {
     text-align: left;
 }
 
-.heading>*>i {
+.heading>i {
     transform: rotateZ(-23deg);
     transition: .3s;
 }
 
-.card:hover>.heading>*>i {
+.card:hover>.heading>i {
     transform: rotateZ(0deg);
     transition: .3s;
 }
@@ -148,17 +144,18 @@ h2.title {
     background: rgb(234, 244, 255);
 }
 
-.label>* {
+.label span,
+.label i {
     margin-right: .25em;
 }
 
-.label>i {
-    font-size: 150%;
-    vertical-align: middle;
+.labelTitle {
+    color: #ffffff;
 }
 
-.label>i, .labelTitle {
-    color: #ffffff;
+.labelTitle>i {
+    font-size: 150%;
+    vertical-align: middle;
 }
 
 .label:hover>.labelTitle, .label:hover>i {
@@ -197,8 +194,9 @@ h2.title {
     text-align: center;
 }
 
+/* RESPONSIVENESS */
+
 @media only screen and (min-width: 60rem) {
-    /* For PC: */
     .card {
         width: 75em;
     }
@@ -214,10 +212,10 @@ h2.title {
     .card.left>.content {
         float: left;
     }
-    .card.right>.heading>* {
+    .card.right>.heading {
         text-align: right;
     }
-    .card.left>.heading>* {
+    .card.left>.heading {
         text-align: left;
     }
     .image {
