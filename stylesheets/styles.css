@@ -17,6 +17,14 @@ a {
     text-decoration: none;
 }
 
+.preload *, .preload {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+  }
+
 body {
     background: rgb(45, 43, 51);
     position: relative;
@@ -127,9 +135,6 @@ h2.title {
     position: relative;
     padding: .5em .75em;
     box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, .15);
-}
-
-.label{
     background: rgb(103, 105, 116);
     transition: .2s ease-out;
 }
