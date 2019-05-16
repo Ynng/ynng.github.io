@@ -1,8 +1,8 @@
 /* General styling/Mobile styling */
 
-.alignRight{
-    margin:0;
-    text-align: right !important; 
+.alignRight {
+    margin: 0;
+    text-align: right !important;
 }
 
 .smallText {
@@ -23,17 +23,20 @@ a {
     -ms-transition: none !important;
     -o-transition: none !important;
     transition: none !important;
-  }
+}
 
-body {
+body{
+    font-family: 'Quicksand', 'Arial', "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
     background: rgb(45, 43, 51);
-    position: relative;
+    margin:0;
+}
+
+#main-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     min-height: 90vh;
-    margin:5vh 0;
-    font-family: 'Quicksand', 'Arial', "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    margin: 5vh 0;
     transition: 0.2s cubic-bezier(0.06, 0.35, 0.43, 0.84);
 }
 
@@ -49,6 +52,7 @@ h1.title {
     font-size: 3em;
     color: #e7e7e7;
 }
+
 h2.title {
     font-size: 1.5em;
     color: #a2a2a2;
@@ -81,8 +85,9 @@ h2.title {
     box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, .125);
     margin: 1em auto;
     border-radius: 1em;
-    width:100%;
+    width: 100%;
     max-width: 30em;
+    cursor: pointer;
 }
 
 .content {
@@ -91,7 +96,7 @@ h2.title {
 
 .content>p {
     font-size: 1.075em;
-    color:rgb(208, 218, 235);
+    color: rgb(208, 218, 235);
     text-align: left;
 }
 
@@ -104,8 +109,8 @@ h2.title {
     display: inline-block;
     width: 100%;
     margin: auto 0;
-    font-size:2em;
-    color:rgb(242, 246, 255);
+    font-size: 2em;
+    color: rgb(242, 246, 255);
     text-align: left;
 }
 
@@ -118,6 +123,45 @@ h2.title {
     transform: rotateZ(0deg);
     transition: .3s;
 }
+
+/* Overlay */
+
+#overlay {
+    width: 100vw;
+    height: 120vh;
+    background: rgba(0, 0, 0, 0);
+    z-index: 10;
+    position: fixed;
+    overflow-y: scroll;
+    left: 0;
+    top: 100vh;
+    transition: .5s cubic-bezier(0.4, 1.49, 0.74, 0.96);   
+}
+
+#overlay-container{
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#overlay-image{
+    box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, .125);
+    margin: 1em auto;
+    border-radius: 1em;
+    width: 80%;
+}
+
+#overlay-text{
+    color:#ffffff;
+}
+
+.noscroll{
+    overflow-y:hidden
+}
+
+/* Label stuffs */
 
 .labelFolder {
     margin: .8em 0;
@@ -140,7 +184,7 @@ h2.title {
 }
 
 .label:hover {
-    border-radius: 0 0.25em 0.25em 0.25em   ;
+    border-radius: 0 0.25em 0.25em 0.25em;
     background: rgb(195, 214, 233);
     transition: .25s ease-out;
 }
@@ -150,8 +194,7 @@ h2.title {
     background: rgb(234, 244, 255);
 }
 
-.label span,
-.label i {
+.label span, .label i {
     margin-right: .25em;
 }
 
@@ -195,12 +238,13 @@ h2.title {
     transition: .25s cubic-bezier(0.21, 0.77, 0.53, 0.92)
 }
 
+/* Footer */
+
 #footer {
     font-size: .9em;
     line-height: 2em;
     padding: .5em 1em;
 }
-
 
 #copyright {
     color: #eee;
@@ -238,9 +282,9 @@ h2.title {
     .content {
         width: 54%;
     }
-    body{
+    #main-container {
         transition: 0.2s cubic-bezier(0.06, 0.35, 0.43, 0.84);
         min-height: 80vh;
-        margin:10vh 0;
+        margin: 10vh 0;
     }
 }
