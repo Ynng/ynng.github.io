@@ -134,8 +134,7 @@ h2.title {
     position: fixed;
     overflow-y: scroll;
     left: 0;
-    top: 100vh;
-    transition: .5s cubic-bezier(0.4, 1.49, 0.74, 0.96);   
+    top: 120vh;
 }
 
 #overlay-container{
@@ -154,9 +153,14 @@ h2.title {
 }
 
 #overlay-text{
+    font-size: 1.5em;
+    line-height: 1.5em;
     color:#ffffff;
 }
 
+#overlay-text a{
+    color:rgb(132, 121, 255);
+}
 .noscroll{
     overflow-y:hidden
 }
