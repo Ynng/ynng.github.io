@@ -25,10 +25,10 @@ a {
     transition: none !important;
 }
 
-body{
+body {
     font-family: 'Quicksand', 'Arial', "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
     background: rgb(45, 43, 51);
-    margin:0;
+    margin: 0;
 }
 
 #main-container {
@@ -127,17 +127,20 @@ h2.title {
 /* Overlay */
 
 #overlay {
+    visibility: hidden;
+    opacity: 0;
     width: 100vw;
-    height: 120vh;
-    background: rgba(0, 0, 0, 0);
+    height: 100vh;
+    background: rgb(63, 67, 87);
     z-index: 10;
     position: fixed;
     overflow-y: scroll;
     left: 0;
-    top: 120vh;
+    top: 0;
 }
 
-#overlay-container{
+#overlay-container {
+    padding: 1em;
     height: 100vh;
     display: flex;
     text-align: center;
@@ -145,24 +148,25 @@ h2.title {
     justify-content: center;
 }
 
-#overlay-image{
+#overlay-image {
     box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, .125);
     margin: 1em auto;
     border-radius: 1em;
-    width: 80%;
+    width: 100%;
 }
 
-#overlay-text{
+#overlay-text {
     font-size: 1.5em;
     line-height: 1.5em;
-    color:#ffffff;
+    color: #ffffff;
 }
 
-#overlay-text a{
-    color:rgb(132, 121, 255);
+#overlay-text a {
+    color: rgb(132, 121, 255);
 }
-.noscroll{
-    overflow-y:hidden
+
+.noscroll {
+    overflow-y: hidden
 }
 
 /* Label stuffs */
@@ -227,9 +231,9 @@ h2.title {
 }
 
 .label::before {
-    color: #fff;
+    color: rgb(198, 198, 198);
     content: attr(alt);
-    font-size: .4em;
+    font-size: .75em;
     left: 0;
     top: -1.75em;
     position: absolute;
@@ -238,8 +242,9 @@ h2.title {
 }
 
 .label:hover::before {
-    font-size: .75em;
-    transition: .25s cubic-bezier(0.21, 0.77, 0.53, 0.92)
+    color: #fff;
+    font-weight: bold;
+    transition: .3s cubic-bezier(0.21, 0.77, 0.53, 0.92)
 }
 
 /* Footer */
@@ -258,6 +263,9 @@ h2.title {
 /* RESPONSIVENESS */
 
 @media only screen and (min-width: 60rem) {
+    #overlay-image {
+        width:80vw;
+    }
     .card {
         width: 75em;
     }
@@ -266,6 +274,12 @@ h2.title {
     }
     .card.content-only>.content {
         width: 100%;
+    }
+    .card.content-only.left .labelFolder {
+        text-align: left;
+    }
+    .card.content-only.right .labelFolder {
+        text-align: right;
     }
     .card.right>.content {
         float: right;

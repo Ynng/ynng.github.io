@@ -8,20 +8,18 @@ window.onload = function () {
 }
 
 function openImageOverlay() {
-    document.getElementById("overlay").style.transition= ".5s cubic-bezier(0.4, 1.4, 0.74, 0.96)"
+    document.getElementById("overlay").style.transition= ".3s cubic-bezier(0.1, 1, 0.74, 0.96)"
+    document.getElementById("overlay").style.visibility="visible"
+    document.getElementById("overlay").style.opacity = "1"
     document.getElementById("overlay").style.top = "0"
     document.getElementById("overlay-image").src = this.src
     document.getElementById("overlay-text").innerHTML = this.alt
     document.getElementById("body").classList.add("noscroll")
-    setTimeout(function () { 
-        document.getElementById("overlay").style.backgroundColor = "rgb(45, 43, 51,0.8)" 
-        }, 350);
-
 }
 
 function closeImageOverlay() {
-    document.getElementById("overlay").style.transition = ".4s cubic-bezier(1,-0.4, 1, 0.65)"
-    document.getElementById("overlay").style.backgroundColor = "rgba(0, 0, 0, 0)"
-    document.getElementById("overlay").style.top = "120vh"
+    document.getElementById("overlay").style.transition = ".25s cubic-bezier(0, 0, 1, 0.15)"
+    document.getElementById("overlay").style.opacity = "0"
+    document.getElementById("overlay").style.visibility="hidden"    
     document.getElementById("body").classList.remove("noscroll")
 }
