@@ -140,12 +140,13 @@ h2.title {
 }
 
 .label:hover {
-    transition: .2s ease-out;
+    border-radius: 0 0.25em 0.25em 0.25em   ;
     background: rgb(195, 214, 233);
+    transition: .25s ease-out;
 }
 
 .label:active {
-    transition: .05s ease-out;
+    transition: .1s ease-out;
     background: rgb(234, 244, 255);
 }
 
@@ -165,7 +166,7 @@ h2.title {
 
 .label:hover>.labelTitle, .label:hover>i {
     color: rgb(31, 31, 37);
-    transition: .2s ease-out;
+    transition: .25s ease-out;
 }
 
 .labelContent {
@@ -175,7 +176,23 @@ h2.title {
 
 .label:hover>.labelContent {
     color: rgb(49, 48, 56);
-    transition: .2s ease-out;
+    transition: .25s ease-out;
+}
+
+.label::before {
+    color: #fff;
+    content: attr(alt);
+    font-size: .4em;
+    left: 0;
+    top: -1.75em;
+    position: absolute;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .25);
+    transition: .2s cubic-bezier(0.21, 0.77, 0.53, 0.92)
+}
+
+.label:hover::before {
+    font-size: .75em;
+    transition: .25s cubic-bezier(0.21, 0.77, 0.53, 0.92)
 }
 
 #footer {
@@ -184,15 +201,6 @@ h2.title {
     padding: .5em 1em;
 }
 
-.label::before {
-    color: #fff;
-    content: attr(alt);
-    font-size: .5em;
-    left: 0;
-    top: -1.75em;
-    position: absolute;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, .25);
-}
 
 #copyright {
     color: #eee;
@@ -206,7 +214,7 @@ h2.title {
         width: 75em;
     }
     .card.content-only {
-        width: 50em;
+        width: 60em;
     }
     .card.content-only>.content {
         width: 100%;
