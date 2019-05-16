@@ -125,7 +125,6 @@ h2.title {
 }
 
 /* Overlay */
-
 #overlay {
     visibility: hidden;
     opacity: 0;
@@ -141,7 +140,7 @@ h2.title {
 
 #overlay-container {
     padding: 1em;
-    height: 100vh;
+    min-height: 90vh;
     display: flex;
     text-align: center;
     flex-direction: column;
@@ -152,10 +151,11 @@ h2.title {
     box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, .125);
     margin: 1em auto;
     border-radius: 1em;
-    width: 100%;
+    width: 90vw;
 }
 
 #overlay-text {
+    margin-bottom: 0;
     font-size: 1.5em;
     line-height: 1.5em;
     color: #ffffff;
@@ -264,7 +264,8 @@ h2.title {
 
 @media only screen and (min-width: 60rem) {
     #overlay-image {
-        width:80vw;
+        width:auto;
+        height: 75vh;
     }
     .card {
         width: 75em;
