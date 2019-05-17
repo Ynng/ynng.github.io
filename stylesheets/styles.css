@@ -122,8 +122,6 @@ h2.title {
 /* Overlay */
 
 #overlay {
-    visibility: hidden;
-    opacity: 1;
     width: 100vw;
     height: 100vh;
     background: rgb(63, 67, 87);
@@ -269,8 +267,8 @@ h2.title {
 
 @media only screen and (min-width: 60rem) {
     #overlay-image {
-        width: auto;
-        height: 75vh;
+        width: 75vw;
+        height: auto;
     }
     .card {
         transition: .2s ease-out;
