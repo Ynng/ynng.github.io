@@ -75,6 +75,11 @@ h2.title {
     padding: 1.6em 0.75em;
 }
 
+.buttons{
+    display:flex;
+    flex-direction: column;
+}
+
 .card.content-only {
     padding: 1em 0.75em;
 }
@@ -129,7 +134,7 @@ h2.title {
     position: fixed;
     overflow-y: scroll;
     left: 0;
-    top: 0;
+    top: 100vh;
 }
 
 #overlay-container {
@@ -187,6 +192,7 @@ h2.title {
 
 .label.large {
     font-size: 200%;
+    margin: .3em .6em;
 }
 
 .label.large:hover {
@@ -303,6 +309,14 @@ h2.title {
     .card.right>.content {
         float: right;
     }
+    .card:hover>.heading>i {
+        transform: rotateZ(0deg);
+        transition: .3s;
+    }
+    .buttons{
+        flex-direction: row;
+        justify-content: center;
+    }
     .image {
         border-radius: 0.5em;
         width: 45%;
@@ -322,10 +336,6 @@ h2.title {
     .heading>i {
         display: inline-block;
         transform: rotateZ(-23deg);
-        transition: .3s;
-    }
-    .card:hover>.heading>i {
-        transform: rotateZ(0deg);
         transition: .3s;
     }
     .label:hover {
