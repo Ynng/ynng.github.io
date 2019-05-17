@@ -73,6 +73,12 @@ h2.title {
     width: 90vw;
     box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, .125);
     padding: 1.6em 0.75em;
+    transition: .5s ease-in-out
+}
+
+.card.hidden{
+    height: 0;
+    opacity: 0;
 }
 
 .buttons{
@@ -192,14 +198,11 @@ h2.title {
 
 .label.large {
     font-size: 200%;
-    margin: .3em .6em;
+    box-shadow: 0 0 0.1em 0.1em rgba(0, 0, 0, .15);
+    margin: .3em .3em;
 }
 
-.label.large:hover {
-    box-shadow: 0.2em 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.25);
-}
-
-.label:hover {
+.label:hover, .label.selected {
     background: rgb(195, 214, 233);
     transition: .25s ease-out;
 }
@@ -215,6 +218,7 @@ h2.title {
 
 .labelTitle {
     color: #ffffff;
+    transition: .25s ease-out;
 }
 
 .labelTitle>i {
@@ -222,9 +226,8 @@ h2.title {
     vertical-align: middle;
 }
 
-.label:hover>.labelTitle, .label:hover>i {
+.label:hover>.labelTitle,.label.selected>.labelTitle {
     color: rgb(31, 31, 37);
-    transition: .25s ease-out;
 }
 
 .labelContent {
@@ -338,7 +341,10 @@ h2.title {
         transform: rotateZ(-23deg);
         transition: .3s;
     }
-    .label:hover {
+    .label:hover,.label.selected {
         border-radius: 0 0.25em 0.25em 0.25em;
+    }
+    .label.large:hover, .label.selected {
+        box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
     }
 }
