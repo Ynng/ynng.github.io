@@ -97,6 +97,7 @@ h2.title {
     width: 90vw;
     box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, .125);
     padding: 1.6em 0.75em;
+    transition: .5s ease-in-out
 }
 
 .buttons{
@@ -115,7 +116,6 @@ h2.title {
     overflow:hidden;
     opacity: 0;
     box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, 0);
-    /* transition: 1s ease-in-out */
 }
 
 /* Content of cards */
@@ -308,7 +308,6 @@ h2.title {
         height: auto;
     }
     .card {
-        transition: .2s ease-out;
         min-width: 55em;
         max-width: 70vw;
     }
