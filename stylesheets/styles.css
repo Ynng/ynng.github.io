@@ -65,7 +65,7 @@ h2.title {
     display: block;
     border-radius: 1em;
     margin: 1em auto;
-    min-width: 20em;
+    min-width: 20vw;
     max-width: 85vw;
     box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, .125);
     padding: 1.6em 0.75em;
@@ -88,6 +88,11 @@ h2.title {
     width: 100%;
     max-width: 30em;
     cursor: pointer;
+    transition: .15s ease-out;
+}
+
+.image:hover{
+    box-shadow: 0.2em 0.2em 0.4em 0.4em rgba(0, 0, 0, 0.25);
 }
 
 .content {
@@ -111,20 +116,15 @@ h2.title {
     margin: auto 0;
     font-size: 2em;
     color: rgb(242, 246, 255);
-    text-align: left;
+    text-align: center;
 }
 
-.heading>i {
-    transform: rotateZ(-23deg);
-    transition: .3s;
-}
-
-.card:hover>.heading>i {
-    transform: rotateZ(0deg);
-    transition: .3s;
+.heading>i{
+    display: none;
 }
 
 /* Overlay */
+
 #overlay {
     visibility: hidden;
     opacity: 0;
@@ -261,38 +261,37 @@ h2.title {
 }
 
 /* RESPONSIVENESS */
-
 @media only screen and (min-width: 60rem) {
     #overlay-image {
-        width:auto;
+        width: auto;
         height: 75vh;
     }
     .card {
-        width: 75em;
+        max-width: 75vw;
     }
     .card.content-only {
-        width: 60em;
+        max-width: 50vw;
     }
     .card.content-only>.content {
         width: 100%;
     }
-    .card.content-only.left .labelFolder {
+    .card.content-only.left .labelFolder, .card.left>.heading {
         text-align: left;
     }
-    .card.content-only.right .labelFolder {
-        text-align: right;
+    .card.content-only.center .labelFolder, .card.center>.heading {
+        text-align: center;
     }
-    .card.right>.content {
-        float: right;
+    .card.content-only.right .labelFolder, .card.right>.heading {
+        text-align: right;
     }
     .card.left>.content {
         float: left;
     }
-    .card.right>.heading {
-        text-align: right;
+    .card.center>.content {
+        float: center;
     }
-    .card.left>.heading {
-        text-align: left;
+    .card.right>.content {
+        float: right;
     }
     .image {
         border-radius: 0.5em;
@@ -305,5 +304,16 @@ h2.title {
         transition: 0.2s cubic-bezier(0.06, 0.35, 0.43, 0.84);
         min-height: 80vh;
         margin: 10vh 0;
+    }
+
+    .heading>i {
+        display: inline-block;
+        transform: rotateZ(-23deg);
+        transition: .3s;
+    }
+    
+    .card:hover>.heading>i {
+        transform: rotateZ(0deg);
+        transition: .3s;
     }
 }
