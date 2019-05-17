@@ -40,6 +40,30 @@ body {
     transition: 0.2s cubic-bezier(0.06, 0.35, 0.43, 0.84);
 }
 
+/* Scroll Bar */
+
+/* width */
+::-webkit-scrollbar {
+    width:10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 4px;
+    background: #f1f1f1; 
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
 /* Title */
 
 .title {
@@ -73,12 +97,6 @@ h2.title {
     width: 90vw;
     box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, .125);
     padding: 1.6em 0.75em;
-    transition: .5s ease-in-out
-}
-
-.card.hidden{
-    height: 0;
-    opacity: 0;
 }
 
 .buttons{
@@ -88,6 +106,16 @@ h2.title {
 
 .card.content-only {
     padding: 1em 0.75em;
+}
+
+.card.hidden{
+    height: 0em;
+    padding:0;
+    margin:0 auto;
+    overflow:hidden;
+    opacity: 0;
+    box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, 0);
+    /* transition: 1s ease-in-out */
 }
 
 /* Content of cards */
