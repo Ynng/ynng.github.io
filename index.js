@@ -29,6 +29,7 @@ function openCards() {
     this.classList.add("selected")
     var list = document.getElementsByClassName(this.id)
     for (var i = 0; i < list.length; i++) {
+        list[i].style.height=list[i].scrollHeight
         list[i].classList.remove("hidden")
     }
 
@@ -38,6 +39,7 @@ function openCards() {
             buttons[i].classList.remove("selected");
             var list = document.getElementsByClassName(buttons[i].id)
             for (var j = 0 ; j < list.length; j++) {
+                list[j].style.height=list[j].scrollHeight
                 list[j].classList.add("hidden")
             }
         }
