@@ -171,7 +171,7 @@ h2.title {
 }
 
 #overlay-container {
-    padding: 1em;
+    padding: 0 1em;
     min-height: 90vh;
     display: flex;
     text-align: center;
