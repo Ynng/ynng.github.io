@@ -13,16 +13,19 @@ $(function () {
 
     $(".large.label").click(function () {
         $(this).addClass("selected");
-        $("." + this.id).each(function(){
+        $('html, body').animate({
+            scrollTop: $("#main_menu").offset().top-10
+        }, 1000);
+        $("." + this.id).each(function () {
             $(this).removeClass("hidden");
-            $(this).css("height",this.scrollHeight);
+            $(this).css("height", this.scrollHeight);
         })
 
         $(".large.label").not("#" + this.id).each(function () {
             $(this).removeClass("selected");
-            $("." + this.id).each(function(){
+            $("." + this.id).each(function () {
                 $(this).addClass("hidden");
-                $(this).css("height","0");
+                $(this).css("height", "0");
             });
         });
     });
