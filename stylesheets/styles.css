@@ -97,7 +97,8 @@ h2.title {
     width: 90vw;
     box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, .125);
     padding: 1.6em 0.75em;
-    transition: .5s ease-in-out
+    transition: .5s ease-in-out;
+    overflow:hidden;
 }
 
 .buttons{
@@ -110,11 +111,9 @@ h2.title {
 }
 
 .card.hidden{
-    height: 0em;
+    height: 0;
     padding:0;
     margin:0 auto;
-    overflow:hidden;
-    opacity: 0;
     box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, 0);
 }
 
