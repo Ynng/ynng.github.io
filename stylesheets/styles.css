@@ -37,7 +37,7 @@ body {
     justify-content: center;
     min-height: 90vh;
     margin: 5vh 0;
-    transition: 0.2s cubic-bezier(0.06, 0.35, 0.43, 0.84);
+    transition: 0.3s cubic-bezier(0.06, 0.35, 0.43, 0.84), ;
 }
 
 /* Scroll Bar */
@@ -97,7 +97,7 @@ h2.title {
     width: 90vw;
     box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, .125);
     padding: 1.6em 0.75em;
-    transition: .5s ease-in-out;
+    transition: border-radius .2s ease-in-out, .4s ease-in-out;
     overflow:hidden;
 }
 
@@ -165,9 +165,18 @@ h2.title {
     background: rgb(63, 67, 87);
     z-index: 10;
     position: fixed;
-    overflow-y: scroll;
+    overflow-y: hidden;
     left: 0;
-    top: 100vh;
+    top: 0;
+    
+    transition: .35s cubic-bezier(0.46, 0.85, 0.67, 0.88);
+}
+
+#overlay.hidden {
+    overflow-y: scroll;
+    height: 0;
+    
+    transition: .3s cubic-bezier(0.21, 0.1, 0.76, 0.29);
 }
 
 #overlay-container {
@@ -220,7 +229,7 @@ h2.title {
     padding: .5em .75em;
     box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, .15);
     background: rgb(103, 105, 116);
-    transition: .2s ease-out;
+    transition: .15s ease-out;
 }
 
 .label.large {
@@ -229,14 +238,18 @@ h2.title {
     margin: .3em .3em;
 }
 
+.label.large:not(.selected){
+    cursor: pointer;
+}
+
 .label:hover, .label.selected {
     background: rgb(195, 214, 233);
-    transition: .25s ease-out;
+    transition: .2s ease-out;
 }
 
 .label:active {
-    transition: .1s ease-out;
     background: rgb(234, 244, 255);
+    transition: .07s ease-out;
 }
 
 .label span, .label i {
@@ -245,7 +258,7 @@ h2.title {
 
 .labelTitle {
     color: #ffffff;
-    transition: .25s ease-out;
+    transition: .15s ease-out;
 }
 
 .labelTitle>i {
@@ -253,18 +266,19 @@ h2.title {
     vertical-align: middle;
 }
 
-.label:hover>.labelTitle,.label.selected>.labelTitle {
+.label:hover>.labelTitle, .label.selected>.labelTitle {
     color: rgb(31, 31, 37);
+    transition: .2s ease-out;
 }
 
 .labelContent {
     color: rgb(214, 214, 214);
-    transition: .2s ease-out;
+    transition: .15s ease-out;
 }
 
 .label:hover>.labelContent {
     color: rgb(49, 48, 56);
-    transition: .25s ease-out;
+    transition: .2s ease-out;
 }
 .label.large::before{
     content: "" ;
@@ -282,7 +296,7 @@ h2.title {
 
 .label:hover::before {
     color: #fff;
-    font-weight: bold;
+    font-size: 0.9em;    
     transition: .3s cubic-bezier(0.21, 0.77, 0.53, 0.92)
 }
 
@@ -312,6 +326,7 @@ h2.title {
     }
     .card:hover{
         border-radius: 0 1em 1em 1em;
+        transition: border-radius .3s ease-in-out,
     }
     .card.content-only {
         min-width: 40em;
@@ -338,10 +353,6 @@ h2.title {
     .card.right>.content {
         float: right;
     }
-    .card:hover>.heading>i {
-        transform: rotateZ(0deg);
-        transition: .3s;
-    }
     .buttons{
         flex-direction: row;
         justify-content: center;
@@ -362,10 +373,14 @@ h2.title {
         min-height: 80vh;
         margin: 10vh 0;
     }
-    .heading>i {
+    .card>.heading>i {
         display: inline-block;
         transform: rotateZ(-23deg);
-        transition: .3s;
+        transition: .15s;
+    }
+    .card:hover>.heading>i {
+        transform: rotateZ(0deg);
+        transition: .2s;
     }
     .label:hover,.label.selected {
         border-radius: 0 0.25em 0.25em 0.25em;
