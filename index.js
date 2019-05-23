@@ -18,9 +18,16 @@ $(function () {
             });
         });
         $(this).addClass("selected");
-        $('html, body').animate({
-            scrollTop: $("#main_menu").offset().top - 10
-        }, 500);
+        if (window.matchMedia('(min-width: 60rem)').matches) {
+            $('html, body').animate({
+                scrollTop: $("#main_menu").offset().top - 10
+            }, 500);
+        } else {
+            $('html, body').animate({
+                scrollTop: $(this).offset().top - 10
+            }, 500);
+        }
+        
         $("." + this.id).each(function () {
             $(this).removeClass("hidden");
             $(this).css("height", this.scrollHeight);
