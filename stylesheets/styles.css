@@ -165,7 +165,7 @@ h2.title {
     background: rgb(63, 67, 87);
     z-index: 10;
     position: fixed;
-    overflow-y: hidden;
+    overflow-y: scroll;
     left: 0;
     top: 0;
     
@@ -173,14 +173,14 @@ h2.title {
 }
 
 #overlay.hidden {
-    overflow-y: scroll;
+    overflow-y: hidden;
     height: 0;
     
     transition: .3s cubic-bezier(0.21, 0.1, 0.76, 0.29);
 }
 
 #overlay-container {
-    padding: 0 1em;
+    padding: 0 1em 1em 1em;
     min-height: 90vh;
     display: flex;
     text-align: center;
