@@ -31,6 +31,11 @@ body {
     margin: 0;
 }
 
+.noscroll {
+    overflow-y: hidden;
+    margin: 0 9px 0 0;
+}
+
 #main-container {
     display: flex;
     flex-direction: column;
@@ -173,13 +178,14 @@ h2.title {
 }
 
 #overlay.hidden {
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
     height: 0;
     transition: .3s cubic-bezier(0.21, 0.1, 0.76, 0.29);
 }
 
 #overlay-container {
-    padding: 1em;
+    padding: 1vw;
+    max-width:98vw;
     min-height: 90vh;
     display: flex;
     text-align: center;
@@ -202,10 +208,6 @@ h2.title {
 
 #overlay-text a {
     color: rgb(132, 121, 255);
-}
-
-.noscroll {
-    overflow-y: hidden
 }
 
 /* Label stuffs */
