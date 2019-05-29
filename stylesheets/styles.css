@@ -232,13 +232,13 @@ h2.title {
     transition: .15s ease-out;
 }
 
-.label.large {
+.label.button {
     font-size: 200%;
     box-shadow: 0 0 0.1em 0.1em rgba(0, 0, 0, .15);
     margin: .3em .3em;
 }
 
-.label.large:not(.selected){
+.label.button:not(.selected){
     cursor: pointer;
 }
 
@@ -280,7 +280,7 @@ h2.title {
     color: rgb(49, 48, 56);
     transition: .2s ease-out;
 }
-.label.large::before{
+.label.button::before{
     content: "" ;
 }
 .label::before {
@@ -381,7 +381,7 @@ h2.title {
     .label:hover,.label.selected {
         border-radius: 0 0.25em 0.25em 0.25em;
     }
-    .label.large:hover, .label.selected {
+    .label.button:hover, .label.selected {
         box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
     }
 }

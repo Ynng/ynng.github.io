@@ -22,16 +22,16 @@ $(function () {
         $("#overlay").removeClass("hidden");
     });
 
-    $(".large.label").click(function () {
+    $(".button.label").click(function () {
         //Only works on buttons that are not selected
         if ($(this).hasClass("selected")) return;
 
         //Un"select" the previous selection
-        $("." + $(".large.label.selected").attr("id")).each(function () {
+        $("." + $(".button.label.selected").attr("id")).each(function () {
             $(this).addClass("hidden");
             $(this).css("height", "0");
         });
-        $(".large.label.selected").removeClass("selected");
+        $(".button.label.selected").removeClass("selected");
 
         //Select the current selection
         $(this).addClass("selected");
