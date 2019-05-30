@@ -42,7 +42,7 @@ body {
 
 /* <a>s */
 
-a{
+a {
     transition: .1s ease-out;
 }
 
@@ -63,30 +63,33 @@ a:active {
     color: rgb(94, 139, 195);
 }
 
-
 /* Scroll Bar */
 
 /* width */
+
 ::-webkit-scrollbar {
-    width:10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
+    width: 10px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
     border-radius: 4px;
-    background: #f1f1f1; 
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+    background: #f1f1f1;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
     border-radius: 4px;
-    background: #888; 
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-  }
+    background: #888;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
 
 /* Title */
 
@@ -122,11 +125,11 @@ h2.title {
     box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, .125);
     padding: 1.6em 0.75em;
     transition: border-radius .2s ease-in-out, .4s ease-in-out;
-    overflow:hidden;
+    overflow: hidden;
 }
 
-.buttons{
-    display:flex;
+.buttons {
+    display: flex;
     flex-direction: column;
 }
 
@@ -134,10 +137,10 @@ h2.title {
     padding: 1em 0.75em;
 }
 
-.card.hidden{
+.card.hidden {
     height: 0;
-    padding:0;
-    margin:0 auto;
+    padding: 0;
+    margin: 0 auto;
     box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, 0);
 }
 
@@ -158,7 +161,7 @@ h2.title {
 }
 
 .content>p {
-    margin:0;
+    margin: 0;
     font-size: 1.075em;
     color: rgb(208, 218, 235);
     text-align: left;
@@ -187,13 +190,12 @@ h2.title {
 #overlay {
     min-width: 100vw;
     height: 100vh;
-    background: rgb(63, 67, 87);
+    background: rgba(44, 46, 56, 0.8);
     z-index: 10;
     position: fixed;
     overflow-y: scroll;
     left: 0;
     top: 0;
-    
     transition: .35s cubic-bezier(0.46, 0.85, 0.67, 0.88);
 }
 
@@ -205,7 +207,7 @@ h2.title {
 
 #overlay-container {
     padding: 1vw;
-    max-width:98vw;
+    max-width: 98vw;
     min-height: 90vh;
     display: flex;
     text-align: center;
@@ -226,6 +228,56 @@ h2.title {
     color: #ffffff;
 }
 
+/* Close button */
+.closeButton {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    height: 4em;
+    width: 4em;
+    text-align: left;
+    border-radius: .5em;
+    background: rgba(153, 154, 163, 0.4);
+    cursor: pointer;
+    transition: 300ms cubic-bezier(0.32, 0.68, 0.46, 0.82);
+}
+
+.closeButton:hover {
+    background: rgba(195, 214, 233, 0.5);
+}
+
+.closeButton:active {
+    background: rgba(240, 247, 255, 0.7);
+    transition: 100ms;
+}
+
+.closeButton::before, .closeButton::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: .25em;
+    width: 100%;
+    background: #fff;
+    border-radius: .5em;
+    transition: 300ms cubic-bezier(0.32, 0.68, 0.46, 0.82);
+}
+
+.closeButton::before {
+    transform: rotate(-45deg) scaleX(0.5);
+}
+
+.closeButton::after {
+    transform: rotate(45deg) scaleX(0.5);
+}
+
+.closeButton:hover::before {
+    transform: rotate(-45deg) scaleX(1);
+}
+
+.closeButton:hover::after {
+    transform: rotate(45deg) scaleX(1);
+}
 /* Label stuffs */
 
 .labelFolder {
@@ -254,7 +306,7 @@ h2.title {
     margin: .3em .3em;
 }
 
-.label.button:not(.selected){
+.label.button:not(.selected) {
     cursor: pointer;
 }
 
@@ -296,9 +348,11 @@ h2.title {
     color: rgb(49, 48, 56);
     transition: .2s ease-out;
 }
-.label.button::before{
-    content: "" ;
+
+.label.button::before {
+    content: "";
 }
+
 .label::before {
     color: rgb(198, 198, 198);
     content: attr(alt);
@@ -312,7 +366,7 @@ h2.title {
 
 .label:hover::before {
     color: #fff;
-    font-size: 0.9em;    
+    font-size: 0.9em;
     transition: .3s cubic-bezier(0.21, 0.77, 0.53, 0.92)
 }
 
@@ -336,7 +390,7 @@ h2.title {
         min-width: 55em;
         max-width: 70vw;
     }
-    .card:hover{
+    .card:hover {
         border-radius: 0 1em 1em 1em;
         transition: border-radius .3s ease-in-out,
     }
@@ -365,7 +419,7 @@ h2.title {
     .card.right>.content {
         float: right;
     }
-    .buttons{
+    .buttons {
         flex-direction: row;
         justify-content: center;
     }
@@ -376,7 +430,7 @@ h2.title {
     .image:hover {
         border-radius: 0 .5em .5em .5em;
         box-shadow: 0.2em 0.2em 0.4em 0.4em rgba(0, 0, 0, 0.25);
-    }    
+    }
     .content {
         width: 54%;
     }
@@ -394,7 +448,7 @@ h2.title {
         transform: rotateZ(0deg);
         transition: .2s;
     }
-    .label:hover,.label.selected {
+    .label:hover, .label.selected {
         border-radius: 0 0.25em 0.25em 0.25em;
     }
     .label.button:hover, .label.selected {
