@@ -190,7 +190,7 @@ h2.title {
 #overlay {
     min-width: 100vw;
     height: 100vh;
-    background: rgba(44, 46, 56, 0.8);
+    background: rgba(44, 46, 56, 0.9);
     z-index: 10;
     position: fixed;
     overflow-y: scroll;
