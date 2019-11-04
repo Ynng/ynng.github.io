@@ -7,7 +7,7 @@ $(function () {
         $("body").addClass("noscroll");
 
         // Making sure the overlay image is as big as it can get while keeping the aspect ratio and stays within the screen
-        if ($("#overlay-image").width() / $(window).width() < $("#overlay-image").height() / $(window).height()) {
+        if ($("#overlay-image").width() / $(window).width() < $("#overlay-image").height() / ($(window).height()-200)) {
             $("#overlay-image").css({
                 "width": "auto",
                 "height": "75vh"
