@@ -31,16 +31,20 @@ function closeImageOverlay() {
     $("#overlay").addClass("hidden");
     $("body").removeClass("noscroll");
     tweenBlur('#main-container',2,0);
+    setTimeout(function () {
+        $("#overlay").addClass("disappear");
+
+    }, 500);
 }
 
 $(function () {
-
 
     $(".image").click(function () {
         $("#overlay-image").attr("src", this.src);
         $("#overlay-text").html(this.alt);
         $("body").addClass("noscroll");
         tweenBlur('#main-container',0,2);
+
         // Making sure the overlay image is as big as it can get while keeping the aspect ratio and stays within the screen
         if ($("#overlay-image").width() / $("#overlay-image").height() < $(window).width() / $(window).height()) {
             $("#overlay-image").css({
@@ -55,6 +59,7 @@ $(function () {
         }
 
         $("#overlay").removeClass("hidden");
+        $("#overlay").removeClass("disappear");
     });
 
     $(".button.label").click(function () {

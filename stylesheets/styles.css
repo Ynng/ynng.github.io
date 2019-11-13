@@ -4,6 +4,10 @@
     text-align: right !important;
 }
 
+.disappear {
+    display:none;
+}
+
 .smallText {
     font-size: .675em;
 }
@@ -197,7 +201,7 @@ h2.title {
     overflow-y: scroll;
     left: 0;
     top: 0;
-    transition: .35s cubic-bezier(0.46, 0.85, 0.67, 0.88);
+    transition: .5s cubic-bezier(0.46, 0.85, 0.67, 0.88);
 }
 
 #overlay.hidden {
@@ -205,7 +209,7 @@ h2.title {
     /* height: 0; */
     opacity: 0;
     display:none;
-    transition: .3s cubic-bezier(0.21, 0.1, 0.76, 0.29);
+    transition: .5s cubic-bezier(0.21, 0.1, 0.76, 0.29);
 }
 
 #overlay-container {
