@@ -201,15 +201,14 @@ h2.title {
     overflow-y: scroll;
     left: 0;
     top: 0;
-    transition: .5s cubic-bezier(0.46, 0.85, 0.67, 0.88);
+    transition: .4s cubic-bezier(0.46, 0.85, 0.67, 0.88);
 }
 
 #overlay.hidden {
     /* overflow-y: hidden; */
     /* height: 0; */
     opacity: 0;
-    display:none;
-    transition: .5s cubic-bezier(0.21, 0.1, 0.76, 0.29);
+    transition: .4s cubic-bezier(0.21, 0.1, 0.76, 0.29);
 }
 
 #overlay-container {
