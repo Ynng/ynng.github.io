@@ -9,7 +9,7 @@ var setBlur = function (ele, radius) {
 
 tweenBlur = function (ele, startRadius, endRadius) {
     $({ blurRadius: startRadius }).animate({ blurRadius: endRadius }, {
-        duration: 500,
+        duration: 400,
         easing: 'swing', // or "linear"
         // use jQuery UI or Easing plugin for more options
         step: function () {
@@ -34,7 +34,7 @@ function closeImageOverlay() {
     setTimeout(function () {
         $("#overlay").addClass("disappear");
 
-    }, 500);
+    }, 400);
 }
 
 $(function () {
@@ -46,7 +46,7 @@ $(function () {
         tweenBlur('#main-container',0,2);
 
         // Making sure the overlay image is as big as it can get while keeping the aspect ratio and stays within the screen
-        if ($("#overlay-image").width() / $("#overlay-image").height() < $(window).width() / $(window).height()) {
+        if (this.width / this.height < $(window).width() / $(window).height()) {
             $("#overlay-image").css({
                 "width": "auto",
                 "height": "75vh"
@@ -57,9 +57,11 @@ $(function () {
                 "height": "auto"
             });
         }
-
-        $("#overlay").removeClass("hidden");
         $("#overlay").removeClass("disappear");
+        
+        setTimeout(function () {
+            $("#overlay").removeClass("hidden");
+        }, 1);
     });
 
     $(".button.label").click(function () {
