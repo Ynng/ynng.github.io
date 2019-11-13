@@ -9,7 +9,7 @@ var setBlur = function (ele, radius) {
 
 tweenBlur = function (ele, startRadius, endRadius) {
     $({ blurRadius: startRadius }).animate({ blurRadius: endRadius }, {
-        duration: 400,
+        duration: 300,
         easing: 'swing', // or "linear"
         // use jQuery UI or Easing plugin for more options
         step: function () {
@@ -31,10 +31,10 @@ function closeImageOverlay() {
     $("#overlay").addClass("hidden");
     $("body").removeClass("noscroll");
     tweenBlur('#main-container',2,0);
+
     setTimeout(function () {
         $("#overlay").addClass("disappear");
-
-    }, 400);
+    }, 300);
 }
 
 $(function () {
