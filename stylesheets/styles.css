@@ -4,6 +4,10 @@
     text-align: right !important;
 }
 
+.bold.title, .bold{
+    font-weight: bold;
+}
+
 .disappear {
     display:none;
 }
