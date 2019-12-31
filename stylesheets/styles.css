@@ -132,13 +132,13 @@ h2.title {
   background: rgb(62, 66, 86);
   text-align: center;
   display: block;
-  border-radius: 1em;
+  border-radius: .5rem;
   margin: 1em auto;
   min-width: 10em;
   width: 90vw;
   box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, 0.125);
-  padding: 1.6em 0.75em;
-  transition: border-radius 0.2s ease-in-out, 0.4s ease-in-out;
+  padding: 1.5rem 1.5rem;
+  transition: border-radius 0.1s ease-in-out, 0.4s ease-in-out;
   overflow: hidden;
 }
 
@@ -147,14 +147,9 @@ h2.title {
   flex-direction: column;
 }
 
-.card.content-only {
-  padding: 1em 0.75em;
-}
-
 .card.hidden {
-  height: 0;
-  padding: 0;
-  margin: 0 auto;
+  padding: 0px;
+  margin: 0em auto;
   box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, 0);
 }
 
@@ -411,10 +406,6 @@ h2.title {
     min-width: 55em;
     max-width: 70vw;
   }
-  .card:hover {
-    border-radius: 0 1em 1em 1em;
-    transition: border-radius 0.3s ease-in-out;
-  }
   .card.content-only {
     min-width: 40em;
     max-width: 60vw;
@@ -480,4 +471,6 @@ h2.title {
   .label.selected {
     box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
   }
+
+
 }
