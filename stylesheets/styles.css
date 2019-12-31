@@ -4,8 +4,7 @@
   text-align: right !important;
 }
 
-.bold.title,
-.bold {
+.bold.title, .bold {
   font-weight: bold;
 }
 
@@ -18,12 +17,10 @@
 }
 
 .japanese {
-  font-family: "Quicksand", "Arial", "ＭＳ Ｐゴシック", "MS PGothic", "メイリオ",
-    Meiryo, "Hiragino Sans GB", sans-serif;
+  font-family: "Quicksand", "Arial", "ＭＳ Ｐゴシック", "MS PGothic", "メイリオ", Meiryo, "Hiragino Sans GB", sans-serif;
 }
 
-.preload *,
-.preload {
+.preload *, .preload {
   -webkit-transition: none !important;
   -moz-transition: none !important;
   -ms-transition: none !important;
@@ -32,8 +29,7 @@
 }
 
 body {
-  font-family: "Quicksand", "Arial", "Microsoft YaHei", "WenQuanYi Micro Hei",
-    sans-serif;
+  font-family: "Quicksand", "Arial", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   background: rgb(45, 43, 51);
   margin: 0;
 }
@@ -69,8 +65,7 @@ a:visited {
 
 body.hasHover a:hover:not(.label) {
   color: rgb(211, 212, 255);
-  text-shadow: 0 0 10px #ffffffbb, 0 0 20px #ffffff7a, 0 0 30px #6778ccdc, 0 0 40px #5061b4ab,
-    0 0 50px #5061b480, 0 0 60px #5061b44d, 0 0 70px #5061b42f;
+  text-shadow: 0 0 10px #ffffffbb, 0 0 20px #ffffff7a, 0 0 30px #6778ccdc, 0 0 40px #5061b4ab, 0 0 50px #5061b480, 0 0 60px #5061b44d, 0 0 70px #5061b42f;
 }
 
 a:active {
@@ -170,15 +165,14 @@ h2.title {
   width: 100%;
 }
 
-.content > p {
+.content>p {
   margin: 0;
   font-size: 1.075em;
   color: rgb(208, 218, 235);
   text-align: left;
 }
 
-.image,
-.content {
+.image, .content {
   display: inline-block;
   vertical-align: top;
 }
@@ -192,7 +186,7 @@ h2.title {
   text-align: center;
 }
 
-.heading > i {
+.heading>i {
   display: none;
 }
 
@@ -242,6 +236,7 @@ h2.title {
 }
 
 /* Close button */
+
 .closeButton {
   position: absolute;
   top: 1em;
@@ -264,8 +259,7 @@ body.hasHover .closeButton:hover {
   transition: 100ms;
 }
 
-.closeButton::before,
-.closeButton::after {
+.closeButton::before, .closeButton::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -292,6 +286,7 @@ body.hasHover .closeButton:hover::before {
 body.hasHover .closeButton:hover::after {
   transform: rotate(45deg) scaleX(1);
 }
+
 /* Label stuffs */
 
 .labelFolder {
@@ -324,8 +319,7 @@ body.hasHover .closeButton:hover::after {
   cursor: pointer;
 }
 
-body.hasHover .label:hover,
-.label.selected {
+body.hasHover .label:hover, .label.selected {
   background: rgb(195, 214, 233);
   transition: 0.2s ease-out;
 }
@@ -335,8 +329,7 @@ body.hasHover .label:hover,
   transition: 0.07s ease-out;
 }
 
-.label span,
-.label i {
+.label span, .label i {
   margin-right: 0.25em;
 }
 
@@ -345,13 +338,12 @@ body.hasHover .label:hover,
   transition: 0.15s ease-out;
 }
 
-.labelTitle > i {
+.labelTitle>i {
   font-size: 150%;
   vertical-align: middle;
 }
 
-body.hasHover .label:hover > .labelTitle,
-.label.selected > .labelTitle {
+body.hasHover .label:hover>.labelTitle, .label.selected>.labelTitle {
   color: rgb(31, 31, 37);
   transition: 0.2s ease-out;
 }
@@ -361,7 +353,7 @@ body.hasHover .label:hover > .labelTitle,
   transition: 0.15s ease-out;
 }
 
-body.hasHover .label:hover > .labelContent {
+body.hasHover .label:hover>.labelContent {
   color: rgb(49, 48, 56);
   transition: 0.2s ease-out;
 }
@@ -401,7 +393,9 @@ body.hasHover .label:hover::before {
 }
 
 /* RESPONSIVENESS */
+
 /* for PC only */
+
 @media only screen and (min-width: 60rem) {
   .card {
     min-width: 55em;
@@ -414,28 +408,25 @@ body.hasHover .label:hover::before {
     min-width: 40em;
     max-width: 60vw;
   }
-  .card.content-only > .content {
+  .card.content-only>.content {
     width: 100%;
   }
-  .card.content-only.left .labelFolder,
-  .card.left > .heading {
+  .card.content-only.left .labelFolder, .card.left>.heading {
     text-align: left;
   }
-  .card.content-only.center .labelFolder,
-  .card.center > .heading {
+  .card.content-only.center .labelFolder, .card.center>.heading {
     text-align: center;
   }
-  .card.content-only.right .labelFolder,
-  .card.right > .heading {
+  .card.content-only.right .labelFolder, .card.right>.heading {
     text-align: right;
   }
-  .card.left > .content {
+  .card.left>.content {
     float: left;
   }
-  .card.center > .content {
+  .card.center>.content {
     float: center;
   }
-  .card.right > .content {
+  .card.right>.content {
     float: right;
   }
   .buttons {
@@ -450,31 +441,33 @@ body.hasHover .label:hover::before {
     border-radius: 0 0.5em 0.5em 0.5em;
     box-shadow: 0.2em 0.2em 0.4em 0.4em rgba(0, 0, 0, 0.25);
   }
+  .card:not(.content-only).left>.content {
+    margin-right: 1%;
+  }
+  .card:not(.content-only).right>.content {
+    margin-left: 1%;
+  }
   .content {
-    width: 54%;
+    width: 53%;
   }
   #main-container {
     transition: 0.2s cubic-bezier(0.06, 0.35, 0.43, 0.84);
     min-height: 80vh;
     margin: 10vh 0;
   }
-  .card > .heading > i {
+  .card>.heading>i {
     display: inline-block;
     transform: rotateZ(-23deg);
     transition: 0.15s;
   }
-  body.hasHover .card:hover > .heading > i {
+  body.hasHover .card:hover>.heading>i {
     transform: rotateZ(0deg);
     transition: 0.2s;
   }
-  body.hasHover .label:hover,
-  .label.selected {
+  body.hasHover .label:hover, .label.selected {
     border-radius: 0 0.25em 0.25em 0.25em;
   }
-  body.hasHover .label.button:hover,
-  .label.selected {
+  body.hasHover .label.button:hover, .label.selected {
     box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
   }
-
-
 }
