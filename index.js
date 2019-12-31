@@ -58,7 +58,43 @@ function updateCardHeight() {
     });
 }
 
+//copied from stack overflow: https://stackoverflow.com/questions/23885255/how-to-remove-ignore-hover-css-style-on-touch-devices
+function watchForHover() {
+    var hasHoverClass = false;
+    var lastTouchTime = 0;
+
+    function enableHover() {
+        // discard emulated mouseMove events coming from touch events
+        if (new Date() - lastTouchTime < 700) return;
+        console.log("hover enabled");
+
+        if (hasHoverClass) return;
+
+        $("body").addClass("hasHover");
+        hasHoverClass = true;
+    }
+
+    function disableHover() {
+        if (!hasHoverClass) return;
+        $("body").removeClass("hasHover");
+        hasHoverClass = false;
+    }
+
+    function updateLastTouchTime() {
+        console.log("Touched");
+        lastTouchTime = new Date();
+    }
+
+    document.addEventListener('touchstart', updateLastTouchTime, true);
+    document.addEventListener('touchstart', disableHover, true);
+    document.addEventListener('mousemove', enableHover, true);
+
+    enableHover();
+}
+
 $(function () {
+    watchForHover();
+
     $(".image").click(function () {
         $("#overlay-image").attr("src", this.src);
         $("#overlay-text").html(this.alt);
