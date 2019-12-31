@@ -67,7 +67,7 @@ a:visited {
   color: rgb(221, 152, 255);
 }
 
-a:hover:not(.label) {
+body.hasHover a:hover:not(.label) {
   color: rgb(211, 212, 255);
   text-shadow: 0 0 10px #ffffffbb, 0 0 20px #ffffff7a, 0 0 30px #6778ccdc, 0 0 40px #5061b4ab,
     0 0 50px #5061b480, 0 0 60px #5061b44d, 0 0 70px #5061b42f;
@@ -101,7 +101,7 @@ a:active {
 
 /* Handle on hover */
 
-::-webkit-scrollbar-thumb:hover {
+body.hasHover ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
 
@@ -255,7 +255,7 @@ h2.title {
   transition: 300ms cubic-bezier(0.32, 0.68, 0.46, 0.82);
 }
 
-.closeButton:hover {
+body.hasHover .closeButton:hover {
   background: rgba(195, 214, 233, 0.5);
 }
 
@@ -285,11 +285,11 @@ h2.title {
   transform: rotate(45deg) scaleX(0.5);
 }
 
-.closeButton:hover::before {
+body.hasHover .closeButton:hover::before {
   transform: rotate(-45deg) scaleX(1);
 }
 
-.closeButton:hover::after {
+body.hasHover .closeButton:hover::after {
   transform: rotate(45deg) scaleX(1);
 }
 /* Label stuffs */
@@ -324,7 +324,7 @@ h2.title {
   cursor: pointer;
 }
 
-.label:hover,
+body.hasHover .label:hover,
 .label.selected {
   background: rgb(195, 214, 233);
   transition: 0.2s ease-out;
@@ -350,7 +350,7 @@ h2.title {
   vertical-align: middle;
 }
 
-.label:hover > .labelTitle,
+body.hasHover .label:hover > .labelTitle,
 .label.selected > .labelTitle {
   color: rgb(31, 31, 37);
   transition: 0.2s ease-out;
@@ -361,7 +361,7 @@ h2.title {
   transition: 0.15s ease-out;
 }
 
-.label:hover > .labelContent {
+body.hasHover .label:hover > .labelContent {
   color: rgb(49, 48, 56);
   transition: 0.2s ease-out;
 }
@@ -381,7 +381,7 @@ h2.title {
   transition: 0.2s cubic-bezier(0.21, 0.77, 0.53, 0.92);
 }
 
-.label:hover::before {
+body.hasHover .label:hover::before {
   color: #fff;
   font-size: 0.9em;
   transition: 0.3s cubic-bezier(0.21, 0.77, 0.53, 0.92);
@@ -446,7 +446,7 @@ h2.title {
     border-radius: 0.5em;
     width: 45%;
   }
-  .image:hover {
+  body.hasHover .image:hover {
     border-radius: 0 0.5em 0.5em 0.5em;
     box-shadow: 0.2em 0.2em 0.4em 0.4em rgba(0, 0, 0, 0.25);
   }
@@ -463,15 +463,15 @@ h2.title {
     transform: rotateZ(-23deg);
     transition: 0.15s;
   }
-  .card:hover > .heading > i {
+  body.hasHover .card:hover > .heading > i {
     transform: rotateZ(0deg);
     transition: 0.2s;
   }
-  .label:hover,
+  body.hasHover .label:hover,
   .label.selected {
     border-radius: 0 0.25em 0.25em 0.25em;
   }
-  .label.button:hover,
+  body.hasHover .label.button:hover,
   .label.selected {
     box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
   }
