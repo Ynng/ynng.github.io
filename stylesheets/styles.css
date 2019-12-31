@@ -1,74 +1,80 @@
 /* General styling/Mobile styling */
 
 .alignRight {
-    text-align: right !important;
+  text-align: right !important;
 }
 
-.bold.title, .bold{
-    font-weight: bold;
+.bold.title,
+.bold {
+  font-weight: bold;
 }
 
 .disappear {
-    display:none;
+  display: none;
 }
 
 .smallText {
-    font-size: .675em;
+  font-size: 0.675em;
 }
 
 .japanese {
-    font-family: 'Quicksand', 'Arial', 'ＭＳ Ｐゴシック', 'MS PGothic', 'メイリオ', Meiryo, "Hiragino Sans GB", sans-serif;
+  font-family: "Quicksand", "Arial", "ＭＳ Ｐゴシック", "MS PGothic", "メイリオ",
+    Meiryo, "Hiragino Sans GB", sans-serif;
 }
 
-.preload *, .preload {
-    -webkit-transition: none !important;
-    -moz-transition: none !important;
-    -ms-transition: none !important;
-    -o-transition: none !important;
-    transition: none !important;
+.preload *,
+.preload {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
 }
 
 body {
-    font-family: 'Quicksand', 'Arial', "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-    background: rgb(45, 43, 51);
-    margin: 0;
+  font-family: "Quicksand", "Arial", "Microsoft YaHei", "WenQuanYi Micro Hei",
+    sans-serif;
+  background: rgb(45, 43, 51);
+  margin: 0;
 }
 
 .noscroll {
-    overflow-y: hidden;
-    margin: 0 9px 0 0;
+  overflow-y: hidden;
+  margin: 0 9px 0 0;
 }
 
 #main-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 90vh;
-    margin: 5vh 0;
-    transition: 0.3s cubic-bezier(0.06, 0.35, 0.43, 0.84), ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 90vh;
+  margin: 5vh 0;
+  transition: 0.3s cubic-bezier(0.06, 0.35, 0.43, 0.84);
 }
 
 /* <a>s */
 
 a {
-    transition: .1s ease-out;
+  transition: 0.1s ease-out;
 }
 
 a:link {
-    text-decoration: none;
-    color: rgb(132, 121, 255);
+  text-decoration: none;
+  color: rgb(152, 179, 255);
 }
 
 a:visited {
-    color: rgb(210, 121, 255);
+  color: rgb(221, 152, 255);
 }
 
-a:hover {
-    color: rgb(121, 181, 255);
+a:hover:not(.label) {
+  color: rgb(211, 212, 255);
+  text-shadow: 0 0 10px #ffffffbb, 0 0 20px #ffffff7a, 0 0 30px #6778ccdc, 0 0 40px #5061b4ab,
+    0 0 50px #5061b480, 0 0 60px #5061b44d, 0 0 70px #5061b42f;
 }
 
 a:active {
-    color: rgb(94, 139, 195);
+  color: rgb(94, 139, 195);
 }
 
 /* Scroll Bar */
@@ -76,392 +82,402 @@ a:active {
 /* width */
 
 ::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
 
 /* Track */
 
 ::-webkit-scrollbar-track {
-    border-radius: 4px;
-    background: #f1f1f1;
+  border-radius: 4px;
+  background: #f1f1f1;
 }
 
 /* Handle */
 
 ::-webkit-scrollbar-thumb {
-    border-radius: 4px;
-    background: #888;
+  border-radius: 4px;
+  background: #888;
 }
 
 /* Handle on hover */
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+  background: #555;
 }
 
 /* Title */
 
 .title {
-    margin: 0;
-    font-weight: 300;
-    line-height: 1.6em;
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, .25);
+  margin: 0;
+  font-weight: 300;
+  line-height: 1.6em;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 h1.title {
-    font-size: 3em;
-    color: #e7e7e7;
+  font-size: 3em;
+  color: #e7e7e7;
 }
 
 h2.title {
-    font-size: 1.5em;
-    color: #a2a2a2;
-    font-weight: bold;
+  font-size: 1.5em;
+  color: #a2a2a2;
+  font-weight: bold;
 }
 
 /* Cards */
 
 .card {
-    background: rgb(63, 67, 87);
-    text-align: center;
-    display: block;
-    border-radius: 1em;
-    margin: 1em auto;
-    min-width: 10em;
-    width: 90vw;
-    box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, .125);
-    padding: 1.6em 0.75em;
-    transition: border-radius .2s ease-in-out, .4s ease-in-out;
-    overflow: hidden;
+  background: rgb(62, 66, 86);
+  text-align: center;
+  display: block;
+  border-radius: 1em;
+  margin: 1em auto;
+  min-width: 10em;
+  width: 90vw;
+  box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, 0.125);
+  padding: 1.6em 0.75em;
+  transition: border-radius 0.2s ease-in-out, 0.4s ease-in-out;
+  overflow: hidden;
 }
 
 .buttons {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .card.content-only {
-    padding: 1em 0.75em;
+  padding: 1em 0.75em;
 }
 
 .card.hidden {
-    height: 0;
-    padding: 0;
-    margin: 0 auto;
-    box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, 0);
+  height: 0;
+  padding: 0;
+  margin: 0 auto;
+  box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, 0);
 }
 
 /* Content of cards */
 
 .image {
-    box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, .125);
-    margin: 1em auto;
-    border-radius: 1em;
-    width: 100%;
-    max-width: 30em;
-    cursor: pointer;
-    transition: .15s ease-out;
+  box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, 0.125);
+  margin: 1em auto;
+  border-radius: 1em;
+  width: 100%;
+  max-width: 30em;
+  cursor: pointer;
+  transition: 0.15s ease-out;
 }
 
 .content {
-    width: 100%;
+  width: 100%;
 }
 
-.content>p {
-    margin: 0;
-    font-size: 1.075em;
-    color: rgb(208, 218, 235);
-    text-align: left;
+.content > p {
+  margin: 0;
+  font-size: 1.075em;
+  color: rgb(208, 218, 235);
+  text-align: left;
 }
 
-.image, .content {
-    display: inline-block;
-    vertical-align: top;
+.image,
+.content {
+  display: inline-block;
+  vertical-align: top;
 }
 
 .heading {
-    display: inline-block;
-    width: 100%;
-    margin: auto 0;
-    font-size: 2em;
-    color: rgb(242, 246, 255);
-    text-align: center;
+  display: inline-block;
+  width: 100%;
+  margin: auto 0;
+  font-size: 2em;
+  color: rgb(242, 246, 255);
+  text-align: center;
 }
 
-.heading>i {
-    display: none;
+.heading > i {
+  display: none;
 }
 
 /* Overlay */
 
 #overlay {
-    opacity: 1;
-    min-width: 100vw;
-    height: 100vh;
-    background: rgba(44, 46, 56, 0.6);
-    z-index: 10;
-    position: fixed;
-    overflow-y: scroll;
-    left: 0;
-    top: 0;
-    transition: .3s cubic-bezier(0.46, 0.85, 0.67, 0.88);
+  opacity: 1;
+  min-width: 100vw;
+  height: 100vh;
+  background: rgba(44, 46, 56, 0.6);
+  z-index: 10;
+  position: fixed;
+  overflow-y: scroll;
+  left: 0;
+  top: 0;
+  transition: 0.3s cubic-bezier(0.46, 0.85, 0.67, 0.88);
 }
 
 #overlay.hidden {
-    /* overflow-y: hidden; */
-    /* height: 0; */
-    opacity: 0;
-    transition: .3s cubic-bezier(0.21, 0.1, 0.76, 0.29);
+  /* overflow-y: hidden; */
+  /* height: 0; */
+  opacity: 0;
+  transition: 0.3s cubic-bezier(0.21, 0.1, 0.76, 0.29);
 }
 
 #overlay-container {
-    padding: 1vw;
-    max-width: 98vw;
-    min-height: 90vh;
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    justify-content: center;
+  padding: 1vw;
+  max-width: 98vw;
+  min-height: 90vh;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #overlay-image {
-    margin: 0 auto;
-    box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, .125);
-    border-radius: 1em;
+  margin: 0 auto;
+  box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, 0.125);
+  border-radius: 1em;
 }
 
 #overlay-text {
-    margin-top: 0;
-    font-size: 1.5em;
-    line-height: 1.5em;
-    color: #ffffff;
+  margin-top: 0;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  color: #ffffff;
 }
 
 /* Close button */
 .closeButton {
-    position: absolute;
-    top: 1em;
-    left: 1em;
-    height: 4em;
-    width: 4em;
-    text-align: left;
-    border-radius: .5em;
-    background: rgba(153, 154, 163, 0.4);
-    cursor: pointer;
-    transition: 300ms cubic-bezier(0.32, 0.68, 0.46, 0.82);
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  height: 4em;
+  width: 4em;
+  text-align: left;
+  border-radius: 0.5em;
+  background: rgba(153, 154, 163, 0.4);
+  cursor: pointer;
+  transition: 300ms cubic-bezier(0.32, 0.68, 0.46, 0.82);
 }
 
 .closeButton:hover {
-    background: rgba(195, 214, 233, 0.5);
+  background: rgba(195, 214, 233, 0.5);
 }
 
 .closeButton:active {
-    background: rgba(240, 247, 255, 0.7);
-    transition: 100ms;
+  background: rgba(240, 247, 255, 0.7);
+  transition: 100ms;
 }
 
-.closeButton::before, .closeButton::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    height: .25em;
-    width: 100%;
-    background: #fff;
-    border-radius: .5em;
-    transition: 300ms cubic-bezier(0.32, 0.68, 0.46, 0.82);
+.closeButton::before,
+.closeButton::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 0.25em;
+  width: 100%;
+  background: #fff;
+  border-radius: 0.5em;
+  transition: 300ms cubic-bezier(0.32, 0.68, 0.46, 0.82);
 }
 
 .closeButton::before {
-    transform: rotate(-45deg) scaleX(0.5);
+  transform: rotate(-45deg) scaleX(0.5);
 }
 
 .closeButton::after {
-    transform: rotate(45deg) scaleX(0.5);
+  transform: rotate(45deg) scaleX(0.5);
 }
 
 .closeButton:hover::before {
-    transform: rotate(-45deg) scaleX(1);
+  transform: rotate(-45deg) scaleX(1);
 }
 
 .closeButton:hover::after {
-    transform: rotate(45deg) scaleX(1);
+  transform: rotate(45deg) scaleX(1);
 }
 /* Label stuffs */
 
 .labelFolder {
-    margin: .8em 0;
-    text-align: center;
-    padding-left: 0.75em;
-    padding-right: 0.75em;
+  margin: 0.8em 0;
+  text-align: center;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
 }
 
 .label {
-    border-radius: 0.25em;
-    display: inline-block;
-    vertical-align: bottom;
-    font-weight: 300;
-    margin: 1.2em 0;
-    position: relative;
-    padding: .5em .75em;
-    box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, .15);
-    background: rgb(103, 105, 116);
-    transition: .15s ease-out;
+  border-radius: 0.25em;
+  display: inline-block;
+  vertical-align: bottom;
+  font-weight: 300;
+  margin: 1.2em 0;
+  position: relative;
+  padding: 0.5em 0.75em;
+  box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, 0.15);
+  background: rgb(103, 105, 116);
+  transition: 0.15s ease-out;
 }
 
 .label.button {
-    font-size: 200%;
-    box-shadow: 0 0 0.1em 0.1em rgba(0, 0, 0, .15);
-    margin: .3em .3em;
+  font-size: 200%;
+  box-shadow: 0 0 0.1em 0.1em rgba(0, 0, 0, 0.15);
+  margin: 0.3em 0.3em;
 }
 
 .label.button:not(.selected) {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-.label:hover, .label.selected {
-    background: rgb(195, 214, 233);
-    transition: .2s ease-out;
+.label:hover,
+.label.selected {
+  background: rgb(195, 214, 233);
+  transition: 0.2s ease-out;
 }
 
 .label:active {
-    background: rgb(234, 244, 255);
-    transition: .07s ease-out;
+  background: rgb(234, 244, 255);
+  transition: 0.07s ease-out;
 }
 
-.label span, .label i {
-    margin-right: .25em;
+.label span,
+.label i {
+  margin-right: 0.25em;
 }
 
 .labelTitle {
-    color: #ffffff;
-    transition: .15s ease-out;
+  color: #ffffff;
+  transition: 0.15s ease-out;
 }
 
-.labelTitle>i {
-    font-size: 150%;
-    vertical-align: middle;
+.labelTitle > i {
+  font-size: 150%;
+  vertical-align: middle;
 }
 
-.label:hover>.labelTitle, .label.selected>.labelTitle {
-    color: rgb(31, 31, 37);
-    transition: .2s ease-out;
+.label:hover > .labelTitle,
+.label.selected > .labelTitle {
+  color: rgb(31, 31, 37);
+  transition: 0.2s ease-out;
 }
 
 .labelContent {
-    color: rgb(214, 214, 214);
-    transition: .15s ease-out;
+  color: rgb(214, 214, 214);
+  transition: 0.15s ease-out;
 }
 
-.label:hover>.labelContent {
-    color: rgb(49, 48, 56);
-    transition: .2s ease-out;
+.label:hover > .labelContent {
+  color: rgb(49, 48, 56);
+  transition: 0.2s ease-out;
 }
 
 .label.button::before {
-    content: "";
+  content: "";
 }
 
 .label::before {
-    color: rgb(198, 198, 198);
-    content: attr(alt);
-    font-size: .75em;
-    left: 0;
-    top: -1.75em;
-    position: absolute;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, .25);
-    transition: .2s cubic-bezier(0.21, 0.77, 0.53, 0.92)
+  color: rgb(198, 198, 198);
+  content: attr(alt);
+  font-size: 0.75em;
+  left: 0;
+  top: -1.75em;
+  position: absolute;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  transition: 0.2s cubic-bezier(0.21, 0.77, 0.53, 0.92);
 }
 
 .label:hover::before {
-    color: #fff;
-    font-size: 0.9em;
-    transition: .3s cubic-bezier(0.21, 0.77, 0.53, 0.92)
+  color: #fff;
+  font-size: 0.9em;
+  transition: 0.3s cubic-bezier(0.21, 0.77, 0.53, 0.92);
 }
 
 /* Footer */
 
 #footer {
-    font-size: .9em;
-    line-height: 2em;
-    padding: .5em 1em;
+  font-size: 0.9em;
+  line-height: 2em;
+  padding: 0.5em 1em;
 }
 
 #copyright {
-    color: #eee;
-    text-align: center;
+  color: #eee;
+  text-align: center;
 }
 
 /* RESPONSIVENESS */
 
 @media only screen and (min-width: 60rem) {
-    .card {
-        min-width: 55em;
-        max-width: 70vw;
-    }
-    .card:hover {
-        border-radius: 0 1em 1em 1em;
-        transition: border-radius .3s ease-in-out,
-    }
-    .card.content-only {
-        min-width: 40em;
-        max-width: 60vw;
-    }
-    .card.content-only>.content {
-        width: 100%;
-    }
-    .card.content-only.left .labelFolder, .card.left>.heading {
-        text-align: left;
-    }
-    .card.content-only.center .labelFolder, .card.center>.heading {
-        text-align: center;
-    }
-    .card.content-only.right .labelFolder, .card.right>.heading {
-        text-align: right;
-    }
-    .card.left>.content {
-        float: left;
-    }
-    .card.center>.content {
-        float: center;
-    }
-    .card.right>.content {
-        float: right;
-    }
-    .buttons {
-        flex-direction: row;
-        justify-content: center;
-    }
-    .image {
-        border-radius: 0.5em;
-        width: 45%;
-    }
-    .image:hover {
-        border-radius: 0 .5em .5em .5em;
-        box-shadow: 0.2em 0.2em 0.4em 0.4em rgba(0, 0, 0, 0.25);
-    }
-    .content {
-        width: 54%;
-    }
-    #main-container {
-        transition: 0.2s cubic-bezier(0.06, 0.35, 0.43, 0.84);
-        min-height: 80vh;
-        margin: 10vh 0;
-    }
-    .card>.heading>i {
-        display: inline-block;
-        transform: rotateZ(-23deg);
-        transition: .15s;
-    }
-    .card:hover>.heading>i {
-        transform: rotateZ(0deg);
-        transition: .2s;
-    }
-    .label:hover, .label.selected {
-        border-radius: 0 0.25em 0.25em 0.25em;
-    }
-    .label.button:hover, .label.selected {
-        box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
-    }
+  .card {
+    min-width: 55em;
+    max-width: 70vw;
+  }
+  .card:hover {
+    border-radius: 0 1em 1em 1em;
+    transition: border-radius 0.3s ease-in-out;
+  }
+  .card.content-only {
+    min-width: 40em;
+    max-width: 60vw;
+  }
+  .card.content-only > .content {
+    width: 100%;
+  }
+  .card.content-only.left .labelFolder,
+  .card.left > .heading {
+    text-align: left;
+  }
+  .card.content-only.center .labelFolder,
+  .card.center > .heading {
+    text-align: center;
+  }
+  .card.content-only.right .labelFolder,
+  .card.right > .heading {
+    text-align: right;
+  }
+  .card.left > .content {
+    float: left;
+  }
+  .card.center > .content {
+    float: center;
+  }
+  .card.right > .content {
+    float: right;
+  }
+  .buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .image {
+    border-radius: 0.5em;
+    width: 45%;
+  }
+  .image:hover {
+    border-radius: 0 0.5em 0.5em 0.5em;
+    box-shadow: 0.2em 0.2em 0.4em 0.4em rgba(0, 0, 0, 0.25);
+  }
+  .content {
+    width: 54%;
+  }
+  #main-container {
+    transition: 0.2s cubic-bezier(0.06, 0.35, 0.43, 0.84);
+    min-height: 80vh;
+    margin: 10vh 0;
+  }
+  .card > .heading > i {
+    display: inline-block;
+    transform: rotateZ(-23deg);
+    transition: 0.15s;
+  }
+  .card:hover > .heading > i {
+    transform: rotateZ(0deg);
+    transition: 0.2s;
+  }
+  .label:hover,
+  .label.selected {
+    border-radius: 0 0.25em 0.25em 0.25em;
+  }
+  .label.button:hover,
+  .label.selected {
+    box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
+  }
 }
