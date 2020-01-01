@@ -138,11 +138,12 @@ h2.title {
   overflow: hidden;
 }
 
-body.hasHover .card:hover{
+body.hasHover .card:hover {
+  transition: 0.4s ease-in-out;
   box-shadow: .8em .8em 2em 0.2em hsla(240, 7%, 8%, 0.6);
 }
 
-body.bruh .card:active{
+body.bruh .card:active {
   transition: 0.1s ease-out;
   box-shadow: .4em .4em 1.5em -0.2em hsla(240, 7%, 4%, 0.8);
 }
@@ -360,9 +361,9 @@ body.hasHover .label:hover, .label.selected {
 }
 
 body.bruh .label:active {
+  transition: 0.09s ease-out;
   background: rgb(234, 244, 255);
   box-shadow: 0.2em 0.2em 1.2em -0.1em hsla(230, 4%, 5%, 0.7);
-  transition: 0.09s ease-out;
 }
 
 .label span, .label i {
@@ -384,6 +385,11 @@ body.hasHover .label:hover>.labelTitle, .label.selected>.labelTitle {
   transition: 0.2s ease-out;
 }
 
+body.bruh .label:active>.labelTitle{
+  color: rgb(31, 31, 37);
+  transition: 0.1s ease-out;
+}
+
 .labelContent {
   color: rgb(214, 214, 214);
   transition: 0.15s ease-out;
@@ -392,6 +398,11 @@ body.hasHover .label:hover>.labelTitle, .label.selected>.labelTitle {
 body.hasHover .label:hover>.labelContent {
   color: rgb(49, 48, 56);
   transition: 0.2s ease-out;
+}
+
+body.bruh .label:active>.labelContent{
+  color: rgb(49, 48, 56);
+  transition: 0.1s ease-out;
 }
 
 .label.button::before {
@@ -409,10 +420,16 @@ body.hasHover .label:hover>.labelContent {
   transition: 0.2s cubic-bezier(0.21, 0.77, 0.53, 0.92);
 }
 
-body.hasHover .label:hover::before {
+body.hasHover .label:hover::before{
   color: #fff;
   font-size: 0.9em;
   transition: 0.3s cubic-bezier(0.21, 0.77, 0.53, 0.92);
+}
+
+body.bruh .label:active::before{
+  transition:0.1s cubic-bezier(0.21, 0.77, 0.53, 0.92);
+  font-size: 0.9em;
+  color: #fff;
 }
 
 /* Footer */
