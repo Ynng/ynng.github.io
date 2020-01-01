@@ -63,13 +63,14 @@ a:visited {
   color: rgb(221, 152, 255);
 }
 
-body.hasHover a:hover:not(.label) {
+body.hasHover a:hover{
   color: rgb(211, 212, 255);
   text-shadow: 0 0 10px #ffffffbb, 0 0 20px #ffffff7a, 0 0 30px #6778ccdc, 0 0 40px #5061b4ab, 0 0 50px #5061b480, 0 0 60px #5061b44d, 0 0 70px #5061b42f;
 }
 
-a:active {
-  color: rgb(94, 139, 195);
+body.bruh a:active {
+  color: rgb(163, 163, 189);
+  text-shadow: 0 0 10px #ffffffaa, 0 0 20px #ffffff3f, 0 0 30px #6778cc98, 0 0 40px #5061b46e, 0 0 50px #5061b44f, 0 0 60px #5061b434, 0 0 70px #5061b415;
 }
 
 /* Scroll Bar */
@@ -254,7 +255,7 @@ body.hasHover .closeButton:hover {
   background: rgba(195, 214, 233, 0.5);
 }
 
-.closeButton:active {
+body.bruh .closeButton:active {
   background: rgba(240, 247, 255, 0.7);
   transition: 100ms;
 }
@@ -309,6 +310,10 @@ body.hasHover .closeButton:hover::after {
   transition: 0.15s ease-out;
 }
 
+a.label{
+  text-shadow: none !important;
+}
+
 .label.button {
   font-size: 150%;
   box-shadow: 0 0 0.1em 0.1em rgba(0, 0, 0, 0.15);
@@ -324,7 +329,7 @@ body.hasHover .label:hover, .label.selected {
   transition: 0.2s ease-out;
 }
 
-.label:active {
+body.bruh .label:active {
   background: rgb(234, 244, 255);
   transition: 0.07s ease-out;
 }
