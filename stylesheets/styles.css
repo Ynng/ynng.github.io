@@ -1,4 +1,9 @@
 /* neumorphism */
+:root {
+  --button-height: 50px;
+  --neumorphism-shadow: 0 0 10px -2px rgba(25, 26, 27, 0.897), 5px 4px 8px 0 rgba(25, 26, 27, 0.151), -2px -2px 8px 2px rgba(109, 111, 114, 0.712);
+  --neumorphism-shadow-reverse: inset 0 0 10px -2px rgba(25, 26, 27, 0.897), inset 5px 4px 6px 0 rgba(25, 26, 27, 0.151), inset -1px -1px 6px 1px rgba(109, 111, 114, 0.712);
+}
 
 body {
   font-family: 'Quicksand', Arial, Helvetica, sans-serif;
@@ -48,15 +53,19 @@ p {
 }
 
 @keyframes boxShadowIn {
-  0% { box-shadow: inset 0 0 10px -2px rgba(25, 26, 27, 0.897), inset 5px 4px 6px 0 rgba(25, 26, 27, 0.151), inset -1px -1px 6px 1px rgba(109, 111, 114, 0.712); }
+  0% { box-shadow: var(--neumorphism-shadow-reverse); }
   50% { box-shadow: none; }
-  100% { box-shadow: 0 0 10px -2px rgba(25, 26, 27, 0.897), 5px 4px 8px 0 rgba(25, 26, 27, 0.151), -2px -2px 8px 2px rgba(109, 111, 114, 0.712); }
+  100% { box-shadow: var(--neumorphism-shadow) }
 }
   
 @keyframes boxShadowOut {
-  0% { box-shadow: 0 0 10px -2px rgba(25, 26, 27, 0.897), 5px 4px 8px 0 rgba(25, 26, 27, 0.151), -2px -2px 8px 2px rgba(109, 111, 114, 0.712); }
+  0% { box-shadow: var(--neumorphism-shadow); }
   50% { box-shadow: none; }
-  100% { box-shadow: inset 0 0 10px -2px rgba(25, 26, 27, 0.897), inset 5px 4px 6px 0 rgba(25, 26, 27, 0.151), inset -1px -1px 6px 1px rgba(109, 111, 114, 0.712); }
+  100% { box-shadow: var(--neumorphism-shadow-reverse); }
+}
+
+.connections{
+  margin-top: 36px;
 }
 
 .button-collection-wrapper{
@@ -67,7 +76,7 @@ p {
   justify-content: center;
 }
 
-.connections, .project-buttons{
+.button-collection{
   font-size: 200%;
   justify-content: center;
   padding: 0;
@@ -75,69 +84,57 @@ p {
   width: 560px;
 }
 
-.connections{
-  margin-top: 36px;
-}
-
-.project-buttons li{
-  flex-grow: 1;
-}
-
-.connections li, .project-buttons li {
+.button-collection li{
   list-style: none;
   padding: 0 15px;
 }
 
-.project-buttons li a{
-  line-height: 50px;
-}
-
-.connections li a, .project-buttons li a {
+.button-collection a {
   position: relative;
   display: block;
-  width: 50px;
-  height: 50px;
-  border-radius: 25%;
+  width: var(--button-height);
+  height: var(--button-height);
+  line-height: var(--button-height);
+  border-radius: calc(var(--button-height)/4.0);
   background-color: #393b3b;
   text-align: center;
-  transition: 0.1s;
+  transition: .1s ease-out;
 }
 
-.project-buttons li a{
-  width: auto;
-  border-radius: 12.5px;
-}
-
-.project-buttons li a p{
+.button-collection p{
   margin: 0px;
-  font-size: 25px;
 }
 
-.project-buttons li a:hover{
-  text-decoration: none;
-}
-
-.connections i, .project-buttons li a{
+.button-collection li *{
   color: #cad4d4;
   font-size: 25px;
   line-height: 50px;
   transition: .1s ease-out;
+  text-decoration: none;
 }
 
-.connections li:hover i{
+.button-collection li:hover i{
   color: #fff;
 }
 
-.project-buttons li:hover a{
-  color: #000;
+.button-collection li:hover a {
+  box-shadow: var(--neumorphism-shadow);
 }
 
-.connections li:hover a, .project-buttons li:hover a {
-  box-shadow: 0 0 10px -2px rgba(25, 26, 27, 0.897), 5px 4px 8px 0 rgba(25, 26, 27, 0.151), -2px -2px 8px 2px rgba(109, 111, 114, 0.712);
-}
-
-.connections li a:active, .project-buttons li a:active {
+.button-collection a:active{
   animation: boxShadowOut .01s forwards ease-out;
+}
+
+.projects li{
+  flex-grow: 1;
+}
+
+.projects li a{
+  width: auto;
+}
+
+.projects li:hover p{
+  color: #000;
 }
 
 li:hover a.discord {
