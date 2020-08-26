@@ -118,7 +118,7 @@ p {
   width: var(--button-height);
   height: var(--button-height);
   line-height: var(--button-height);
-  border-radius: calc(var(--button-height)/4.0);
+  border-radius: 12px;
   background-color: #393b3b;
   text-align: center;
   transition: .1s ease-out;
