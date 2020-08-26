@@ -1,4 +1,5 @@
 /* neumorphism */
+
 :root {
   --button-height: 50px;
   --neumorphism-shadow: 0 0 10px -2px rgba(25, 26, 27, 0.897), 5px 4px 8px 0 rgba(25, 26, 27, 0.151), -2px -2px 8px 2px rgba(109, 111, 114, 0.712);
@@ -20,8 +21,6 @@ p {
   display: block;
   margin-block-start: 1em;
   margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
 }
 
 .my-container {
@@ -35,10 +34,23 @@ p {
   align-items: center;
 }
 
+@keyframes card-fadein {
+  0% {
+    box-shadow: none;
+    opacity: 0;
+  }
+  50%{
+    opacity: 0;
+  }
+  100% {
+    box-shadow: 0 0 10px -2px rgba(25, 26, 27, 0.897), 5px 4px 8px 0 rgba(25, 26, 27, 0.151), -2px -2px 8px 2px rgba(88, 90, 92, 0.712);
+    opacity: 1;
+  }
+}
+
 .my-card {
   display: block;
   user-select: none;
-  flex: 0;
   width: auto;
   min-height: 180px;
   min-height: min-content;
@@ -47,28 +59,39 @@ p {
   background: #393b3b;
   padding: 44px 60px;
   border-radius: 12px;
-  box-shadow: 0 0 10px -2px rgba(25, 26, 27, 0.897), 5px 4px 8px 0 rgba(25, 26, 27, 0.151), -2px -2px 8px 2px rgba(88, 90, 92, 0.712);
-  transition: box-shadow .48s ease-in-out .2s, opacity .17s ease-out;
+  animation: card-fadein .5s ease-out forwards;
   margin-bottom: 60px;
 }
 
 @keyframes boxShadowIn {
-  0% { box-shadow: var(--neumorphism-shadow-reverse); }
-  50% { box-shadow: none; }
-  100% { box-shadow: var(--neumorphism-shadow) }
-}
-  
-@keyframes boxShadowOut {
-  0% { box-shadow: var(--neumorphism-shadow); }
-  50% { box-shadow: none; }
-  100% { box-shadow: var(--neumorphism-shadow-reverse); }
+  0% {
+    box-shadow: var(--neumorphism-shadow-reverse);
+  }
+  50% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: var(--neumorphism-shadow)
+  }
 }
 
-.connections{
+@keyframes boxShadowOut {
+  0% {
+    box-shadow: var(--neumorphism-shadow);
+  }
+  50% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: var(--neumorphism-shadow-reverse);
+  }
+}
+
+.connections {
   margin-top: 36px;
 }
 
-.button-collection-wrapper{
+.button-collection-wrapper {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -76,7 +99,7 @@ p {
   justify-content: center;
 }
 
-.button-collection{
+.button-collection {
   font-size: 200%;
   justify-content: center;
   padding: 0;
@@ -84,7 +107,7 @@ p {
   width: 560px;
 }
 
-.button-collection li{
+.button-collection li {
   list-style: none;
   padding: 0 15px;
 }
@@ -101,11 +124,11 @@ p {
   transition: .1s ease-out;
 }
 
-.button-collection p{
-  margin: 0px;
+.button-collection p {
+  margin: 0;
 }
 
-.button-collection li *{
+.button-collection li * {
   color: #cad4d4;
   font-size: 25px;
   line-height: 50px;
@@ -113,7 +136,7 @@ p {
   text-decoration: none;
 }
 
-.button-collection li:hover i{
+.button-collection li:hover i {
   color: #fff;
 }
 
@@ -121,19 +144,19 @@ p {
   box-shadow: var(--neumorphism-shadow);
 }
 
-.button-collection a:active{
+.button-collection a:active {
   animation: boxShadowOut .01s forwards ease-out;
 }
 
-.projects li{
+.projects li {
   flex-grow: 1;
 }
 
-.projects li a{
+.projects li a {
   width: auto;
 }
 
-.projects li:hover p{
+.projects li:hover p {
   color: #000;
 }
 
