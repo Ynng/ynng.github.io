@@ -2,8 +2,6 @@
 
 :root {
   --button-height: 50px;
-  --neumorphism-shadow: 0 0 10px -2px rgba(25, 26, 27, 0.897), 5px 4px 8px 0 rgba(25, 26, 27, 0.151), -2px -2px 8px 2px rgba(109, 111, 114, 0.712);
-  --neumorphism-shadow-reverse: inset 0 0 10px -2px rgba(25, 26, 27, 0.897), inset 5px 4px 6px 0 rgba(25, 26, 27, 0.151), inset -1px -1px 6px 1px rgba(109, 111, 114, 0.712);
 }
 
 body {
@@ -37,14 +35,11 @@ p {
 @keyframes card-fadein {
   0% {
     box-shadow: none;
-    opacity: 0;
   }
-  50%{
-    opacity: 0;
+  50% {
   }
   100% {
     box-shadow: 0 0 10px -2px rgba(25, 26, 27, 0.897), 5px 4px 8px 0 rgba(25, 26, 27, 0.151), -2px -2px 8px 2px rgba(88, 90, 92, 0.712);
-    opacity: 1;
   }
 }
 
@@ -59,32 +54,8 @@ p {
   background: #393b3b;
   padding: 44px 60px;
   border-radius: 12px;
-  animation: card-fadein .5s ease-out forwards;
+  animation: card-fadein 1s ease-out forwards;
   margin-bottom: 60px;
-}
-
-@keyframes boxShadowIn {
-  0% {
-    box-shadow: var(--neumorphism-shadow-reverse);
-  }
-  50% {
-    box-shadow: none;
-  }
-  100% {
-    box-shadow: var(--neumorphism-shadow)
-  }
-}
-
-@keyframes boxShadowOut {
-  0% {
-    box-shadow: var(--neumorphism-shadow);
-  }
-  50% {
-    box-shadow: none;
-  }
-  100% {
-    box-shadow: var(--neumorphism-shadow-reverse);
-  }
 }
 
 .connections {
@@ -121,7 +92,7 @@ p {
   border-radius: 12px;
   background-color: #393b3b;
   text-align: center;
-  transition: .1s ease-out;
+  transition: .1s cubic-bezier(.79,.21,.06,.81);
 }
 
 .button-collection p {
@@ -141,11 +112,21 @@ p {
 }
 
 .button-collection li:hover a {
-  box-shadow: var(--neumorphism-shadow);
+  box-shadow: 0 0 10px -2px rgba(25, 26, 27, 0.897), 5px 4px 8px 0 rgba(25, 26, 27, 0.151), -2px -2px 8px 2px rgba(109, 111, 114, 0.712), inset 0 0 0px 0px rgba(25, 26, 27, 0.897), inset 0px 0px 0px 0 rgba(25, 26, 27, 0.151), inset 0px 0px 0px 0px rgba(109, 111, 114, 0.712);
 }
 
 .button-collection a:active {
-  animation: boxShadowOut .01s forwards ease-out;
+  transition-duration: .05s;
+
+  box-shadow: 0 0 0px 0px rgba(25, 26, 27, 0.897), 0px 0px 0px 0 rgba(25, 26, 27, 0.151), 0px 0px 0px 0px rgba(109, 111, 114, 0.712), inset 0 0 10px -2px rgba(25, 26, 27, 0.897), inset 5px 4px 6px 0 rgba(25, 26, 27, 0.151), inset -1px -1px 6px 1px rgba(109, 111, 114, 0.712) !important;
+}
+
+.button-collection a:active i{
+  transform: scale(0.9);
+}
+
+.button-collection a:active p{
+  transform: scale(0.95);
 }
 
 .projects li {
