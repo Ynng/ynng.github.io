@@ -1,0 +1,35 @@
+li:hover a.discord {
+  background-color: #7289DA;
+}
+
+li:hover a.dmoj {
+  background-color: #FCDB05;
+}
+
+li:hover a.youtube {
+  background-color: #FF0000;
+}
+
+li:hover a.gmail {
+  background-color: #D93025;
+}
+
+li:hover a.linkedin {
+  background-color: #0077B5;
+}
+
+li:hover a.github {
+  background-color: #0c112e;
+}
+
+li:hover a.instagram {
+  background-color: #e4405f;
+}
+
+li:hover a.current-project {
+  background-color: #80d6ec;
+}
+
+li:hover a.past-projects {
+  background-color: #b7fb9d;
+}

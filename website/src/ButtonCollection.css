@@ -1,0 +1,75 @@
+
+.button-collection {
+  font-size: 200%;
+  justify-content: space-evenly;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 100%;
+  max-width: 560px;
+}
+
+.button-collection li {
+  list-style: none;
+}
+
+.button-collection a {
+  position: relative;
+  display: block;
+  width: var(--button-height);
+  height: var(--button-height);
+  line-height: var(--button-height);
+  border-radius: calc(0.24 * var(--button-height));
+  background-color: #393b3b;
+  text-align: center;
+  transition: .05s cubic-bezier(.79,.21,.06,.81);
+}
+
+.button-collection p {
+  margin: 0;
+}
+
+.button-collection li * {
+  color: #cad4d4;
+  font-size: calc(0.5 * var(--button-height));
+  line-height: var(--button-height);
+  transition: .05s cubic-bezier(.79,.21,.06,.81);
+  text-decoration: none;
+}
+
+.button-collection li:hover path {
+  color: #fff;
+}
+
+.button-collection li:hover a {
+  box-shadow: 0 0 0px 0px rgba(25, 26, 27, 0.897), 0px 0px 0px 0 rgba(25, 26, 27, 0.151), 0px 0px 0px 0px rgba(109, 111, 114, 0.712), inset 0 0 10px -2px rgba(25, 26, 27, 0.897), inset 5px 4px 6px 0 rgba(25, 26, 27, 0.151), inset -1px -1px 6px 1px rgba(109, 111, 114, 0.712);
+}
+
+.button-collection a:active svg{
+  transform: scale(0.9);
+}
+
+.button-collection a:active p{
+  transform: scale(0.95);
+}
+
+@media only screen and (min-width: 768px){
+  .button-collection a {
+    transition-duration: 0.1s;
+  }
+
+  .button-collection {
+    width: 560px;
+  }
+
+  .button-collection li:hover a {
+    box-shadow: 0 0 10px -2px rgba(25, 26, 27, 0.897), 5px 4px 8px 0 rgba(25, 26, 27, 0.151), -2px -2px 8px 2px rgba(109, 111, 114, 0.712), inset 0 0 0px 0px rgba(25, 26, 27, 0.897), inset 0px 0px 0px 0 rgba(25, 26, 27, 0.151), inset 0px 0px 0px 0px rgba(109, 111, 114, 0.712);
+  }
+  
+  .button-collection a:active {
+    transition-duration: .05s;
+  
+    box-shadow: 0 0 0px 0px rgba(25, 26, 27, 0.897), 0px 0px 0px 0 rgba(25, 26, 27, 0.151), 0px 0px 0px 0px rgba(109, 111, 114, 0.712), inset 0 0 10px -2px rgba(25, 26, 27, 0.897), inset 5px 4px 6px 0 rgba(25, 26, 27, 0.151), inset -1px -1px 6px 1px rgba(109, 111, 114, 0.712) !important;
+  }
+}
