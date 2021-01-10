@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
 
 :root {
   --button-size: 40px;
@@ -16,9 +16,15 @@
   background: #979c9c;
 }
 
-body{
-  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
-  background: linear-gradient(160deg, #3b3d3d 0%, #393b3b 20%, #393b3b 70%, #37393a 100%);
+body {
+  font-family: "Quicksand", Arial, Helvetica, sans-serif;
+  background: linear-gradient(
+    160deg,
+    #3b3d3d 0%,
+    #393b3b 20%,
+    #393b3b 70%,
+    #37393a 100%
+  );
   color: #e1ecee;
   margin: 0;
   padding: 0;
@@ -29,7 +35,7 @@ body{
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -42,17 +48,24 @@ p {
   margin-block-end: 1rem;
 }
 
-img{
+img {
   width: 100%;
   max-width: var(--content-width);
   border-radius: var(--border-radius);
 }
 
-h6, h5, h4, h3, h2, h1 {
+h6,
+h5,
+h4,
+h3,
+h2,
+h1 {
   margin-bottom: 1rem;
 }
 
-ol, ul, dl {
+ol,
+ul,
+dl {
   margin: 0;
 }
 
@@ -64,7 +77,7 @@ ol, ul, dl {
   font-size: 2.5rem;
 }
 
-.title{
+.title {
   font-size: 3.5rem;
   margin-bottom: 2rem;
 }
@@ -93,27 +106,30 @@ ol, ul, dl {
   background: #393b3b;
   padding: 22px 30px;
   border-radius: var(--border-radius);
-  box-shadow: 0 0 10px -2px rgba(25, 26, 27, 0.897), 5px 4px 8px 0 rgba(25, 26, 27, 0.151), -2px -2px 8px 2px rgba(88, 90, 92, 0.712);
+  box-shadow: 0 0 10px -2px rgba(25, 26, 27, 0.897),
+    5px 4px 8px 0 rgba(25, 26, 27, 0.151),
+    -2px -2px 8px 2px rgba(88, 90, 92, 0.712);
   margin-bottom: 60px;
 }
 
-@keyframes card-fadein {
+@keyframes card-fade-in {
   0% {
     box-shadow: none;
   }
   50% {
   }
   100% {
-    box-shadow: 0 0 10px -2px rgba(25, 26, 27, 0.897), 5px 4px 8px 0 rgba(25, 26, 27, 0.151), -2px -2px 8px 2px rgba(88, 90, 92, 0.712);
+    box-shadow: 0 0 10px -2px rgba(25, 26, 27, 0.897),
+      5px 4px 8px 0 rgba(25, 26, 27, 0.151),
+      -2px -2px 8px 2px rgba(88, 90, 92, 0.712);
   }
 }
 
-
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 768px) {
   .my-card {
     min-width: calc(var(--content-width) * 0.75);
     max-width: calc(var(--content-width) + 120px);
-    animation: card-fadein 1s ease-out forwards;
+    animation: card-fade-in 1s ease-out forwards;
     box-shadow: none;
     padding: 44px 60px;
   }
@@ -121,16 +137,15 @@ ol, ul, dl {
   .my-container {
     padding: 7rem 60px;
   }
-
 }
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 768px) {
   :root {
     --button-size: 50px;
   }
 }
 
-@media only screen and (min-width: 1000px){
+@media only screen and (min-width: 1000px) {
   :root {
     --button-size: 60px;
   }

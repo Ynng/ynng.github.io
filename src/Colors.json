@@ -1,24 +1,24 @@
 {
-  "dark":{
-    "github" : "#0c112e",
-    "instagram" : "#e4405f",
-    "discord" : "#7289DA",
-    "linkedin" : "#0077B5",
-    "dmoj" : "#FCDB05",
-    "gmail" : "#D93025",
-    "youtube" : "#FF0000",
-    "download" : "#5AB847",
-    "visit" : "#FF9DBF"
+  "dark": {
+    "github": "#0c112e",
+    "instagram": "#e4405f",
+    "discord": "#7289DA",
+    "linkedin": "#0077B5",
+    "dmoj": "#FCDB05",
+    "gmail": "#D93025",
+    "youtube": "#FF0000",
+    "download": "#5AB847",
+    "visit": "#FF9DBF"
   },
-  "light":{
-    "github" : "#BAC7DB",
-    "instagram" : "#e4405f",
-    "discord" : "#7289DA",
-    "linkedin" : "#0077B5",
-    "dmoj" : "#FCDB05",
-    "gmail" : "#D93025",
-    "youtube" : "#FF0000",
-    "download" : "#8BE778",
-    "visit" : "#FF9DBF"
+  "light": {
+    "github": "#BAC7DB",
+    "instagram": "#e4405f",
+    "discord": "#7289DA",
+    "linkedin": "#0077B5",
+    "dmoj": "#FCDB05",
+    "gmail": "#D93025",
+    "youtube": "#FF0000",
+    "download": "#8BE778",
+    "visit": "#FF9DBF"
   }
 }
