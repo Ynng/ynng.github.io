@@ -11,7 +11,7 @@ import {
   faFileDownload,
   faWindowMaximize,
 } from "@fortawesome/free-solid-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGithubSquare } from "@fortawesome/free-brands-svg-icons";
 
 //Colors for icons
 const Colors = require("../Colors.json");
@@ -49,7 +49,7 @@ function Portfolio() {
         <ButtonCollection
           buttons={[
             {
-              icon: faGithub,
+              icon: faGithubSquare,
               color: Colors.dark.github,
               link: "https://github.com/UHSRobotics/UHSRobotics.github.io",
             },
@@ -82,7 +82,7 @@ function Portfolio() {
         <ButtonCollection
           buttons={[
             {
-              icon: faGithub,
+              icon: faGithubSquare,
               color: Colors.dark.github,
               link: "https://github.com/Ynng/Try-Catch-Throw",
             },

@@ -6,13 +6,13 @@ import { Helmet } from "react-helmet";
 import ButtonCollection from "../components/ButtonCollection.js";
 
 // fontawesome imports
-import { faEnvelope, faAsterisk } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelopeSquare, faExternalLinkSquareAlt, faLaptopCode} from "@fortawesome/free-solid-svg-icons";
 import {
-  faYoutube,
+  faYoutubeSquare,
   faLinkedin,
   faDiscord,
-  faInstagram,
-  faGithub,
+  faInstagramSquare,
+  faGithubSquare,
 } from "@fortawesome/free-brands-svg-icons";
 
 //Colors for icons
@@ -21,18 +21,18 @@ const Colors = require("../Colors.json");
 function Home() {
   const connectionButtons = [
     {
-      icon: faYoutube,
+      icon: faYoutubeSquare,
       link:
         "https://www.youtube.com/channel/UC5qAOjtSdCkPEy1BUM78ruw/featured?view_as=subscriber",
       color: Colors.dark.youtube,
     },
     {
-      icon: faEnvelope,
+      icon: faEnvelopeSquare,
       link: "mailto:kh.kevinhuang.03@gmail.com",
       color: Colors.dark.gmail,
     },
     {
-      icon: faAsterisk,
+      icon: faExternalLinkSquareAlt,
       link: "https://dmoj.ca/user/Ynng11626",
       color: Colors.dark.dmoj,
     },
@@ -47,12 +47,12 @@ function Home() {
       color: Colors.dark.discord,
     },
     {
-      icon: faInstagram,
+      icon: faInstagramSquare,
       link: "https://www.instagram.com/_ynng_/",
       color: Colors.dark.instagram,
     },
     {
-      icon: faGithub,
+      icon: faGithubSquare,
       link: "https://github.com/Ynng",
       color: Colors.dark.github,
     },
