@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+:root {
+  --button-size: 40px;
+  --content-width: 620px;
+  --border-radius: 12px;
+}
+
+::selection {
+  color: inherit;
+  background: #979c9c;
+}
+
+::-moz-selection {
+  color: inherit;
+  background: #979c9c;
+}
+
+body{
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+  background: linear-gradient(160deg, #3b3d3d 0%, #393b3b 20%, #393b3b 70%, #37393a 100%);
+  color: #e1ecee;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+p {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: block;
+  font-size: 18px;
+  margin-block-start: 1rem;
+  margin-block-end: 1rem;
+}
+
+img{
+  width: 100%;
+  max-width: var(--content-width);
+  border-radius: var(--border-radius);
+}
+
+h6, h5, h4, h3, h2, h1 {
+  margin-bottom: 1rem;
+}
+
+ol, ul, dl {
+  margin: 0;
+}
+
+.alignCenter {
+  text-align: center;
+}
+
+.my-card h1 {
+  font-size: 2.5rem;
+}
+
+.title{
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+}
+
+.my-container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.my-card {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 90vw;
+  min-height: 180px;
+  min-height: min-content;
+  height: 180px;
+  height: min-content;
+  background: #393b3b;
+  padding: 22px 30px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 10px -2px rgba(25, 26, 27, 0.897), 5px 4px 8px 0 rgba(25, 26, 27, 0.151), -2px -2px 8px 2px rgba(88, 90, 92, 0.712);
+  margin-bottom: 60px;
+}
+
+@keyframes card-fadein {
+  0% {
+    box-shadow: none;
+  }
+  50% {
+  }
+  100% {
+    box-shadow: 0 0 10px -2px rgba(25, 26, 27, 0.897), 5px 4px 8px 0 rgba(25, 26, 27, 0.151), -2px -2px 8px 2px rgba(88, 90, 92, 0.712);
+  }
+}
+
+
+@media only screen and (min-width: 768px){
+  .my-card {
+    min-width: calc(var(--content-width) * 0.75);
+    max-width: calc(var(--content-width) + 120px);
+    animation: card-fadein 1s ease-out forwards;
+    box-shadow: none;
+    padding: 44px 60px;
+  }
+
+  .my-container {
+    padding: 7rem 60px;
+  }
+
+}
+
+@media only screen and (min-width: 768px){
+  :root {
+    --button-size: 50px;
+  }
+}
+
+@media only screen and (min-width: 1000px){
+  :root {
+    --button-size: 60px;
+  }
+}
