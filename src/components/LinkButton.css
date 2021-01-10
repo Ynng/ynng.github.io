@@ -32,7 +32,7 @@
 }
 
 .link-button:hover a {
-  box-shadow: 0 0 0px 0px rgba(25, 26, 27, 0.897), 0px 0px 0px 0 rgba(25, 26, 27, 0.151), 0px 0px 0px 0px rgba(109, 111, 114, 0.712), inset 0 0 10px -2px rgba(25, 26, 27, 0.897), inset 5px 4px 6px 0 rgba(25, 26, 27, 0.151), inset -1px -1px 6px 1px rgba(109, 111, 114, 0.712);
+  box-shadow: 0 0 0 0 rgba(25, 26, 27, 0.897), 0 0 0 0 rgba(25, 26, 27, 0.151), 0 0 0 0 rgba(109, 111, 114, 0.712), inset 0 0 10px -2px rgba(25, 26, 27, 0.897), inset 5px 4px 6px 0 rgba(25, 26, 27, 0.151), inset -1px -1px 6px 1px rgba(109, 111, 114, 0.712);
 }
 
 .link-button a:active svg{
@@ -58,11 +58,11 @@
 
 @media only screen and (min-width: 768px){
   .link-button:hover a {
-    box-shadow: 0 0 10px -2px rgba(25, 26, 27, 0.897), 5px 4px 8px 0 rgba(25, 26, 27, 0.151), -2px -2px 8px 2px rgba(109, 111, 114, 0.712), inset 0 0 0px 0px rgba(25, 26, 27, 0.897), inset 0px 0px 0px 0 rgba(25, 26, 27, 0.151), inset 0px 0px 0px 0px rgba(109, 111, 114, 0.712);
+    box-shadow: 0 0 10px -2px rgba(25, 26, 27, 0.897), 5px 4px 8px 0 rgba(25, 26, 27, 0.151), -2px -2px 8px 2px rgba(109, 111, 114, 0.712), inset 0 0 0 0 rgba(25, 26, 27, 0.897), inset 0 0 0 0 rgba(25, 26, 27, 0.151), inset 0 0 0 0 rgba(109, 111, 114, 0.712);
   }
 
   .link-button a:active {
-    box-shadow: 0 0 0px 0px rgba(25, 26, 27, 0.897), 0px 0px 0px 0 rgba(25, 26, 27, 0.151), 0px 0px 0px 0px rgba(109, 111, 114, 0.712), inset 0 0 10px -2px rgba(25, 26, 27, 0.897), inset 5px 4px 6px 0 rgba(25, 26, 27, 0.151), inset -1px -1px 6px 1px rgba(109, 111, 114, 0.712) !important;
+    box-shadow: 0 0 0 0 rgba(25, 26, 27, 0.897), 0 0 0 0 rgba(25, 26, 27, 0.151), 0 0 0 0 rgba(109, 111, 114, 0.712), inset 0 0 10px -2px rgba(25, 26, 27, 0.897), inset 5px 4px 6px 0 rgba(25, 26, 27, 0.151), inset -1px -1px 6px 1px rgba(109, 111, 114, 0.712) !important;
   }
 
   .link-button a:active, .link-button a:active *{
