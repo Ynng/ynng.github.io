@@ -1,0 +1,20 @@
+.back-button{
+  background-color: rgba(119, 125, 128, 0.85);
+  position: fixed;
+  left: 40px;
+  top: 40px;
+  width: var(--button-size);
+  height: var(--button-size);
+  color: #d1dddd;
+  font-size: calc(0.5 * var(--button-size));
+  line-height: var(--button-size);
+  text-align: center;
+  border-radius: var(--border-radius);
+
+  transition: .1s cubic-bezier(.79,.21,.06,.81);
+}
+
+.back-button:hover{
+  color: #fff;
+  background-color: rgb(0, 131, 197);
+}
