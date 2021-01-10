@@ -1,3 +1,4 @@
+import React from 'react';
 import './ButtonCollection.css';
 import LinkButton from'./LinkButton.js';
 
