@@ -16,14 +16,14 @@
   border-radius: calc(0.24 * var(--button-size));
   background-color: #393b3b;
   text-align: center;
-  transition: .04s cubic-bezier(.79,.21,.06,.81);
+  transition: .06s cubic-bezier(.79,.21,.06,.81);
 }
 
 .link-button * {
   color: #cad4d4;
   font-size: calc(0.5 * var(--button-size));
   line-height: var(--button-size);
-  transition: .04s cubic-bezier(.79,.21,.06,.81);
+  transition: .06s cubic-bezier(.79,.21,.06,.81);
   text-decoration: none;
 }
 
@@ -66,6 +66,6 @@
   }
 
   .link-button a:active, .link-button a:active *{
-    transition-duration: 0.01s;
+    transition-duration: 0.02s;
   }
 }
