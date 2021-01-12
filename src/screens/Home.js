@@ -61,7 +61,7 @@ function Home() {
     {
       text: "Resume",
       link:
-        "https://gappsyrdsbca-my.sharepoint.com/:b:/g/personal/349530436_gapps_yrdsb_ca/EQkjf_VU6PxEuh7adbfo-d4BuVdPyfGbIJu2qFmpvSFwuA?e=3ZKGKT",
+        "/resume.pdf",
       color: "#80d6ec",
     },
     {
