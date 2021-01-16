@@ -79,28 +79,30 @@ function Home() {
   });
 
   return (
-    <div className="my-card">
-      <Helmet>
-        <title>Home | Kevin Huang</title>
-        <meta
-          name="description"
-          content="Home of Kevin Huang's personal website"
+    <div className="my-container center">
+      <div className="my-card">
+        <Helmet>
+          <title>Home | Kevin Huang</title>
+          <meta
+            name="description"
+            content="Home of Kevin Huang's personal website"
+          />
+        </Helmet>
+        <h1>Kevin Huang</h1>
+        <p>
+          Robotics, VR, Web, Game dev.
+          <br />
+          Currently learning opengl, tensorflow and motion profiling.
+          <br />
+          <br />I am always looking for more ways to expand my skill set and
+          broaden my experiences!
+        </p>
+        <ButtonCollection
+          buttons={connectionButtons}
+          style={{ marginTop: "3rem", marginBottom: "1rem" }}
         />
-      </Helmet>
-      <h1>Kevin Huang</h1>
-      <p>
-        Robotics, VR, Web, Game dev.
-        <br />
-        Currently learning opengl, tensorflow and motion profiling.
-        <br />
-        <br />I am always looking for more ways to expand my skill set and
-        broaden my experiences!
-      </p>
-      <ButtonCollection
-        buttons={connectionButtons}
-        style={{ marginTop: "3rem", marginBottom: "1rem" }}
-      />
-      <ButtonCollection buttons={additionalButtons} />
+        <ButtonCollection buttons={additionalButtons} />
+      </div>
     </div>
   );
 }

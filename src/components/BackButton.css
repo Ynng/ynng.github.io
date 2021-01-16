@@ -1,8 +1,8 @@
 .back-button {
   background-color: rgba(119, 125, 128, 0.85);
   position: fixed;
-  left: 40px;
-  top: 40px;
+  left: calc(0.5 * var(--button-size));
+  top: calc(0.5 * var(--button-size));
   width: var(--button-size);
   height: var(--button-size);
   color: #d1dddd;

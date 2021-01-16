@@ -25,7 +25,7 @@ function Portfolio() {
   });
 
   return (
-    <>
+    <div className="my-container">
       <Helmet>
         <title>Portfolio | Kevin Huang</title>
         <meta
@@ -103,7 +103,7 @@ function Portfolio() {
 
       <h2 className="alignCenter">Website Under Construction!</h2>
       <h3 className="alignCenter">More coming soon</h3>
-    </>
+    </div>
   );
 }
 export default Portfolio;
