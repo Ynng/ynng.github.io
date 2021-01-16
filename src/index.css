@@ -4,6 +4,9 @@
   --button-size: 40px;
   --content-width: 620px;
   --border-radius: 12px;
+  --card-shadow: 0 0 10px -2px rgba(25, 26, 27, 0.897),
+                5px 4px 8px 0 rgba(25, 26, 27, 0.151),
+                -2px -2px 8px 2px rgba(88, 90, 92, 0.712);
 }
 
 ::selection {
@@ -122,9 +125,7 @@ dl {
   background: #393b3b;
   padding: 22px 30px;
   border-radius: var(--border-radius);
-  box-shadow: 0 0 10px -2px rgba(25, 26, 27, 0.897),
-    5px 4px 8px 0 rgba(25, 26, 27, 0.151),
-    -2px -2px 8px 2px rgba(88, 90, 92, 0.712);
+  box-shadow: var(--card-shadow);
   margin-bottom: 60px;
 }
 
@@ -132,12 +133,11 @@ dl {
   0% {
     box-shadow: none;
   }
-  50% {
+  40% {
+    box-shadow: none;
   }
   100% {
-    box-shadow: 0 0 10px -2px rgba(25, 26, 27, 0.897),
-      5px 4px 8px 0 rgba(25, 26, 27, 0.151),
-      -2px -2px 8px 2px rgba(88, 90, 92, 0.712);
+    box-shadow: var(--card-shadow);
   }
 }
 
@@ -145,7 +145,7 @@ dl {
   .my-card {
     min-width: calc(var(--content-width) * 0.75);
     max-width: calc(var(--content-width) + 120px);
-    animation: card-fade-in 1s ease-out forwards;
+    animation: card-fade-in .7s ease-out forwards;
     box-shadow: none;
     padding: 44px 60px;
   }
@@ -167,23 +167,23 @@ dl {
   }
 }
 
-/* simple - enter transition 300ms, exit 150ms */
+/* simple - enter transition 200ms, exit 100ms */
 .fade-appear,
 .fade-enter {
-    opacity: 0;
-    z-index: 1;
+  opacity: 0;
+  z-index: 1;
 }
 .fade-appear-active,
 .fade-enter.fade-enter-active {
-    opacity: 1;
-    transition: opacity 300ms linear 150ms;
+  opacity: 1;
+  transition: opacity 200ms linear 100ms;
 }
 
 .fade-exit {
-    opacity: 1;
+  opacity: 1;
 }
 
 .fade-exit.fade-exit-active {
     opacity: 0;
-    transition: opacity 150ms linear;
+    transition: opacity 100ms linear;
 }
