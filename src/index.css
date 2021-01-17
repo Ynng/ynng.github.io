@@ -22,22 +22,43 @@
 #bg{
   z-index: -1;
   position: fixed;
-  width: 100%;
-  height: 100%;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   background: linear-gradient(160deg, #3b3d3d 0%, #393b3b 20%, #393b3b 70%, #37393a 100%);
-  transform: transform(0,0);
+  transform: translate(0,0);
 }
 
 body {
-  position: static;
   font-family: "Quicksand", Arial, Helvetica, sans-serif;
   color: #e1ecee;
   margin: 0;
   padding: 0;
+  width: 100%;
   /* min-height: 100vh; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #2E3338;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #202225;
+}
+
+body::-webkit-scrollbar-track, body::-webkit-scrollbar-thumb{
+  border: 0px solid transparent;
+  background-clip: padding-box;
+  /* border-radius: 8px; */
+}
+
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -88,18 +109,9 @@ dl {
 }
 
 .my-container {
-  position: fixed;
-  
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  opacity: 1;
-
   display: flex;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   padding: 20px;
   box-sizing: border-box;
   flex-direction: column;
@@ -107,7 +119,7 @@ dl {
   align-items: center;
   overflow: hidden;
 
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .my-container.center{
