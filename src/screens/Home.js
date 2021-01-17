@@ -93,8 +93,9 @@ function Home() {
           Robotics, VR, Web, Game dev.
           <br />
           Currently learning opengl, tensorflow and motion profiling.
-          <br />
-          <br />I am always looking for more ways to expand my skill set and
+        </p>
+        <p>
+          I am always looking for more ways to expand my skill set and
           broaden my experiences!
         </p>
         <ButtonCollection

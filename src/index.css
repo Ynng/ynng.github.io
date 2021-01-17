@@ -1,22 +1,81 @@
-@import url("https://fonts.googleapis.com/css?family=Quicksand");
+@import url("https://fonts.googleapis.com/css?family=Quicksand:300,400,500");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 :root {
   --button-size: 40px;
   --content-width: 620px;
   --border-radius: 12px;
-  --card-shadow: 0 0 10px -2px rgba(25, 26, 27, 0.897),
-                5px 4px 8px 0 rgba(25, 26, 27, 0.151),
-                -2px -2px 8px 2px rgba(88, 90, 92, 0.712);
+  --theme-toggle-time: .1s;
+  --theme-toggle-curve: ease-out;
+}
+
+.light{
+  --main-background-color: hsl(60, 2%, 92%);
+  --light-background-color: hsl(60, 3%, 94%);
+  --dark-background-color: hsl(60, 2%, 90%);
+
+  --scrollbar-track-color: hsl(60, 2%, 85%);
+  --scrollbar-color: hsl(60, 2%, 65%);
+  --selection-color: hsl(180, 2%, 80%);
+
+  --text-color: hsl(231, 15%, 12%);
+
+  --button-color: hsl(60, 10%, 20%);
+
+  --card-shadow: 6px 6px 12px hsl(230, 4%, 73%), -6px -6px 12px hsl(0, 0%, 100%);
+
+  --button-shadow-up: 3px 3px 6px #b8b9be, -3px -3px 6px #ffffff, inset 2px 2px 5px #b8b9be00, inset -3px -3px 7px #FFFFFF00;
+
+  --button-shadow-down: 3px 3px 6px #b8b9be00, -3px -3px 6px #ffffff00, inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #FFFFFF;
+}
+
+.dark{
+  --main-background-color: hsl(180, 3%, 23%);
+  --light-background-color: hsl(180, 2%, 24%);
+  --dark-background-color: hsl(195, 4%, 22%);
+
+  --scrollbar-track-color:hsl(195, 4%, 20%);
+  --scrollbar-color: hsl(195, 4%, 13%);
+  --selection-color: hsl(180, 2%, 60%);
+
+  --text-color: hsl(189, 28%, 91%);
+
+  --button-color: hsl(180, 10%, 81%);
+
+  --card-shadow: 6px 6px 12px hsl(180, 3%, 12%), -6px -6px 12px hsl(180, 0%, 31%);
+
+  --button-shadow-up: 0 0 10px -2px rgba(25, 26, 27, 0.897),
+  5px 4px 8px 0 rgba(25, 26, 27, 0.151),
+  -2px -2px 8px 2px rgba(109, 111, 114, 0.712),
+  inset 0 0 0 0 rgba(25, 26, 27, 0.897),
+  inset 0 0 0 0 rgba(25, 26, 27, 0.151),
+  inset 0 0 0 0 rgba(109, 111, 114, 0.712);
+
+  --button-shadow-down: 0 0 0 0 rgba(25, 26, 27, 0.897), 0 0 0 0 rgba(25, 26, 27, 0.151),
+  0 0 0 0 rgba(109, 111, 114, 0.712),
+  inset 0 0 10px -2px rgba(25, 26, 27, 0.897),
+  inset 5px 4px 6px 0 rgba(25, 26, 27, 0.151),
+  inset -1px -1px 6px 1px rgba(109, 111, 114, 0.712);
+  /* --card-shadow: 0 0 10px -2px rgba(25, 26, 27, 0.897),
+  5px 4px 8px 0 rgba(25, 26, 27, 0.151),
+  -2px -2px 8px 2px rgba(88, 90, 92, 0.712); */
 }
 
 ::selection {
   color: inherit;
-  background: #979c9c;
+  background-color: var(--selection-color);
+  transition: background-color var(--theme-toggle-time) var(--theme-toggle-curve); 
 }
 
 ::-moz-selection {
   color: inherit;
-  background: #979c9c;
+  background-color: var(--selection-color);
+  transition: background-color var(--theme-toggle-time) var(--theme-toggle-curve); 
 }
 
 #bg{
@@ -25,13 +84,14 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(160deg, #3b3d3d 0%, #393b3b 20%, #393b3b 70%, #37393a 100%);
+  background-color: var(--main-background-color);
+  /* background: linear-gradient(160deg,var(--light-background-color) 0%, var(--main-background-color) 20%, var(--main-background-color) 70%, var(--dark-background-color)  100%); */
   transform: translate(0,0);
+  transition: background-color var(--theme-toggle-time) var(--theme-toggle-curve); 
 }
 
 body {
   font-family: "Quicksand", Arial, Helvetica, sans-serif;
-  color: #e1ecee;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -41,15 +101,17 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: 10px;
+  width: 16px;
 }
 
 body::-webkit-scrollbar-track {
-  background: #2E3338;
+  background-color: var(--scrollbar-track-color);
+  transition: background-color var(--theme-toggle-time) var(--theme-toggle-curve); 
 }
 
 body::-webkit-scrollbar-thumb {
-  background: #202225;
+  background-color: var(--scrollbar-color);
+  transition: background-color var(--theme-toggle-time) var(--theme-toggle-curve); 
 }
 
 body::-webkit-scrollbar-track, body::-webkit-scrollbar-thumb{
@@ -58,14 +120,31 @@ body::-webkit-scrollbar-track, body::-webkit-scrollbar-thumb{
   /* border-radius: 8px; */
 }
 
-
+a:hover {
+  color: inherit;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
+h6,
+h5,
+h4,
+h3,
+h2,
+h1 {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  transition: color var(--theme-toggle-time) var(--theme-toggle-curve); 
+}
+
+
 p {
+  color: var(--text-color);
+  transition: color var(--theme-toggle-time) var(--theme-toggle-curve); 
+
   width: -moz-fit-content;
   width: fit-content;
   display: block;
@@ -78,15 +157,6 @@ img {
   width: 100%;
   max-width: var(--content-width);
   border-radius: var(--border-radius);
-}
-
-h6,
-h5,
-h4,
-h3,
-h2,
-h1 {
-  margin-bottom: 1rem;
 }
 
 ol,
@@ -135,11 +205,14 @@ dl {
   min-height: min-content;
   height: 180px;
   height: min-content;
-  background: #393b3b;
+  background-color: var(--main-background-color);
   padding: 22px 30px;
   border-radius: var(--border-radius);
   box-shadow: var(--card-shadow);
   margin-bottom: 60px;
+
+  transition: background-color var(--theme-toggle-time) var(--theme-toggle-curve),
+    box-shadow var(--theme-toggle-time) var(--theme-toggle-curve); 
 }
 
 @keyframes card-fade-in {
@@ -158,13 +231,17 @@ dl {
   .my-card {
     min-width: calc(var(--content-width) * 0.75);
     max-width: calc(var(--content-width) + 120px);
-    animation: card-fade-in .3s ease-out forwards;
-    box-shadow: none;
+    /* animation: card-fade-in .5s ease-out forwards;
+    box-shadow: none; */
     padding: 44px 60px;
   }
 
   .my-container {
     padding: 7rem 60px;
+  }
+
+  p{
+    font-size: 20px;
   }
 }
 
