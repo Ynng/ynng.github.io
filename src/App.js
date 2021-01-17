@@ -4,7 +4,6 @@ import ReactGA from "react-ga";
 import { Route, Switch } from "react-router-dom";
 import Home from "./screens/Home.js";
 import Portfolio from "./screens/Portfolio.js";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 function initializeReactGA() {
   ReactGA.initialize("UA-140777720-1");
