@@ -19,16 +19,10 @@ function App() {
   return (
     <div className="preload body">
       <div id="bg"></div>
-      <Route render={({location})=>(
-        <TransitionGroup>
-        <CSSTransition key={location.key} timeout={450} classNames="fade">
-          <Switch location={location}>
-            <Route path="/portfolio" component={Portfolio} />
-            <Route path="/" component={Home} />
-          </Switch>
-        </CSSTransition>
-      </TransitionGroup>
-      )} />
+        <Switch>
+          <Route path="/portfolio" component={Portfolio} />
+          <Route path="/" component={Home} />
+        </Switch>
     </div>
   );
 }
