@@ -29,12 +29,12 @@
 }
 
 body {
+  position: static;
   font-family: "Quicksand", Arial, Helvetica, sans-serif;
   color: #e1ecee;
   margin: 0;
   padding: 0;
-  width: 100%;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -89,6 +89,7 @@ dl {
 
 .my-container {
   position: fixed;
+  
   top: 0;
   left: 0;
   right: 0;

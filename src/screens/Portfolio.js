@@ -22,7 +22,7 @@ function Portfolio() {
       "now visiting " + window.location.pathname + window.location.search
     );
     ReactGA.pageview(window.location.pathname + window.location.search);
-  });
+  }, []);
 
   return (
     <div className="my-container">
