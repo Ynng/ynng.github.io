@@ -12,11 +12,8 @@ import {
   faLinkedin,
   faDiscord,
   faInstagram,
-  faGithub,
+  faGithubAlt,
 } from "@fortawesome/free-brands-svg-icons";
-
-//Colors for icons
-const Colors = require("../Colors.json");
 
 function Home() {
   const connectionButtons = [
@@ -24,37 +21,37 @@ function Home() {
       icon: faYoutube,
       link:
         "https://www.youtube.com/channel/UC5qAOjtSdCkPEy1BUM78ruw/featured?view_as=subscriber",
-      color: Colors.dark.youtube,
+      colorCssVar: "--youtube-color",
     },
     {
       icon: faEnvelope,
       link: "mailto:kh.kevinhuang.03@gmail.com",
-      color: Colors.dark.gmail,
+      colorCssVar: "--gmail-color",
     },
     {
       icon: faAsterisk,
       link: "https://dmoj.ca/user/Ynng11626",
-      color: Colors.dark.dmoj,
+      colorCssVar: "--dmoj-color",
     },
     {
       icon: faLinkedin,
       link: "https://www.linkedin.com/in/kevin-huang-b67b9817a/",
-      color: Colors.dark.linkedin,
+      colorCssVar: "--linkedin-color",
     },
     {
       icon: faDiscord,
       link: "https://discord.gg/HMZrmM6",
-      color: Colors.dark.discord,
+      colorCssVar: "--discord-color",
     },
     {
       icon: faInstagram,
       link: "https://www.instagram.com/_ynng_/",
-      color: Colors.dark.instagram,
+      colorCssVar: "--instagram-color",
     },
     {
-      icon: faGithub,
+      icon: faGithubAlt,
       link: "https://github.com/Ynng",
-      color: Colors.dark.github,
+      colorCssVar: "--github-color",
     },
   ];
   const additionalButtons = [
@@ -62,12 +59,10 @@ function Home() {
       text: "Resume",
       link:
         "/resume.pdf",
-      color: "#80d6ec",
     },
     {
       text: "Portfolio",
       routerLink: "/portfolio",
-      color: "#b7fb9d",
     },
   ];
 

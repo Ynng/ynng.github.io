@@ -12,17 +12,21 @@ function initializeReactGA() {
 }
 
 function App() {
-  const [themeClass, setThemeClass] = useState("dark");
+  const [themeClass, setThemeClass] = useState("light");
 
   useEffect(() => {
-    toggleTheme();
-  }, [])
+    // toggleTheme();
+      document.body.classList.remove("preload");
+
+    // setTimeout(() => {
+    // }, 1000);
+  }, []);
 
   let changeBodyThemeClass = (target) => {
     document.body.classList.add(target);
     document.body.classList.remove(themeClass);
     setThemeClass(target);
-  }
+  };
 
   let toggleTheme = () => {
     if (themeClass == "dark") changeBodyThemeClass("light");
@@ -36,7 +40,7 @@ function App() {
   return (
     <div>
       <div id="bg"></div>
-      <ThemeToggleButton toggleTheme={toggleTheme}/>
+      <ThemeToggleButton toggleTheme={toggleTheme} />
       <Switch>
         <Route path="/portfolio" component={Portfolio} />
         <Route path="/" component={Home} />

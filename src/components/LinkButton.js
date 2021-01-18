@@ -3,8 +3,9 @@ import "./LinkButton.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
-function LinkButton({ button, style }) {
-  let linkClassName = `on-hover-${button.color.substr(1)}`;
+function LinkButton({ button, style, onClick, className }) {
+  if(button.colorCssVar)
+    var linkClassName = `link-button-${button.colorCssVar.substr(2)}`;
 
   let linkContent;
   if (button.icon) linkContent = <FontAwesomeIcon icon={button.icon} />;
@@ -26,12 +27,17 @@ function LinkButton({ button, style }) {
 
   return (
     <div
-      className={`link-button ${button.icon ? "icon" : "text"}`}
+      className={`link-button ${button.icon ? "icon" : "text"} ${className}`}
       style={style}
+      onClick = {onClick}
     >
-      <style type="text/css" scoped>
-        {`.link-button:hover .${linkClassName}{ background-color : ${button.color};}`}
-      </style>
+      {button.colorCssVar ? 
+        <style type="text/css" scoped>
+          {`.link-button .${linkClassName} path{ color : var(${button.colorCssVar});}
+            .link-button:active .${linkClassName}{ background-color : var(${button.colorCssVar}); border-color : var(${button.colorCssVar})}`}
+        </style>
+      :<></>}
+
       {linkElement}
     </div>
   );

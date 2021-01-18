@@ -30,6 +30,11 @@
   margin: 0 10px;
 }
 
+.button-collection .link-button {
+  margin-right: .75rem;
+  margin-bottom: .75rem;
+}
+
 .button-collection .link-button.text,
 .button-collection .link-button.text * {
   width: auto;

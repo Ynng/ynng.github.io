@@ -1,55 +1,55 @@
 .link-button {
-  width: var(--button-size);
-  height: var(--button-size);
+
   margin-left: -0.5rem;
 }
 
 .link-button p {
   margin: 0;
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 .link-button a {
+  width: var(--button-size);
+  height: var(--button-size);
+
   position: relative;
-  display: block;
-  line-height: var(--button-size);
-  border-radius: calc(0.24 * var(--button-size));
-  background-color: #00000000;
-  text-align: center;
-  transition: 0.06s cubic-bezier(0.79, 0.21, 0.06, 0.81);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: calc(0.21 * var(--button-size));
+  background-color: var(--main-background-color);
+
+  transition: 0.2s ease;
+  border: 0.0625rem solid transparent;
+  border-color: var(--border-color);
+  box-shadow: var(--button-shadow-up);
+  /* transition: 0.06s cubic-bezier(0.79, 0.21, 0.06, 0.81); */
+}
+
+.link-button a svg{
+  max-height: calc(0.4 * var(--button-size));
+  max-width: calc(0.4 * var(--button-size));
 }
 
 .link-button * {
   color: var(--button-color);
   font-size: calc(0.5 * var(--button-size));
   line-height: var(--button-size);
-  transition: 0.06s cubic-bezier(0.79, 0.21, 0.06, 0.81);
+  transition: all 0.2s ease;
+  /* transition: 0.06s cubic-bezier(0.79, 0.21, 0.06, 0.81); */
   text-decoration: none;
 }
 
-.link-button:hover path {
-  color: #fff;
-}
-
-.link-button:hover a {
-  box-shadow: var(--button-shadow-up);
-}
-
-.link-button a:active {
+.link-button:hover a, .link-button:active a {
   box-shadow: var(--button-shadow-down);
 }
 
-.link-button a:active,
-.link-button a:active * {
-  transition-duration: 0.02s;
+.link-button a:active:focus {
+  box-shadow: var(--button-shadow-pressed);
 }
 
-.link-button a:active svg {
-  transform: scale(0.9);
-}
-
-.link-button a:active p {
-  transform: scale(0.95);
+.link-button:active path{
+  color : var(--main-background-color) !important;
 }
 
 .link-button.text,
@@ -60,8 +60,4 @@
 
 .link-button.text a {
   padding: 0 0.5rem;
-}
-
-.link-button.text:hover p {
-  color: #000;
 }

@@ -2,23 +2,11 @@
   user-select: none;
 
   z-index: 1000000;
-  background-color: rgba(119, 125, 128, 0.85);
   position: fixed;
   right: calc(0.5 * var(--button-size));
   top: calc(0.5 * var(--button-size));
-  width: var(--button-size);
-  height: var(--button-size);
-  color: #d1dddd;
-  font-size: calc(0.5 * var(--button-size));
-  line-height: var(--button-size);
-  text-align: center;
-  border-radius: var(--border-radius);
-
-  transition: 0.1s cubic-bezier(0.79, 0.21, 0.06, 0.81);
 }
 
 .theme-toggle-button:hover {
-  color: #fff;
-  background-color: rgb(0, 131, 197);
   cursor: pointer;
 }

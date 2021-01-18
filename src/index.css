@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand:300,400,500");
 
+.preload,
+.preload * {
+  transition: none !important;
+}
+
 *,
 *::before,
 *::after {
@@ -7,39 +12,52 @@
 }
 
 :root {
-  --button-size: 40px;
+  --button-size: 3.2rem;
   --content-width: 620px;
   --border-radius: 12px;
-  --theme-toggle-time: .1s;
+  --theme-toggle-time: 0.1s;
   --theme-toggle-curve: ease-out;
 }
 
-.light{
-  --main-background-color: hsl(60, 2%, 92%);
-  --light-background-color: hsl(60, 3%, 94%);
-  --dark-background-color: hsl(60, 2%, 90%);
+.light {
+  --main-background-color: hsl(180, 3%, 93%);
+  --light-background-color: hsl(180, 3%, 94%);
+  --dark-background-color: hsl(180, 2%, 90%);
 
-  --scrollbar-track-color: hsl(60, 2%, 85%);
-  --scrollbar-color: hsl(60, 2%, 65%);
+  --scrollbar-track-color: hsl(180, 2%, 85%);
+  --scrollbar-color: hsl(180, 2%, 65%);
   --selection-color: hsl(180, 2%, 80%);
 
   --text-color: hsl(231, 15%, 12%);
 
-  --button-color: hsl(60, 10%, 20%);
+  --button-color: hsl(180, 10%, 20%);
 
   --card-shadow: 6px 6px 12px hsl(230, 4%, 73%), -6px -6px 12px hsl(0, 0%, 100%);
 
-  --button-shadow-up: 3px 3px 6px #b8b9be, -3px -3px 6px #ffffff, inset 2px 2px 5px #b8b9be00, inset -3px -3px 7px #FFFFFF00;
+  --border-color: #d1d9e6;
+  --button-shadow-up: 3px 3px 6px #b8b9be, -3px -3px 6px #ffffff;
+  --button-shadow-down: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #ffffff;
+  --button-shadow-pressed: inset 2px 2px 5px #b8b9be,
+    inset -3px -3px 7px #ffffff, inset 2px 2px 5px #b8b9be,
+    inset -3px -3px 7px #ffffff;
 
-  --button-shadow-down: 3px 3px 6px #b8b9be00, -3px -3px 6px #ffffff00, inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #FFFFFF;
+  --github-color: #222222;
+  --instagram-color: #c32845;
+  --discord-color: #515f90;
+  --linkedin-color: #0077b5;
+  --dmoj-color: #cab710;
+  --gmail-color: #d3483e;
+  --youtube-color: #cd201f;
+  --download-color: #5ab847;
+  --visit-color: #15aabf;
 }
 
-.dark{
+.dark {
   --main-background-color: hsl(180, 3%, 23%);
   --light-background-color: hsl(180, 2%, 24%);
   --dark-background-color: hsl(195, 4%, 22%);
 
-  --scrollbar-track-color:hsl(195, 4%, 20%);
+  --scrollbar-track-color: hsl(195, 4%, 20%);
   --scrollbar-color: hsl(195, 4%, 13%);
   --selection-color: hsl(180, 2%, 60%);
 
@@ -47,38 +65,46 @@
 
   --button-color: hsl(180, 10%, 81%);
 
-  --card-shadow: 6px 6px 12px hsl(180, 3%, 12%), -6px -6px 12px hsl(180, 0%, 31%);
+  --card-shadow: 6px 6px 12px hsl(180, 3%, 12%),
+    -6px -6px 12px hsl(180, 0%, 31%);
 
-  --button-shadow-up: 0 0 10px -2px rgba(25, 26, 27, 0.897),
-  5px 4px 8px 0 rgba(25, 26, 27, 0.151),
-  -2px -2px 8px 2px rgba(109, 111, 114, 0.712),
-  inset 0 0 0 0 rgba(25, 26, 27, 0.897),
-  inset 0 0 0 0 rgba(25, 26, 27, 0.151),
-  inset 0 0 0 0 rgba(109, 111, 114, 0.712);
+  --border-color: hsl(233, 18%, 22%);
+  --button-shadow-up: 3px 3px 6px 0 hsla(210, 4%, 5%, 0.5),
+    -3px -3px 6px 0px hsla(220, 3%, 35%, 0.712);
+  --button-shadow-down: inset 2px 2px 5px 0 hsla(210, 4%, 5%, 0.5),
+    inset -3px -3px 7px 0 hsla(220, 3%, 35%, 0.712);
 
-  --button-shadow-down: 0 0 0 0 rgba(25, 26, 27, 0.897), 0 0 0 0 rgba(25, 26, 27, 0.151),
-  0 0 0 0 rgba(109, 111, 114, 0.712),
-  inset 0 0 10px -2px rgba(25, 26, 27, 0.897),
-  inset 5px 4px 6px 0 rgba(25, 26, 27, 0.151),
-  inset -1px -1px 6px 1px rgba(109, 111, 114, 0.712);
-  /* --card-shadow: 0 0 10px -2px rgba(25, 26, 27, 0.897),
-  5px 4px 8px 0 rgba(25, 26, 27, 0.151),
-  -2px -2px 8px 2px rgba(88, 90, 92, 0.712); */
+  --button-shadow-pressed: inset 2px 2px 5px 0 hsla(210, 4%, 5%, 0.5),
+    inset -3px -3px 7px 0 hsla(220, 3%, 35%, 0.712),
+    inset 2px 2px 5px 0 hsla(210, 4%, 5%, 0.5),
+    inset -3px -3px 7px 0 hsla(220, 3%, 35%, 0.712);
+
+  --github-color: #F0F6FC;
+  --instagram-color: #ff738e;
+  --discord-color: #8098ec;
+  --linkedin-color: #0092de;
+  --dmoj-color: #fcdb05;
+  --gmail-color: #dc362b;
+  --youtube-color: #e40000;
+  --download-color: #5ab847;
+  --visit-color: #ff9dbf;
 }
 
 ::selection {
   color: inherit;
   background-color: var(--selection-color);
-  transition: background-color var(--theme-toggle-time) var(--theme-toggle-curve); 
+  transition: background-color var(--theme-toggle-time)
+    var(--theme-toggle-curve);
 }
 
 ::-moz-selection {
   color: inherit;
   background-color: var(--selection-color);
-  transition: background-color var(--theme-toggle-time) var(--theme-toggle-curve); 
+  transition: background-color var(--theme-toggle-time)
+    var(--theme-toggle-curve);
 }
 
-#bg{
+#bg {
   z-index: -1;
   position: fixed;
   left: 0;
@@ -86,8 +112,9 @@
   height: 100vh;
   background-color: var(--main-background-color);
   /* background: linear-gradient(160deg,var(--light-background-color) 0%, var(--main-background-color) 20%, var(--main-background-color) 70%, var(--dark-background-color)  100%); */
-  transform: translate(0,0);
-  transition: background-color var(--theme-toggle-time) var(--theme-toggle-curve); 
+  transform: translate(0, 0);
+  transition: background-color var(--theme-toggle-time)
+    var(--theme-toggle-curve);
 }
 
 body {
@@ -106,15 +133,18 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-track {
   background-color: var(--scrollbar-track-color);
-  transition: background-color var(--theme-toggle-time) var(--theme-toggle-curve); 
+  transition: background-color var(--theme-toggle-time)
+    var(--theme-toggle-curve);
 }
 
 body::-webkit-scrollbar-thumb {
   background-color: var(--scrollbar-color);
-  transition: background-color var(--theme-toggle-time) var(--theme-toggle-curve); 
+  transition: background-color var(--theme-toggle-time)
+    var(--theme-toggle-curve);
 }
 
-body::-webkit-scrollbar-track, body::-webkit-scrollbar-thumb{
+body::-webkit-scrollbar-track,
+body::-webkit-scrollbar-thumb {
   border: 0px solid transparent;
   background-clip: padding-box;
   /* border-radius: 8px; */
@@ -137,13 +167,12 @@ h2,
 h1 {
   color: var(--text-color);
   margin-bottom: 1rem;
-  transition: color var(--theme-toggle-time) var(--theme-toggle-curve); 
+  transition: color var(--theme-toggle-time) var(--theme-toggle-curve);
 }
-
 
 p {
   color: var(--text-color);
-  transition: color var(--theme-toggle-time) var(--theme-toggle-curve); 
+  transition: color var(--theme-toggle-time) var(--theme-toggle-curve);
 
   width: -moz-fit-content;
   width: fit-content;
@@ -192,7 +221,7 @@ dl {
   overflow-y: auto;
 }
 
-.my-container.center{
+.my-container.center {
   justify-content: center;
 }
 
@@ -207,12 +236,16 @@ dl {
   height: min-content;
   background-color: var(--main-background-color);
   padding: 22px 30px;
+  border: 0.0625rem solid;
+  border-color: var(--border-color);
   border-radius: var(--border-radius);
   box-shadow: var(--card-shadow);
   margin-bottom: 60px;
 
-  transition: background-color var(--theme-toggle-time) var(--theme-toggle-curve),
-    box-shadow var(--theme-toggle-time) var(--theme-toggle-curve); 
+  transition: background-color var(--theme-toggle-time)
+      var(--theme-toggle-curve),
+    box-shadow var(--theme-toggle-time) var(--theme-toggle-curve),
+    border-color var(--theme-toggle-time) var(--theme-toggle-curve);
 }
 
 @keyframes card-fade-in {
@@ -240,19 +273,19 @@ dl {
     padding: 7rem 60px;
   }
 
-  p{
+  p {
     font-size: 20px;
   }
 }
 
 @media only screen and (min-width: 768px) {
   :root {
-    --button-size: 50px;
+    --button-size: 3.2rem;
   }
 }
 
 @media only screen and (min-width: 1000px) {
   :root {
-    --button-size: 60px;
+    --button-size: 3.2rem;
   }
 }

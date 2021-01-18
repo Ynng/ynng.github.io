@@ -8,13 +8,10 @@ import BackButton from "../components/BackButton.js";
 
 // fontawesome imports
 import {
-  faFileDownload,
-  faWindowMaximize,
+  faDownload,
+  faEye,
 } from "@fortawesome/free-solid-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-
-//Colors for icons
-const Colors = require("../Colors.json");
+import { faGithubAlt } from "@fortawesome/free-brands-svg-icons";
 
 function Portfolio() {
   useEffect(() => {
@@ -49,13 +46,13 @@ function Portfolio() {
         <ButtonCollection
           buttons={[
             {
-              icon: faGithub,
-              color: Colors.dark.github,
+              icon: faGithubAlt,
+              colorCssVar: "--github-color",
               link: "https://github.com/UHSRobotics/UHSRobotics.github.io",
             },
             {
-              icon: faWindowMaximize,
-              color: Colors.dark.visit,
+              icon: faEye,
+              colorCssVar: "--visit-color",
               link: "https://uhsrobotics.github.io/",
             },
           ]}
@@ -82,13 +79,13 @@ function Portfolio() {
         <ButtonCollection
           buttons={[
             {
-              icon: faGithub,
-              color: Colors.dark.github,
+              icon: faGithubAlt,
+              colorCssVar: "--github-color",
               link: "https://github.com/Ynng/Try-Catch-Throw",
             },
             {
-              icon: faFileDownload,
-              color: Colors.dark.download,
+              icon: faDownload,
+              colorCssVar: "--download-color",
               link: "https://github.com/Ynng/Try-Catch-Throw/releases/latest",
             },
           ]}
