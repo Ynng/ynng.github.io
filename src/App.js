@@ -19,12 +19,12 @@ let changeBodyThemeClass = (target, remove) => {
 const useEffectDarkMode = () => {
   const [themeState, setThemeState] = React.useState({
     dark: false,
-    hasThemeLoaded: false,
+    hasThemeLoaded: true,
   });
   React.useEffect(() => {
     const lsDark = localStorage.getItem('dark') === 'true';
     setThemeState({ ...themeState, dark: lsDark, hasThemeLoaded: true });
-    if(lsDark)changeBodyThemeClass("dark", "light");
+    // if(lsDark)changeBodyThemeClass("dark", "light");
     //preload class disabled all css transition, so there won't be a flicker on load
     document.body.classList.remove("preload");
   }, []);

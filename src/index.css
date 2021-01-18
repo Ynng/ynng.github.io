@@ -12,7 +12,7 @@
 }
 
 :root {
-  --button-size: 3.2rem;
+  --button-size: 3rem;
   --content-width: 620px;
   --border-radius: 12px;
   --theme-toggle-time: 0.1s;
@@ -85,7 +85,7 @@
   --linkedin-color: #0092de;
   --dmoj-color: #fcdb05;
   --gmail-color: #dc362b;
-  --youtube-color: #e40000;
+  --youtube-color: #cc0000;
   --download-color: #5ab847;
   --visit-color: #ff9dbf;
 }
@@ -177,7 +177,7 @@ p {
   width: -moz-fit-content;
   width: fit-content;
   display: block;
-  font-size: 18px;
+  font-size: 17px;
   margin-block-start: 1rem;
   margin-block-end: 1rem;
 }
@@ -210,8 +210,9 @@ dl {
 .my-container {
   display: flex;
   width: 100%;
-  min-height: 100vh;
-  padding: 20px;
+  min-height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  min-height: calc(var(--vh, 1vh) * 100);
+  padding: 5rem 1rem;
   box-sizing: border-box;
   flex-direction: column;
   justify-content: flex-start;
@@ -261,6 +262,10 @@ dl {
 }
 
 @media only screen and (min-width: 768px) {
+  :root {
+    --button-size: 3.2rem;
+  }
+
   .my-card {
     min-width: calc(var(--content-width) * 0.75);
     max-width: calc(var(--content-width) + 120px);
@@ -274,18 +279,21 @@ dl {
   }
 
   p {
-    font-size: 20px;
+    font-size: 18px;
   }
-}
 
-@media only screen and (min-width: 768px) {
-  :root {
-    --button-size: 3.2rem;
-  }
 }
 
 @media only screen and (min-width: 1000px) {
   :root {
     --button-size: 3.2rem;
   }
+  
+  p {
+    font-size: 20px;
+  }
+}
+
+.bs-tooltip-left, .bs-tooltip-right, .bs-tooltip-auto[data-popper-placement^=left], .bs-tooltip-auto[data-popper-placement^=right]{
+  padding: 0 0.4rem;
 }

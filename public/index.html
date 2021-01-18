@@ -26,8 +26,27 @@
 
 </head>
 
-<body class="preload light">
+<body class="preload">
   <noscript>You need to enable JavaScript to run this app.</noscript>
+  <script>
+    // Scripts that needs to run asap.
+    //Setting custom vh
+
+    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+    let vh = window.innerHeight * 0.01;
+    // Then we set the value in the --vh custom property to the root of the document
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+    window.addEventListener('resize', () => {
+      // We execute the same script as before
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
+    
+    const lsDark = localStorage.getItem('dark') === 'true';
+    if(lsDark)document.body.classList.add('dark');
+    else document.body.classList.add('light');
+  </script>
   <div id="root"></div>
   <!--
       This HTML file is a template.

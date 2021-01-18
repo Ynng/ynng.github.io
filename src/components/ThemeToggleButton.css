@@ -4,9 +4,16 @@
   z-index: 1000000;
   position: fixed;
   right: calc(0.5 * var(--button-size));
-  top: calc(0.5 * var(--button-size));
+  bottom: calc(0.5 * var(--button-size));
 }
 
 .theme-toggle-button:hover {
   cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .theme-toggle-button {
+    top: calc(0.5 * var(--button-size));
+    bottom: auto;
+  }
 }

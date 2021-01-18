@@ -1,20 +1,6 @@
-.link-button {
-
-  margin-left: -0.5rem;
-}
-
 .link-button h2 {
   margin: 0;
   /* text-decoration: underline; */
-}
-
-.link-button-tooltip.fade:not(.show) {
-  opacity: 0;
-  transition: opacity 0.1s ease 0s;
-}
-
-.link-button-tooltip.fade {
-  transition: opacity .2s ease .5s;
 }
 
 .link-button a {
@@ -49,10 +35,6 @@
   text-decoration: none;
 }
 
-.link-button:hover a, .link-button:active a {
-  box-shadow: var(--button-shadow-down);
-}
-
 .link-button a:active:focus {
   box-shadow: var(--button-shadow-pressed);
 }
@@ -69,4 +51,29 @@
 
 .link-button.text a {
   padding: 0 0.5rem;
+}
+
+.link-button-tooltip.tooltip{
+  display: none;
+}
+
+.link-button-tooltip.fade:not(.show) {
+  opacity: 0;
+  transition: opacity 0.1s ease 0s;
+}
+
+.link-button-tooltip.fade {
+  transition: opacity .2s ease .5s;
+}
+
+@media only screen and (min-width: 768px) {
+  .link-button:hover a, .link-button:active a {
+    box-shadow: var(--button-shadow-down);
+  }
+  .link-button-tooltip.tooltip{
+    display: inherit;
+  }
+  .button-collection {
+    width: var(--content-width);
+  }
 }
