@@ -38,7 +38,7 @@ function LinkButton({
 
   var button = (
     <div
-      className={`link-button ${icon ? "icon" : "text"} ${className}`}
+      className={`link-button ${icon ? "icon" : "text"} ${className} ${colorCssVar ? "color-changing" : "static"}`}
       style={style}
       onClick={onClick}
     >

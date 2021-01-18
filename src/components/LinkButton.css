@@ -39,7 +39,7 @@
   box-shadow: var(--button-shadow-pressed);
 }
 
-.link-button:active path{
+.link-button.color-changing:active a *{
   color : var(--main-background-color) !important;
 }
 

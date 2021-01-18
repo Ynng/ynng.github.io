@@ -7,10 +7,7 @@ import ButtonCollection from "../components/ButtonCollection.js";
 import BackButton from "../components/BackButton.js";
 
 // fontawesome imports
-import {
-  faDownload,
-  faEye,
-} from "@fortawesome/free-solid-svg-icons";
+import { faDownload, faEye } from "@fortawesome/free-solid-svg-icons";
 import { faGithubAlt } from "@fortawesome/free-brands-svg-icons";
 
 function Portfolio() {
@@ -43,28 +40,41 @@ function Portfolio() {
           information on the members, history, and the current activities of
           Unionville High School Robotics Club, FRC Team 7721/849.
         </p>
-        <ButtonCollection
+        {/* <ButtonCollection
           buttons={[
             {
               icon: faGithubAlt,
               colorCssVar: "--github-color",
               link: "https://github.com/UHSRobotics/UHSRobotics.github.io",
-              tip: "Github Repository"
+              tip: "Github Repository",
             },
             {
               icon: faEye,
               colorCssVar: "--visit-color",
               link: "https://uhsrobotics.github.io/",
-              tip: "Visit Website"
+              tip: "Visit Website",
+            },
+          ]}
+          className="left"
+        /> */}
+
+        <ButtonCollection
+          buttons={[
+            {
+              text: "Github",
+              colorCssVar: "--github-color",
+              link: "https://github.com/UHSRobotics/UHSRobotics.github.io",
+              tip: "Github Repository",
+            },
+            {
+              text: "Visit",
+              colorCssVar: "--visit-color",
+              link: "https://uhsrobotics.github.io/",
+              tip: "Visit Website",
             },
           ]}
           className="left"
         />
-
-        {/* <ButtonCollection buttons = {[
-          { text: "Github", color: Colors.light.github, link: "https://github.com/UHSRobotics/UHSRobotics.github.io" },
-          { text: "Visit", color: Colors.light.visit, link: "https://uhsrobotics.github.io/" }
-        ]}/>   */}
       </div>
       <div className="my-card">
         <h2>Try-Catch-Throw</h2>
@@ -84,13 +94,13 @@ function Portfolio() {
               icon: faGithubAlt,
               colorCssVar: "--github-color",
               link: "https://github.com/Ynng/Try-Catch-Throw",
-              tip: "Github Repository"
+              tip: "Github Repository",
             },
             {
               icon: faDownload,
               colorCssVar: "--download-color",
               link: "https://github.com/Ynng/Try-Catch-Throw/releases/latest",
-              tip: "Download Game"
+              tip: "Download Game",
             },
           ]}
           className="left"
