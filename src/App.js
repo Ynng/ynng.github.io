@@ -11,36 +11,50 @@ function initializeReactGA() {
   ReactGA.pageview(window.location.pathname + window.location.search);
 }
 
-function App() {
-  const [themeClass, setThemeClass] = useState("light");
+let changeBodyThemeClass = (target, remove) => {
+  document.body.classList.add(target);
+  document.body.classList.remove(remove);
+};
 
-  useEffect(() => {
-    // toggleTheme();
-      document.body.classList.remove("preload");
-
-    // setTimeout(() => {
-    // }, 1000);
+const useEffectDarkMode = () => {
+  const [themeState, setThemeState] = React.useState({
+    dark: false,
+    hasThemeLoaded: false,
+  });
+  React.useEffect(() => {
+    const lsDark = localStorage.getItem('dark') === 'true';
+    setThemeState({ ...themeState, dark: lsDark, hasThemeLoaded: true });
+    if(lsDark)changeBodyThemeClass("dark", "light");
+    //preload class disabled all css transition, so there won't be a flicker on load
+    document.body.classList.remove("preload");
   }, []);
+  return [themeState, setThemeState];
+};
 
-  let changeBodyThemeClass = (target) => {
-    document.body.classList.add(target);
-    document.body.classList.remove(themeClass);
-    setThemeClass(target);
-  };
+function App() {
+  const [themeState, setThemeState] = useEffectDarkMode();
 
   let toggleTheme = () => {
-    if (themeClass == "dark") changeBodyThemeClass("light");
-    else changeBodyThemeClass("dark");
+    const dark = !themeState.dark;
+    localStorage.setItem('dark', JSON.stringify(dark));
+    setThemeState({ ...themeState, dark });
+
+    if(dark)changeBodyThemeClass("dark", "light");
+    else changeBodyThemeClass("light", "dark");
   };
 
   useEffect(() => {
     initializeReactGA();
   }, []);
 
+  if (!themeState.hasThemeLoaded) {
+      return <div/>;
+  }
+
   return (
     <div>
-      <div id="bg"></div>
-      <ThemeToggleButton toggleTheme={toggleTheme} theme={themeClass}/>
+      <div id="bg"/>
+      <ThemeToggleButton toggleTheme={toggleTheme} theme={themeState}/>
       <Switch>
         <Route path="/portfolio" component={Portfolio} />
         <Route path="/" component={Home} />

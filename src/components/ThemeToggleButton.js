@@ -13,7 +13,7 @@ function ThemeToggleButton({ toggleTheme, theme }) {
   
   return (
     <LinkButton
-      icon={theme==="dark"?faSun : faMoon}
+      icon={theme.dark?faSun : faMoon}
       colorCssVar="--text-color"
       onClick={handleClick}
       className={`theme-toggle-button ${hideIcon ? "hide-icon" : ""}`}
