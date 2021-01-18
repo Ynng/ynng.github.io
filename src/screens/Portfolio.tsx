@@ -3,8 +3,8 @@ import ReactGA from "react-ga";
 import { Helmet } from "react-helmet";
 
 //My own components
-import ButtonCollection from "../components/ButtonCollection.js";
-import BackButton from "../components/BackButton.js";
+import ButtonCollection from "../components/ButtonCollection";
+import BackButton from "../components/BackButton";
 
 // fontawesome imports
 import {

@@ -2,9 +2,9 @@
 import React, { useEffect, useState } from "react";
 import ReactGA from "react-ga";
 import { Route, Switch } from "react-router-dom";
-import Home from "./screens/Home.js";
-import Portfolio from "./screens/Portfolio.js";
-import ThemeToggleButton from "./components/ThemeToggleButton.js";
+import Home from "./screens/Home";
+import Portfolio from "./screens/Portfolio";
+import ThemeToggleButton from "./components/ThemeToggleButton";
 
 function initializeReactGA() {
   ReactGA.initialize("UA-140777720-1");

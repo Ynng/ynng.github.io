@@ -3,7 +3,13 @@ import "./LinkButton.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
-function LinkButton({ button, style }) {
+let ButtonInforma
+
+interface Props{
+  target: string;
+}
+
+const LinkButton = ({ button, style }) => {
   let linkClassName = `on-hover-${button.color.substr(1)}`;
 
   let linkContent;

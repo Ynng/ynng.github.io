@@ -4,7 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 
-function BackButton({ target }) {
+interface Props{
+  target: string;
+}
+
+const BackButton = ({ target } : Props) => {
   return (
     <Link to={target} className="back-button">
       <FontAwesomeIcon icon={faHome} />
