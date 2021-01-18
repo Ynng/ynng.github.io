@@ -22,36 +22,43 @@ function Home() {
       link:
         "https://www.youtube.com/channel/UC5qAOjtSdCkPEy1BUM78ruw/featured?view_as=subscriber",
       colorCssVar: "--youtube-color",
+      tip: "Youtube Channel"
     },
     {
       icon: faEnvelope,
       link: "mailto:kh.kevinhuang.03@gmail.com",
       colorCssVar: "--gmail-color",
+      tip: "Email Me"
     },
     {
       icon: faAsterisk,
       link: "https://dmoj.ca/user/Ynng11626",
       colorCssVar: "--dmoj-color",
+      tip: "DMOJ Profile"
     },
     {
       icon: faLinkedin,
       link: "https://www.linkedin.com/in/kevin-huang-b67b9817a/",
       colorCssVar: "--linkedin-color",
+      tip: "LinkedIn"
     },
     {
       icon: faDiscord,
       link: "https://discord.gg/HMZrmM6",
       colorCssVar: "--discord-color",
+      tip: "Discord"
     },
     {
       icon: faInstagram,
       link: "https://www.instagram.com/_ynng_/",
       colorCssVar: "--instagram-color",
+      tip: "Instagram"
     },
     {
       icon: faGithubAlt,
       link: "https://github.com/Ynng",
       colorCssVar: "--github-color",
+      tip: "Github"
     },
   ];
   const additionalButtons = [

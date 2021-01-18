@@ -2,45 +2,68 @@ import React from "react";
 import "./LinkButton.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
+import Tooltip from "react-bootstrap/Tooltip";
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 
-function LinkButton({ colorCssVar, icon, style, onClick, className, text, routerLink, link}) {
-  if(colorCssVar)
-    var linkClassName = `link-button-${colorCssVar.substr(2)}`;
+function LinkButton({
+  colorCssVar,
+  icon,
+  style,
+  onClick,
+  className,
+  text,
+  routerLink,
+  link,
+  tip,
+  tipPlacement = "top"
+}) {
+  if (colorCssVar) var linkClassName = `link-button-${colorCssVar.substr(2)}`;
 
-  let linkContent;
-  if (icon) linkContent = <FontAwesomeIcon icon={icon} />;
-  else linkContent = <p>{text}</p>;
+  if (icon) var linkContent = <FontAwesomeIcon icon={icon} />;
+  else var linkContent = <h2>{text}</h2>;
 
-  let linkElement;
+  // Chooses between a and Link based on the type of link
   if (routerLink)
-    linkElement = (
+    var linkElement = (
       <Link to={routerLink} className={linkClassName}>
         {linkContent}
       </Link>
     );
   else
-    linkElement = (
+    var linkElement = (
       <a href={link} className={linkClassName}>
         {linkContent}
       </a>
     );
 
-  return (
+  var button = (
     <div
       className={`link-button ${icon ? "icon" : "text"} ${className}`}
       style={style}
-      onClick = {onClick}
+      onClick={onClick}
     >
-      {colorCssVar ? 
+      {colorCssVar ? (
         <style type="text/css" scoped>
           {`.link-button .${linkClassName} path{ color : var(${colorCssVar});}
-            .link-button:active .${linkClassName}{ background-color : var(${colorCssVar}); border-color : var(${colorCssVar})}`}
+        .link-button:active .${linkClassName}{ background-color : var(${colorCssVar}); border-color : var(${colorCssVar})}`}
         </style>
-      :<></>}
-
+      ) : (
+        <></>
+      )}
       {linkElement}
     </div>
   );
+
+  if (tip)
+    return (
+      <OverlayTrigger
+        placement={tipPlacement}
+        overlay={<Tooltip className = "link-button-tooltip">{tip}</Tooltip>}
+      >
+        {button}
+      </OverlayTrigger>
+    );
+  return button;
 }
 
 export default LinkButton;

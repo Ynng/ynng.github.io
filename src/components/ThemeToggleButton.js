@@ -17,6 +17,8 @@ function ThemeToggleButton({ toggleTheme, theme }) {
       colorCssVar="--text-color"
       onClick={handleClick}
       className={`theme-toggle-button ${hideIcon ? "hide-icon" : ""}`}
+      tip="Toggle Dark Theme"
+      tipPlacement="bottom"
     />
   );
 }

@@ -49,11 +49,13 @@ function Portfolio() {
               icon: faGithubAlt,
               colorCssVar: "--github-color",
               link: "https://github.com/UHSRobotics/UHSRobotics.github.io",
+              tip: "Github Repository"
             },
             {
               icon: faEye,
               colorCssVar: "--visit-color",
               link: "https://uhsrobotics.github.io/",
+              tip: "Visit Website"
             },
           ]}
           className="left"
@@ -82,11 +84,13 @@ function Portfolio() {
               icon: faGithubAlt,
               colorCssVar: "--github-color",
               link: "https://github.com/Ynng/Try-Catch-Throw",
+              tip: "Github Repository"
             },
             {
               icon: faDownload,
               colorCssVar: "--download-color",
               link: "https://github.com/Ynng/Try-Catch-Throw/releases/latest",
+              tip: "Download Game"
             },
           ]}
           className="left"
