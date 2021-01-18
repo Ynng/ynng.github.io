@@ -40,7 +40,7 @@ function App() {
   return (
     <div>
       <div id="bg"></div>
-      <ThemeToggleButton toggleTheme={toggleTheme} />
+      <ThemeToggleButton toggleTheme={toggleTheme} theme={themeClass}/>
       <Switch>
         <Route path="/portfolio" component={Portfolio} />
         <Route path="/" component={Home} />

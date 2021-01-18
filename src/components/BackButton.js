@@ -8,12 +8,10 @@ import LinkButton from "./LinkButton";
 function BackButton({ target }) {
   return (
     <LinkButton
-      button={{
-        icon: faHome,
-        colorCssVar: "--text-color",
-        routerLink: target
-      }}
-      className = "back-button"
+      icon={faHome}
+      colorCssVar="--text-color"
+      routerLink={target}
+      className="back-button"
     />
   );
 }

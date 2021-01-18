@@ -5,9 +5,9 @@ import LinkButton from "./LinkButton.js";
 function ButtonCollection({ buttons, style, className }) {
   return (
     <ul className={`button-collection ${className}`} style={style}>
-      {buttons.map((button, idx) => (
-        <LinkButton key={idx} button={button} />
-      ))}
+      {buttons.map((button, idx) => {
+        return <LinkButton key={idx} {...button}/>;
+      })}
     </ul>
   );
 }

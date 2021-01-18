@@ -3,38 +3,38 @@ import "./LinkButton.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
-function LinkButton({ button, style, onClick, className }) {
-  if(button.colorCssVar)
-    var linkClassName = `link-button-${button.colorCssVar.substr(2)}`;
+function LinkButton({ colorCssVar, icon, style, onClick, className, text, routerLink, link}) {
+  if(colorCssVar)
+    var linkClassName = `link-button-${colorCssVar.substr(2)}`;
 
   let linkContent;
-  if (button.icon) linkContent = <FontAwesomeIcon icon={button.icon} />;
-  else linkContent = <p>{button.text}</p>;
+  if (icon) linkContent = <FontAwesomeIcon icon={icon} />;
+  else linkContent = <p>{text}</p>;
 
   let linkElement;
-  if (button.routerLink)
+  if (routerLink)
     linkElement = (
-      <Link to={button.routerLink} className={linkClassName}>
+      <Link to={routerLink} className={linkClassName}>
         {linkContent}
       </Link>
     );
   else
     linkElement = (
-      <a href={button.link} className={linkClassName}>
+      <a href={link} className={linkClassName}>
         {linkContent}
       </a>
     );
 
   return (
     <div
-      className={`link-button ${button.icon ? "icon" : "text"} ${className}`}
+      className={`link-button ${icon ? "icon" : "text"} ${className}`}
       style={style}
       onClick = {onClick}
     >
-      {button.colorCssVar ? 
+      {colorCssVar ? 
         <style type="text/css" scoped>
-          {`.link-button .${linkClassName} path{ color : var(${button.colorCssVar});}
-            .link-button:active .${linkClassName}{ background-color : var(${button.colorCssVar}); border-color : var(${button.colorCssVar})}`}
+          {`.link-button .${linkClassName} path{ color : var(${colorCssVar});}
+            .link-button:active .${linkClassName}{ background-color : var(${colorCssVar}); border-color : var(${colorCssVar})}`}
         </style>
       :<></>}
 
