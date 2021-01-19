@@ -329,9 +329,9 @@ dl {
 
   .my-card .media-container:hover {
     max-height: calc(var(--content-width)/16*9);
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
     cursor: pointer;
-    padding: 1rem 0;
+    /* padding: 1rem 0; */
   }
   
   .my-card .media-container:active {
