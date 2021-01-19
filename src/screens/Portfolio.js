@@ -40,7 +40,7 @@ function Portfolio() {
           information on the members, history, and the current activities of
           Unionville High School Robotics Club, FRC Team 7721/849.
         </p>
-        {/* <ButtonCollection
+        <ButtonCollection
           buttons={[
             {
               icon: faGithubAlt,
@@ -50,24 +50,6 @@ function Portfolio() {
             },
             {
               icon: faEye,
-              colorCssVar: "--visit-color",
-              link: "https://uhsrobotics.github.io/",
-              tip: "Visit Website",
-            },
-          ]}
-          className="left"
-        /> */}
-
-        <ButtonCollection
-          buttons={[
-            {
-              text: "Github",
-              colorCssVar: "--github-color",
-              link: "https://github.com/UHSRobotics/UHSRobotics.github.io",
-              tip: "Github Repository",
-            },
-            {
-              text: "Visit",
               colorCssVar: "--visit-color",
               link: "https://uhsrobotics.github.io/",
               tip: "Visit Website",

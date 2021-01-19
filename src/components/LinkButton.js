@@ -45,7 +45,7 @@ function LinkButton({
       {colorCssVar ? (
         <style type="text/css" scoped>
           {`.link-button .${linkClassName} path{ color : var(${colorCssVar});}
-        .link-button:active .${linkClassName}{ background-color : var(${colorCssVar}); border-color : var(${colorCssVar})}`}
+        .link-button .${linkClassName}:active{ background-color : var(${colorCssVar}); border-color : var(${colorCssVar})}`}
         </style>
       ) : (
         <></>
@@ -57,6 +57,7 @@ function LinkButton({
   if (tip)
     return (
       <OverlayTrigger
+        className="link-button-tooltip-overlay"
         placement={tipPlacement}
         overlay={<Tooltip className = "link-button-tooltip">{tip}</Tooltip>}
       >

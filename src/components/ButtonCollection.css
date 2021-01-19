@@ -11,12 +11,17 @@
   justify-content: flex-start;
 }
 
+.button-collection.right {
+  justify-content: flex-end;
+}
+
+
 .button-collection .link-button {
   margin: 0;
 }
 
 .button-collection.left {
-  margin-left: -0.5rem;
+  margin-left: -0.45rem;
 }
 
 .button-collection.left .link-button,
@@ -27,8 +32,8 @@
 .button-collection .link-button.text {
   flex-grow: 1;
   flex-basis: 0;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
   margin-bottom: 1rem;
 }
 

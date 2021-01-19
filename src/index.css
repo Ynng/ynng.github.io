@@ -128,7 +128,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: 16px;
+  width: 12px;
 }
 
 body::-webkit-scrollbar-track {
@@ -141,6 +141,8 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--scrollbar-color);
   transition: background-color var(--theme-toggle-time)
     var(--theme-toggle-curve);
+
+  border-radius: 6px;
 }
 
 body::-webkit-scrollbar-track,
@@ -199,7 +201,7 @@ dl {
 }
 
 .my-card h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 .title {
