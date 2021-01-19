@@ -193,6 +193,7 @@ p {
 img {
   width: 100%;
   max-width: var(--content-width);
+  border-radius: var(--border-radius);
 }
 
 ol,
@@ -212,8 +213,9 @@ dl {
 .my-card .media-container {
   height: auto;
   overflow: hidden;
-  border-radius: var(--border-radius);  
+  border-radius: var(--border-radius);
   transition: .2s ease;
+  box-sizing: content-box;
 }
 
 .title {
@@ -329,7 +331,7 @@ dl {
     max-height: calc(var(--content-width)/16*9);
     transform: scale(1.1);
     cursor: pointer;
-    margin: 3rem 0;
+    padding: 1rem 0;
   }
   
   .my-card .media-container:active {
