@@ -9,7 +9,6 @@ function BackButton({ target }) {
   return (
     <LinkButton
       icon={faHome}
-      colorCssVar="--text-color"
       routerLink={target}
       className="back-button"
     />

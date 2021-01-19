@@ -48,8 +48,10 @@
   --dmoj-color: #cab710;
   --gmail-color: #d3483e;
   --youtube-color: #cd201f;
-  --download-color: #5ab847;
-  --visit-color: #15aabf;
+  --download-color: #2A9D8F;
+  --visit-color: #2191bd;
+  --credits-color: #E76F51;
+  --images-color: #EEBE44;
 }
 
 .dark {
@@ -86,8 +88,10 @@
   --dmoj-color: #fcdb05;
   --gmail-color: #dc362b;
   --youtube-color: #cc0000;
-  --download-color: #5ab847;
-  --visit-color: #ff9dbf;
+  --download-color: #06D6A0;
+  --visit-color: #24def6;
+  --credits-color: #EF476F;
+  --images-color: #FFD166;
 }
 
 ::selection {

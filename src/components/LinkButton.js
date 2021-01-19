@@ -45,7 +45,7 @@ function LinkButton({
       {colorCssVar ? (
         <style type="text/css" scoped>
           {`.link-button .${linkClassName} path{ color : var(${colorCssVar});}
-        .link-button .${linkClassName}:active{ background-color : var(${colorCssVar}); border-color : var(${colorCssVar})}`}
+        .link-button .${linkClassName}:active{ background-color : var(${colorCssVar}); border-color : var(${colorCssVar}); transition: background-color .1s ease, border-color .1s ease;}`}
         </style>
       ) : (
         <></>
