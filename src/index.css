@@ -29,6 +29,7 @@
   --selection-color: hsl(180, 2%, 80%);
 
   --text-color: hsl(231, 15%, 12%);
+  --text-sub-color: hsl(231, 5%, 40%);
 
   --button-color: hsl(180, 10%, 20%);
 
@@ -65,6 +66,7 @@
   --selection-color: hsl(180, 2%, 60%);
 
   --text-color: hsl(189, 28%, 91%);
+  --text-sub-color: hsl(189, 2%, 65%);
 
   --button-color: hsl(180, 10%, 81%);
 
@@ -206,8 +208,13 @@ dl {
   text-align: center;
 }
 
-.my-card h1 {
-  font-size: 3rem;
+.my-card h5.subtitle{
+  color: var(--text-sub-color);
+  font-weight: 400;
+}
+
+.my-card h1.name {
+  font-size: 2.5rem;
 }
 
 .my-card .media-container {
@@ -282,6 +289,10 @@ dl {
     --button-size: 3.2rem;
   }
 
+  .my-card h1.name {
+    font-size: 3rem;
+  }
+
   .my-card {
     min-width: calc(var(--content-width) * 0.75);
     max-width: calc(var(--content-width) + 120px);
@@ -309,26 +320,26 @@ dl {
     transition: .2s ease;
   }
 
-  .my-card .media-container.center-up >*{
+  /* .my-card .media-container.center-up >*{
     transform: translate( 0, -25%);
-  }
+  } */
 
 
-  .my-card .media-container.center >*{
+  /* .my-card .media-container.center >*{
     transform: translate( 0, -35%);
-  }
+  } */
 
   .my-card .media-container:hover >*{
     transform: translate( 0, 0);
   }
 
-  .my-card .media-container{
+  /* .my-card .media-container{
     max-height: 5rem;
     transform: scale(1);
-  }
+  } */
 
   .my-card .media-container:hover {
-    max-height: calc(var(--content-width)/16*9);
+    /* max-height: calc(var(--content-width)/16*9); */
     /* transform: scale(1.1); */
     cursor: pointer;
     /* padding: 1rem 0; */

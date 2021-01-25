@@ -90,7 +90,7 @@ function Home() {
             content="Home of Kevin Huang's personal website"
           />
         </Helmet>
-        <h1>Kevin Huang</h1>
+        <h1 className="name">Kevin Huang</h1>
         <p>
           Robotics, VR, Web, Game dev.
           <br />

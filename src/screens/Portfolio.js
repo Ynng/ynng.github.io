@@ -46,9 +46,9 @@ function Portfolio() {
       <h1 className="title">Portfolio</h1>
       <h1 className="alignCenter">2020</h1>
       <div className="my-card">
-        <h2>
-          Discord Server<h5>2020 September</h5>
-        </h2>
+        <h1>
+          Discord Server<h5 className="subtitle">2020 September</h5>
+        </h1>
         <div className="media-container">
           <img
             src={UHS}
@@ -84,9 +84,9 @@ function Portfolio() {
         />
       </div>
       <div className="my-card">
-        <h2>
-          FRC Robotics Website<h5>2020 Summer</h5>
-        </h2>
+        <h1>
+          FRC Robotics Website<h5 className="subtitle">2020 Summer</h5>
+        </h1>
         <div className="media-container center-up">
           <img
             src={UHSRobotics}
@@ -123,9 +123,9 @@ function Portfolio() {
         />
       </div>
       <div className="my-card">
-        <h2>
-          Try-Catch-Throw<h5>2020 June</h5>
-        </h2>
+        <h1>
+          Try-Catch-Throw<h5 className="subtitle">2020 June</h5>
+        </h1>
         <div className="media-container">
           <img src={TryCatchThrow} alt="render of the game" draggable="false" />
         </div>
@@ -159,9 +159,9 @@ function Portfolio() {
         />
       </div>
       <div className="my-card">
-        <h2>
-          Fixate<h5>2020 May</h5>
-        </h2>
+        <h1>
+          Fixate<h5 className="subtitle">2020 May</h5>
+        </h1>
         <div className="media-container center">
           <ResponsivePlayer
             url="https://www.youtube.com/watch?v=FlUhG99RqHs"
@@ -205,9 +205,9 @@ function Portfolio() {
         />
       </div>
       <div className="my-card">
-        <h2>
-          Noteworking<h5>2020 January</h5>
-        </h2>
+        <h1>
+          Noteworking<h5 className="subtitle">2020 January</h5>
+        </h1>
         <div className="media-container center">
           <img
             src={Noteworking}
@@ -246,9 +246,9 @@ function Portfolio() {
       </div>
       <h1 className="alignCenter">2019</h1>
       <div className="my-card">
-        <h2>
-          VRC Robotics Website<h5>2019 December</h5>
-        </h2>
+        <h1>
+          VRC Robotics Website<h5 className="subtitle">2019 December</h5>
+        </h1>
         <div className="media-container center">
           <img
             src={VEXWebsite}
@@ -280,9 +280,9 @@ function Portfolio() {
         />
       </div>
       <div className="my-card">
-        <h2>
-          VRC Tower Takeover Helper<h5>2019 November</h5>
-        </h2>
+        <h1>
+          VRC Tower Takeover Helper<h5 className="subtitle">2019 November</h5>
+        </h1>
         <div className="media-container center">
           <img
             src={TTHelper}
