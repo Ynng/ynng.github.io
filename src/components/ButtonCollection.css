@@ -23,10 +23,10 @@
   margin-left: -0.45rem;
 }
 
-.button-collection.left .link-button,
+/* .button-collection.left .link-button,
 .button-collection.right .link-button {
   margin: 0 0.5rem;
-}
+} */
 
 .button-collection .link-button.text {
   flex-grow: 1;
@@ -48,7 +48,7 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .button-collection {
+  .button-collection:not(.left):not(.right) {
     width: var(--content-width);
   }
 }

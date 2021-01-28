@@ -81,7 +81,4 @@
   .link-button-tooltip.tooltip{
     display: inherit;
   }
-  .button-collection {
-    width: var(--content-width);
-  }
 }
