@@ -44,8 +44,8 @@ function Portfolio() {
       </Helmet>
       <BackButton target="/" />
       <h1 className="title">Portfolio</h1>
-      <h1 className="alignCenter">2020</h1>
-      <div className="my-card">
+      <h1 className="alignCenter" id="2020">2020</h1>
+      <div className="my-card" id="uhs-server">
         <h1>
           Discord Server<h5 className="subtitle">2020 September</h5>
         </h1>
@@ -83,7 +83,7 @@ function Portfolio() {
           className="left"
         />
       </div>
-      <div className="my-card">
+      <div className="my-card" id="robotics-website">
         <h1>
           FRC Robotics Website<h5 className="subtitle">2020 Summer</h5>
         </h1>
@@ -122,7 +122,7 @@ function Portfolio() {
           className="left"
         />
       </div>
-      <div className="my-card">
+      <div className="my-card" id="try-catch-throw">
         <h1>
           Try-Catch-Throw<h5 className="subtitle">2020 June</h5>
         </h1>
@@ -158,7 +158,7 @@ function Portfolio() {
           className="left"
         />
       </div>
-      <div className="my-card">
+      <div className="my-card" id="fixate">
         <h1>
           Fixate<h5 className="subtitle">2020 May</h5>
         </h1>
@@ -204,7 +204,7 @@ function Portfolio() {
           className="left"
         />
       </div>
-      <div className="my-card">
+      <div className="my-card" id="noteworking">
         <h1>
           Noteworking<h5 className="subtitle">2020 January</h5>
         </h1>
@@ -244,8 +244,8 @@ function Portfolio() {
           className="left"
         />
       </div>
-      <h1 className="alignCenter">2019</h1>
-      <div className="my-card">
+      <h1 className="alignCenter" id="2019">2019</h1>
+      <div className="my-card" id="vex-website">
         <h1>
           VRC Robotics Website<h5 className="subtitle">2019 December</h5>
         </h1>
@@ -279,7 +279,7 @@ function Portfolio() {
           className="left"
         />
       </div>
-      <div className="my-card">
+      <div className="my-card" id="vrc-helper">
         <h1>
           VRC Tower Takeover Helper<h5 className="subtitle">2019 November</h5>
         </h1>
