@@ -20,7 +20,7 @@
   --theme-toggle-curve: ease-out;
   --content-width-wide: 640px;
   --font-size: 17px;
-  --scrollspy-scale: 1.5;
+  --scrollspy-scale: 1.2;
 }
 
 .light {
@@ -212,32 +212,25 @@ dl {
 }
 
 .scrollspy{
-  position: fixed;
-  left: 1em;
-  top: 45vh;
-  transform: translateY(-50%);
-  padding-left: 1rem;
-  font-weight: 500;
-  height: calc(7 * 2rem);
-  line-height: 1;
+  margin: 5vh 0 10vh 0;
+  padding: 0;
+  font-weight: 400;
   color: var(--text-sub-color);
 }
 
 .scrollspy li{
   list-style: none;
+  text-align: center;
   height: calc(1.5 * var(--font-size));
-  font-size: calc(0.8 * var(--font-size));
-  /* width: calc((100vw - var(--content-width)) / 2 - 1rem - 60px); */
-  width: 50vw;
 }
 
 .scrollspy li a{
   text-decoration: none;
-  color: inherit;
-  transition: .3s ease;
-
-  position: absolute;
-  transform: translateY(-50%);
+  line-height: calc(var(--scrollspy-scale) * var(--font-size));
+  font-size: var(--font-size);
+  color: var(--text-color);
+  font-style: italic;
+  transition: .25s ease;
 }
 
 .scrollspy li.year{
@@ -246,15 +239,9 @@ dl {
 
 .scrollspy li.year a{
   font-family: "Raleway", Arial, Helvetica, sans-serif;
-
-  font-size: calc(1 * var(--font-size));
+  font-size: calc(1.5 * var(--font-size));
   color: var(--text-color);
   text-decoration: underline;
-}
-
-.scrollspy .is-current a{
-  font-size: calc(var(--scrollspy-scale) * var(--font-size));
-  color: var(--text-color);
 }
 
 .my-masonry-grid {
@@ -368,11 +355,49 @@ dl {
   }
 }
 
+@media only screen and (min-width: 720px) {
+  .scrollspy{
+    position: fixed;
+    left: 1em;
+    top: 45vh;
+    left: 2rem;
+    transform: translateY(-50%);
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  .scrollspy li{
+    height: calc(var(--scrollspy-scale) * var(--font-size));
+    text-align: left;
+    margin-right: .5rem;
+  }
+  
+  .scrollspy li a{
+    color: inherit;
+    font-style: normal;
+    font-size: calc(0.8 * var(--font-size));
+  }
+  
+  .scrollspy .is-current a{
+    font-size: calc(var(--scrollspy-scale) * var(--font-size));
+    color: var(--text-color);
+  }
+  
+  .scrollspy li.year a{
+    font-size: var(--font-size);
+  }
+
+  .content-with-scrollspy{
+    margin-left: 40vw;
+  }
+}
+
 @media only screen and (min-width: 900px) {
   :root {
     --button-size: 3.2rem;
     --content-width-wide: 800px;
     --font-size: 18px;
+    --scrollspy-scale: 1.3;
   }
 
   .my-card h1.name {
@@ -390,6 +415,9 @@ dl {
   .my-container {
     padding: 7rem 60px;
   }
+  .content-with-scrollspy{
+    margin-left: 30vw;
+  }
 }
 
 @media only screen and (min-width: 1025px) {
@@ -404,29 +432,12 @@ dl {
     transition: .2s ease;
   }
 
-  /* .my-card .media-container.center-up >*{
-    transform: translate( 0, -25%);
-  } */
-
-
-  /* .my-card .media-container.center >*{
-    transform: translate( 0, -35%);
-  } */
-
   .my-card .media-container:hover >*{
     transform: translate( 0, 0);
   }
 
-  /* .my-card .media-container{
-    max-height: 5rem;
-    transform: scale(1);
-  } */
-
   .my-card .media-container:hover {
-    /* max-height: calc(var(--content-width)/16*9); */
-    /* transform: scale(1.1); */
     cursor: pointer;
-    /* padding: 1rem 0; */
   }
   
   .my-card .media-container:active {
@@ -434,7 +445,7 @@ dl {
   }
 }
 
-@media only screen and (max-width: 1600px) {
+@media only screen and (min-width: 1300px) {
   :root{
     --scrollspy-scale: 1.4;
   }
@@ -443,39 +454,12 @@ dl {
   }
 }
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (min-width: 1600px) {
   :root{
-    --scrollspy-scale: 1.3;
+    --scrollspy-scale: 1.5;
   }
-  .content-with-scrollspy{
-    margin-left: 30vw;
-  }
-}
-
-@media only screen and (max-width: 900px) {
-  :root{
-    --scrollspy-scale: 1.2;
-  }
-  .content-with-scrollspy{
-    margin-left: 40vw;
-  }
-}
-
-@media only screen and (max-width: 720px) {
   .content-with-scrollspy{
     margin-left: 0;
-  }
-  .scrollspy{
-    position: relative;
-    height: 30vh;
-    transform: translateY(0);
-    top: 0;
-    margin: 10vh 0;
-  }
-  .scrollspy li a{
-    font-size: calc(var(--scrollspy-scale) * var(--font-size));
-    color: var(--text-color);
-    text-decoration: underline;
   }
 }
 

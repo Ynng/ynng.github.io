@@ -11,6 +11,8 @@ import UHS from "../images/UHS.jpg";
 import UHSRobotics from "../images/UHSRobotics.jpg";
 import TryCatchThrow from "../images/TryCatchThrow.jpg";
 import VEXWebsite from "../images/VEXWebsite.jpg";
+import VRViewer from "../images/vr-viewer.jpg";
+import VRCProgramming from "../images/VRCProgrammingCompressed.jpg";
 
 //My own components
 import ResponsivePlayer from "../components/ResponsivePlayer.js";
@@ -50,6 +52,8 @@ function Portfolio() {
         <Scrollspy
           items={[
             "",
+            "vrc_programming_lead",
+            "",
             "uhs_server",
             "robotics_website",
             "try_catch_throw",
@@ -58,11 +62,19 @@ function Portfolio() {
             "",
             "vex_website",
             "vrc_helper",
+            "",
+            "vr_viewer",
           ]}
           currentClassName="is-current"
           className="scrollspy"
           offset={-300}
-        > 
+        >
+          <li className="year">
+            <a href="#involvements">Involvements</a>
+          </li>
+          <li>
+            <a href="#vrc_programming_lead">VRC Programming Lead</a>
+          </li>
           <li className="year">
             <a href="#2020">2020</a>
           </li>
@@ -88,9 +100,63 @@ function Portfolio() {
             <a href="#vex_website">VRC Robotics Website</a>
           </li>
           <li>
-            <a href="#vrc_helper">VRC Tower Takeover Helper</a>
+            <a href="#vrc_helper">VRC Helper</a>
+          </li>
+          <li className="year">
+            <a href="#2018">2018</a>
+          </li>
+          <li>
+            <a href="#vr_viewer">VR Mesh Viewer</a>
           </li>
         </Scrollspy>
+        <h1 className="alignCenter" id="involvements">
+          Involvements
+        </h1>
+        <div className="my-card" id="vrc_programming_lead">
+          <h1>
+            VRC Programming lead<h5 className="subtitle">2020 Winter</h5>
+          </h1>
+          <div className="media-container center">
+            <ResponsivePlayer
+              url="https://www.youtube.com/watch?v=53xpT4EiF6M"
+              controls={true}
+            />
+          </div>
+          <p>
+            As <strong>programming lead</strong> of LeRoi Robotics, VEX Robotics
+            Competition Team 81208X, I self-taught advanced robotic concepts
+            such as odometry, motion profiling, inverse kinematics, and feedback
+            controller, and implemented with C++ for our team's robot.
+          </p>
+          <p>
+            We are currently ranked <strong>8th globally</strong> and have
+            received numerous awards, such as the Think Award, the best award a
+            team can receive for their programming.
+          </p>
+          <ButtonCollection
+            buttons={[
+              {
+                icon: faGithubAlt,
+                colorCssVar: "--github-color",
+                link: "https://github.com/81208X/VRC2020",
+                tip: "Code Release",
+              },
+              {
+                icon: faExternalLinkSquareAlt,
+                colorCssVar: "--visit-color",
+                link: "https://www.leroirobotics.com/",
+                tip: "Website",
+              },
+              {
+                icon: faUsers,
+                colorCssVar: "--credits-color",
+                link: "https://www.uhsrobotics.org/credits.html",
+                tip: "Contributors",
+              },
+            ]}
+            className="left"
+          />
+        </div>
         <h1 className="alignCenter" id="2020">
           2020
         </h1>
@@ -176,7 +242,11 @@ function Portfolio() {
             Try-Catch-Throw: VR Game<h5 className="subtitle">2020 June</h5>
           </h1>
           <div className="media-container">
-            <img src={TryCatchThrow} alt="render of the game" draggable="false" />
+            <img
+              src={TryCatchThrow}
+              alt="render of the game"
+              draggable="false"
+            />
           </div>
           <p>
             A <strong>VR game</strong> made in Unity for a school project, where
@@ -221,7 +291,8 @@ function Portfolio() {
           <p>
             <strong>Machine Learning</strong> based website blocker. We analyze
             visited web pages for relevance to the user's “area of work”.
-            Unrelated pages will be blocked so you can stay focused even at home.
+            Unrelated pages will be blocked so you can stay focused even at
+            home.
           </p>
           <ButtonCollection
             buttons={[
@@ -255,7 +326,8 @@ function Portfolio() {
         </div>
         <div className="my-card" id="noteworking">
           <h1>
-            Noteworking: Science Solver<h5 className="subtitle">2020 January</h5>
+            Noteworking: Science Solver
+            <h5 className="subtitle">2020 January</h5>
           </h1>
           <div className="media-container center">
             <img
@@ -360,6 +432,44 @@ function Portfolio() {
                 colorCssVar: "--visit-color",
                 link: "https://ynng.github.io/VEX-Tower-Takeover-Helper/",
                 tip: "Visit",
+              },
+            ]}
+            className="left"
+          />
+        </div>
+        <h1 className="alignCenter" id="2018">
+          2018
+        </h1>
+        <div className="my-card" id="vr_viewer">
+          <h1>
+            VR Mesh Viewer<h5 className="subtitle">2018 - 2020</h5>
+          </h1>
+          <div className="media-container center">
+            <img
+              src={VRViewer}
+              alt="First screenshot of the program working"
+              draggable="false"
+            />
+          </div>
+          <p>
+            A simple 3d mesh viewer for <code>Steam VR</code>, made with{" "}
+            <code>OpenGL</code> and{" "}
+            <a href="https://libigl.github.io/">
+              <code>libigl.</code>
+            </a>
+          </p>
+          <p>
+            This project taught me a lot about low level computer graphics and
+            gave me an early look into practical applications of linear algebra.{" "}
+          </p>
+          <ButtonCollection
+            buttons={[
+              {
+                icon: faGithubAlt,
+                colorCssVar: "--github-color",
+                link:
+                  "https://github.com/psarahdactyl/libigl-vr-viewer-version",
+                tip: "Github",
               },
             ]}
             className="left"
