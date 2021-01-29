@@ -34,6 +34,8 @@
 
   --text-color: hsl(231, 15%, 12%);
   --text-sub-color: hsl(231, 5%, 40%);
+  --link-text-color: hsl(207, 80%, 20%);
+  --link-hover-text-color:hsl(207, 80%, 5%);
 
   --button-color: hsl(180, 10%, 20%);
 
@@ -71,6 +73,8 @@
 
   --text-color: hsl(189, 28%, 91%);
   --text-sub-color: hsl(189, 2%, 65%);
+  --link-text-color: hsl(189, 78%, 79%);
+  --link-hover-text-color: hsl(189, 100%, 68%);
 
   --button-color: hsl(180, 10%, 81%);
 
@@ -114,6 +118,14 @@
   background-color: var(--selection-color);
   transition: background-color var(--theme-toggle-time)
     var(--theme-toggle-curve);
+}
+
+a{
+  color: var(--link-text-color);
+}
+
+a:hover {
+  color: var(--link-hover-text-color);
 }
 
 #bg {
@@ -162,10 +174,6 @@ body::-webkit-scrollbar-thumb {
   border: 0px solid transparent;
   background-clip: padding-box;
   /* border-radius: 8px; */
-}
-
-a:hover {
-  color: inherit;
 }
 
 code {
@@ -359,7 +367,7 @@ dl {
   .scrollspy{
     position: fixed;
     left: 1em;
-    top: 45vh;
+    top: 47.5vh;
     left: 2rem;
     transform: translateY(-50%);
     font-weight: 500;

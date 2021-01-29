@@ -26,6 +26,7 @@ import {
   faUsers,
   faImage,
   faFileAlt,
+  faTrophy
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithubAlt, faYoutube } from "@fortawesome/free-brands-svg-icons";
 
@@ -52,7 +53,9 @@ function Portfolio() {
         <Scrollspy
           items={[
             "",
+            "frc_captain",
             "vrc_programming_lead",
+            "comsci_club",
             "",
             "uhs_server",
             "robotics_website",
@@ -73,7 +76,13 @@ function Portfolio() {
             <a href="#involvements">Involvements</a>
           </li>
           <li>
+            <a href="#frc_captain">FRC Team Captain</a>
+          </li>
+          <li>
             <a href="#vrc_programming_lead">VRC Programming Lead</a>
+          </li>
+          <li>
+            <a href="#comsci_club">Com Sci Club Founder</a>
           </li>
           <li className="year">
             <a href="#2020">2020</a>
@@ -112,9 +121,63 @@ function Portfolio() {
         <h1 className="alignCenter" id="involvements">
           Involvements
         </h1>
+        <div className="my-card" id="frc_captain">
+          <h1>
+            FRC Team Captain<h5 className="subtitle">2019 - Current</h5>
+          </h1>
+          <div className="media-container center">
+            <ResponsivePlayer
+              url="https://www.youtube.com/watch?v=j7h64w9ww2k"
+              controls={true}
+            />
+          </div>
+          <p>
+            <strong>Team Captain</strong> of First Robotics Competition (FRC)
+            Team 7721 and <strong>President</strong> of the Unionville High
+            School (UHS) Robotics Club since 2020 September.
+          </p>
+          <p>
+            <strong>Programming Lead</strong> of the above organization since
+            2019 September.
+          </p>
+          <p>
+            Our robot was commented as "<strong>Top 5 in Ontario</strong>" for
+            the 2019-2020 competition season, but our competition was
+            unfortunately cancelled due to COVID-19.
+          </p>
+          <ButtonCollection
+            buttons={[
+              {
+                icon: faGithubAlt,
+                colorCssVar: "--github-color",
+                link: "https://github.com/UHSRobotics/FRC-2020",
+                tip: "Code",
+              },
+              {
+                icon: faExternalLinkSquareAlt,
+                colorCssVar: "--visit-color",
+                link: "https://www.uhsrobotics.org/",
+                tip: "Website",
+              },
+              {
+                icon: faUsers,
+                colorCssVar: "--credits-color",
+                link: "https://www.uhsrobotics.org/team.html#top",
+                tip: "Team Members",
+              },
+              {
+                icon: faYoutube,
+                colorCssVar: "--youtube-color",
+                link: "https://www.youtube.com/channel/UCM4zyy81QGAcxW_ovfChR4g",
+                tip: "Youtube Channel",
+              }
+            ]}
+            className="left"
+          />
+        </div>
         <div className="my-card" id="vrc_programming_lead">
           <h1>
-            VRC Programming lead<h5 className="subtitle">2020 Winter</h5>
+            VRC Programming Lead<h5 className="subtitle">2019 - Current</h5>
           </h1>
           <div className="media-container center">
             <ResponsivePlayer
@@ -124,9 +187,9 @@ function Portfolio() {
           </div>
           <p>
             As <strong>programming lead</strong> of LeRoi Robotics, VEX Robotics
-            Competition Team 81208X, I self-taught advanced robotic concepts
-            such as odometry, motion profiling, inverse kinematics, and feedback
-            controller, and implemented with C++ for our team's robot.
+            Competition (VRC) Team 81208X, I self-taught advanced robotic
+            concepts such as odometry, motion profiling, inverse kinematics, and
+            feedback controller, and implemented with C++ for our team's robot.
           </p>
           <p>
             We are currently ranked <strong>8th globally</strong> and have
@@ -150,8 +213,60 @@ function Portfolio() {
               {
                 icon: faUsers,
                 colorCssVar: "--credits-color",
-                link: "https://www.uhsrobotics.org/credits.html",
-                tip: "Contributors",
+                link: "https://www.leroirobotics.com/#teamMembers",
+                tip: "Team Members",
+              },
+              {
+                icon: faYoutube,
+                colorCssVar: "--youtube-color",
+                link: "https://www.youtube.com/watch?v=2Nl5LK6FEdQ",
+                tip: "Introduction Video",
+              },
+              {
+                icon: faTrophy,
+                colorCssVar: "--images-color",
+                link: "https://www.robotevents.com/robot-competitions/vex-robotics-competition/standings/skills",
+                tip: "Check Ranking",
+              },
+            ]}
+            className="left"
+          />
+        </div>
+        <div className="my-card" id="comsci_club">
+          <h1>
+            Computer Science Club Founder<h5 className="subtitle">2018 - Current</h5>
+          </h1>
+          <div className="media-container center">
+            <ResponsivePlayer
+              url="https://www.youtube.com/watch?v=Zi6NvDbyAfY"
+              controls={true}
+            />
+          </div>
+          <p>
+            Co-founded the computer science club at Unionville Highschool with <a href="https://www.peterjiang.net/">Peter Jiang</a> and <a href="https://czhu1217.github.io/">Cindy Zhu</a>
+          </p>
+          <p>
+            We teach students Java, C++, competitive programming and Unity Game developments.
+          </p>
+          <ButtonCollection
+            buttons={[
+              {
+                icon: faExternalLinkSquareAlt,
+                colorCssVar: "--visit-color",
+                link: "https://uhscs.club/",
+                tip: "Website",
+              },
+              {
+                icon: faYoutube,
+                colorCssVar: "--youtube-color",
+                link: "https://www.youtube.com/watch?v=Zi6NvDbyAfY",
+                tip: "Introduction Video",
+              },
+              {
+                icon: faTrophy,
+                colorCssVar: "--images-color",
+                link: "https://dmoj.ca/organization/125-unionville-hs/users",
+                tip: "Check Ranking",
               },
             ]}
             className="left"
