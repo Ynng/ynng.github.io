@@ -26,7 +26,7 @@ import {
   faUsers,
   faImage,
   faFileAlt,
-  faTrophy
+  faTrophy,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithubAlt, faYoutube } from "@fortawesome/free-brands-svg-icons";
 
@@ -48,7 +48,7 @@ function Portfolio() {
         />
       </Helmet>
       <BackButton target="/" />
-      <div className="content-with-scrollspy">
+      <div className="content-with-scrollspy portfolio-page">
         <h1 className="title">Portfolio</h1>
         <Scrollspy
           items={[
@@ -76,22 +76,22 @@ function Portfolio() {
             <a href="#involvements">Involvements</a>
           </li>
           <li>
-            <a href="#frc_captain">FRC Team Captain</a>
+            <a href="#frc_captain">First Robotics</a>
           </li>
           <li>
-            <a href="#vrc_programming_lead">VRC Programming Lead</a>
+            <a href="#vrc_programming_lead">VEX Robotics</a>
           </li>
           <li>
-            <a href="#comsci_club">Com Sci Club Founder</a>
+            <a href="#comsci_club">UHS Com Sci</a>
           </li>
           <li className="year">
             <a href="#2020">2020</a>
           </li>
           <li>
-            <a href="#uhs_server">Online School Discord Bot</a>
+            <a href="#uhs_server">UHS Community</a>
           </li>
           <li>
-            <a href="#robotics_website">FRC Robotics Website</a>
+            <a href="#robotics_website">UHS Robotics Website</a>
           </li>
           <li>
             <a href="#try_catch_throw">VR Game</a>
@@ -123,9 +123,17 @@ function Portfolio() {
         </h1>
         <div className="my-card" id="frc_captain">
           <h1>
-            FRC Team Captain<h5 className="subtitle">2019 - Current</h5>
+            UHS Robotics{" "}
+            <span className="h4 title-detail">/Club President</span>
+            <h5 className="subtitle">2019 - Current</h5>
           </h1>
-          <div className="media-container center">
+          <div
+            className="media-container center"
+            style={{
+              backgroundImage:
+                "url(https://i.ytimg.com/vi/j7h64w9ww2k/maxresdefault.jpg)",
+            }}
+          >
             <ResponsivePlayer
               url="https://www.youtube.com/watch?v=j7h64w9ww2k"
               controls={true}
@@ -168,18 +176,27 @@ function Portfolio() {
               {
                 icon: faYoutube,
                 colorCssVar: "--youtube-color",
-                link: "https://www.youtube.com/channel/UCM4zyy81QGAcxW_ovfChR4g",
+                link:
+                  "https://www.youtube.com/channel/UCM4zyy81QGAcxW_ovfChR4g",
                 tip: "Youtube Channel",
-              }
+              },
             ]}
             className="left"
           />
         </div>
         <div className="my-card" id="vrc_programming_lead">
           <h1>
-            VRC Programming Lead<h5 className="subtitle">2019 - Current</h5>
+            LeRoi Robotics{" "}
+            <span className="h4 title-detail">/Programming Lead</span>
+            <h5 className="subtitle">2019 - Current</h5>
           </h1>
-          <div className="media-container center">
+          <div
+            className="media-container center"
+            style={{
+              backgroundImage:
+                "url(https://i.ytimg.com/vi/53xpT4EiF6M/maxresdefault.jpg)",
+            }}
+          >
             <ResponsivePlayer
               url="https://www.youtube.com/watch?v=53xpT4EiF6M"
               controls={true}
@@ -192,7 +209,7 @@ function Portfolio() {
             feedback controller, and implemented with C++ for our team's robot.
           </p>
           <p>
-            We are currently ranked <strong>8th globally</strong> and have
+            We are currently ranked <strong>1st globally</strong> and have
             received numerous awards, such as the Think Award, the best award a
             team can receive for their programming.
           </p>
@@ -225,7 +242,8 @@ function Portfolio() {
               {
                 icon: faTrophy,
                 colorCssVar: "--images-color",
-                link: "https://www.robotevents.com/robot-competitions/vex-robotics-competition/standings/skills",
+                link:
+                  "https://www.robotevents.com/robot-competitions/vex-robotics-competition/standings/skills",
                 tip: "Check Ranking",
               },
             ]}
@@ -234,19 +252,29 @@ function Portfolio() {
         </div>
         <div className="my-card" id="comsci_club">
           <h1>
-            Computer Science Club Founder<h5 className="subtitle">2018 - Current</h5>
+            UHS Com Sci <span className="h4 title-detail">/President</span>
+            <h5 className="subtitle">2018 - Current</h5>
           </h1>
-          <div className="media-container center">
+          <div
+            className="media-container center"
+            style={{
+              backgroundImage:
+                "url(https://i.ytimg.com/vi/Zi6NvDbyAfY/maxresdefault.jpg)",
+            }}
+          >
             <ResponsivePlayer
               url="https://www.youtube.com/watch?v=Zi6NvDbyAfY"
               controls={true}
             />
           </div>
           <p>
-            Co-founded the computer science club at Unionville Highschool with <a href="https://www.peterjiang.net/">Peter Jiang</a> and <a href="https://czhu1217.github.io/">Cindy Zhu</a>
+            Co-founded the computer science club at Unionville Highschool with{" "}
+            <a href="https://www.peterjiang.net/">Peter Jiang</a> and{" "}
+            <a href="https://czhu1217.github.io/">Cindy Zhu</a>
           </p>
           <p>
-            We teach students Java, C++, competitive programming and Unity Game developments.
+            We teach students Java, C++, competitive programming and Unity Game
+            developments.
           </p>
           <ButtonCollection
             buttons={[
@@ -396,7 +424,13 @@ function Portfolio() {
           <h1>
             Fixate: AI Web-Blocker<h5 className="subtitle">2020 May</h5>
           </h1>
-          <div className="media-container center">
+          <div
+            className="media-container center"
+            style={{
+              backgroundImage:
+                "url(https://i.ytimg.com/vi/FlUhG99RqHs/maxresdefault.jpg)",
+            }}
+          >
             <ResponsivePlayer
               url="https://www.youtube.com/watch?v=FlUhG99RqHs"
               controls={true}
@@ -404,10 +438,13 @@ function Portfolio() {
           </div>
           {/* <div className="media-container"> <img src={Fixate} alt="screenshot of Fixate" draggable="false"/> </div>*/}
           <p>
-            <strong>Machine Learning</strong> based website blocker. We analyze
-            visited web pages for relevance to the user's “area of work”.
-            Unrelated pages will be blocked so you can stay focused even at
-            home.
+            Semantics based website blocker. We analyze visited web pages for
+            relevance to the user's “area of work”. Unrelated pages will be
+            blocked to minimize distractions.
+            <br />
+            We created this because distracting websites like Youtube and Reddit
+            also contain useful information, but gets blocked entirely by
+            traditional website blockers.
           </p>
           <ButtonCollection
             buttons={[
@@ -590,9 +627,7 @@ function Portfolio() {
             className="left"
           />
         </div>
-
-        <h2 className="alignCenter">Website Under Construction!</h2>
-        <h3 className="alignCenter">More coming soon</h3>
+        <h3 className="alignCenter">More coming soon...</h3>
       </div>
     </div>
   );

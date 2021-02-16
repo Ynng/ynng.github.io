@@ -22,50 +22,49 @@ function Home() {
       link:
         "https://www.youtube.com/channel/UC5qAOjtSdCkPEy1BUM78ruw/featured?view_as=subscriber",
       colorCssVar: "--youtube-color",
-      tip: "Youtube Channel"
+      tip: "Youtube Channel",
     },
     {
       icon: faEnvelope,
       link: "mailto:kh.kevinhuang.03@gmail.com",
       colorCssVar: "--gmail-color",
-      tip: "Email Me"
+      tip: "Email Me",
     },
     {
       icon: faAsterisk,
       link: "https://dmoj.ca/user/Ynng11626",
       colorCssVar: "--dmoj-color",
-      tip: "DMOJ Profile"
+      tip: "DMOJ Profile",
     },
     {
       icon: faLinkedin,
       link: "https://www.linkedin.com/in/kevin-huang-b67b9817a/",
       colorCssVar: "--linkedin-color",
-      tip: "LinkedIn"
+      tip: "LinkedIn",
     },
     {
       icon: faDiscord,
       link: "https://discord.gg/HMZrmM6",
       colorCssVar: "--discord-color",
-      tip: "Discord"
+      tip: "Discord",
     },
     {
       icon: faInstagram,
       link: "https://www.instagram.com/_ynng_/",
       colorCssVar: "--instagram-color",
-      tip: "Instagram"
+      tip: "Instagram",
     },
     {
       icon: faGithubAlt,
       link: "https://github.com/Ynng",
       colorCssVar: "--github-color",
-      tip: "Github"
+      tip: "Github",
     },
   ];
   const additionalButtons = [
     {
       text: "Resume",
-      link:
-        "/resume.pdf",
+      link: "/resume.pdf",
     },
     {
       text: "Portfolio",
@@ -92,13 +91,16 @@ function Home() {
         </Helmet>
         <h1 className="name">Kevin Huang</h1>
         <p>
-          Robotics, VR, Web, Game dev.
-          <br />
-          Currently learning opengl, tensorflow and motion profiling.
+          <strong>
+            Robotics Programmer, Game Developer, Competitive Programmer.
+          </strong>
         </p>
         <p>
-          I am always looking for more ways to expand my skill set and
-          broaden my experiences!
+          Hi, I'm Kevin Huang, currently a Grade 12 student.
+          <br />
+          I've been most interested in robotics control and computer graphics
+          and am always looking for more ways to expand my skill set and broaden
+          my experiences!
         </p>
         <ButtonCollection
           buttons={connectionButtons}

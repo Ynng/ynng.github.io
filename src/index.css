@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand:300,400,500");
-@import url("https://fonts.googleapis.com/css?family=Raleway:600");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:600");
+@import url("https://fonts.googleapis.com/css?family=JetBrains+Mono:600");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");
 
 .preload,
 .preload * {
@@ -146,6 +148,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
+  font-weight: 500;
   /* min-height: 100vh; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -191,7 +194,7 @@ h1 {
   color: var(--text-color);
   margin-bottom: 1rem;
   transition: color var(--theme-toggle-time) var(--theme-toggle-curve);
-  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
   font-weight: 600;
 }
 
@@ -246,7 +249,7 @@ dl {
 }
 
 .scrollspy li.year a{
-  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
   font-size: calc(1.5 * var(--font-size));
   color: var(--text-color);
   text-decoration: underline;
@@ -330,8 +333,18 @@ dl {
     border-color var(--theme-toggle-time) var(--theme-toggle-curve);
 }
 
+.portfolio-page .my-card h1{
+  margin-right: 0.5rem;
+}
+
+.title-detail{
+  display: inline-block;
+  font-family: "JetBrains Mono", Arial, Helvetica, sans-serif;
+}
+
 .my-card h5.subtitle{
   color: var(--text-sub-color);
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-weight: 400;
 }
 
@@ -345,6 +358,7 @@ dl {
   border-radius: var(--border-radius);
   transition: .2s ease;
   box-sizing: content-box;
+  background-size: cover;
 }
 
 .my-card img{
